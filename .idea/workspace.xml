@@ -1,7 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5dd59e40-e747-4cbf-84fb-010b4f3c0df2" name="变更" comment="update" />
+    <list default="true" id="6e5d4bcb-36a5-4dac-999c-dd08d3c61e72" name="Changes" comment="fork Jekyll Theme">
+      <change beforePath="$PROJECT_DIR$/.github/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/androidColor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/boot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/comment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/goto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/head.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/pageNav.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/post-header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/post-title.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/posts_paginator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/share.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_includes/title.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_layouts/default.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_layouts/post.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_plugins/pager.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_plugins/pagination.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_posts/2018-05-17-welcome-to-jekyll.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/_posts/2018-05-18-hello-jekyll.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/bak.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/boot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/boot_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/github-markdown.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/media.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/pygments/pygments_autumn.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/pygments/pygments_default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/pygments/pygments_emacs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/pygments/pygments_friendly.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/pygments/pygments_manni.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/pygments/pygments_murphy.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/pygments/pygments_pastie.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/pygments/pygments_perldoc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/pygments/pygments_tango.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/rougeBAK.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/share.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/DankMonoNormal/DankMonoNormal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/DankMonoNormal/DankMonoNormal.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/DankMonoNormal/DankMonoNormal.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/DankMonoNormal/DankMonoNormal.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/DankMonoNormal/DankMonoNormal.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/DankMonoNormal/DankMonoNormal.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Pacifico/Pacifico.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Pacifico/Pacifico.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Pacifico/Pacifico.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Pacifico/Pacifico.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Pacifico/Pacifico.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Pacifico/original-pacifico-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/RobotoMono/RobotoMono.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/RobotoMono/RobotoMono.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/RobotoMono/RobotoMono.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/RobotoMono/RobotoMono.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/RobotoMono/RobotoMono.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/RobotoMono/original-robotomono-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/SourceSansPro/SourceSansPro.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/SourceSansPro/SourceSansPro.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/SourceSansPro/SourceSansPro.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/SourceSansPro/SourceSansPro.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/SourceSansPro/SourceSansPro.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/SourceSansPro/original-sourcesanspro-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Ubuntu/Ubuntu.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Ubuntu/Ubuntu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Ubuntu/Ubuntu.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Ubuntu/Ubuntu.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Ubuntu/Ubuntu.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/Ubuntu/original-ubuntu-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/YaHei Consolas Hybrid/YaHei Consolas Hybrid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/YaHei Consolas Hybrid/YaHei Consolas Hybrid.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/YaHei Consolas Hybrid/YaHei Consolas Hybrid.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/YaHei Consolas Hybrid/YaHei Consolas Hybrid.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/YaHei Consolas Hybrid/YaHei Consolas Hybrid.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/YaHei Consolas Hybrid/YaHei Consolas Hybrid.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/ffad_matro/ffad_matro-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/ffad_matro/ffad_matro-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/ffad_matro/ffad_matro-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/ffad_matro/ffad_matro-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/ffad_matro/ffad_matro-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/kaushanscript/kaushanscript.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/kaushanscript/kaushanscript.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/kaushanscript/kaushanscript.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/kaushanscript/kaushanscript.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/kaushanscript/kaushanscript.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/kaushanscript/original-kaushanscript.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/operatormono/operatormono.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/operatormono/operatormono.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/operatormono/operatormono.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/operatormono/operatormono.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/operatormono/operatormono.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/fonts/operatormono/original-operatormono-medium.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/js/social-share.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/js/wow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/js/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/lineart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/profile.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/assets/test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/friendLink.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/sns-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/screenshot/博客代码高亮例子.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/tags.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/timeline.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Cauchyoooo.github.io.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,12 +141,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Q0OlrxIQtYz0QBzufvnc4YghVx" />
+  <component name="ProjectId" id="2EKgvJaPCsilpDaDFnzWOP6cnb0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,43 +156,28 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Cauchyoooo.github.io" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Cauchyoooo.github.io" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="默认任务">
-      <changelist id="5dd59e40-e747-4cbf-84fb-010b4f3c0df2" name="变更" comment="" />
-      <created>1684487189939</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e5d4bcb-36a5-4dac-999c-dd08d3c61e72" name="Changes" comment="" />
+      <created>1662349919141</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1684487189939</updated>
+      <updated>1662349919141</updated>
     </task>
-    <task id="LOCAL-00001" summary="restruct">
-      <created>1684487255340</created>
+    <task id="LOCAL-00001" summary="delete something">
+      <created>1662350610208</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1684487255340</updated>
+      <updated>1662350610208</updated>
     </task>
-    <task id="LOCAL-00002" summary="update">
-      <created>1684488198390</created>
+    <task id="LOCAL-00002" summary="fork Jekyll Theme">
+      <created>1662350762667</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1684488198390</updated>
+      <updated>1662350762667</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -78,8 +194,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="restruct" />
-    <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="delete something" />
+    <MESSAGE value="fork Jekyll Theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="fork Jekyll Theme" />
   </component>
 </project>
