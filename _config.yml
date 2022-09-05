@@ -24,7 +24,7 @@ portraits: '/assets/profile.jpeg' # your portraits image file path
 
 # SNS
 SNS: true
-SNS-icon: ['qq','weixin'] #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagram', 'weixin', 'Codepen']
+SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagram', 'weixin', 'Codepen']
   mail: 'mailto:903729210@qq.com'
   weixin: 'lyx12242013' # 你的微信二维码存放的地址
   qq: "903729210" # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='你的QQ号'&site=qq&menu=yes
