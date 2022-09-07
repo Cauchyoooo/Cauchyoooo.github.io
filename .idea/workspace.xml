@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e5d4bcb-36a5-4dac-999c-dd08d3c61e72" name="Changes" comment="Fix some Problem">
+    <list default="true" id="6e5d4bcb-36a5-4dac-999c-dd08d3c61e72" name="Changes" comment="Edit Post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-05-17-welcome-to-jekyll.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-05-18-hello-jekyll.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +85,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662356668387</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Post">
+      <created>1662559425363</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662559425363</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Edit Post">
+      <created>1662560803475</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1662560803475</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +117,8 @@
     <MESSAGE value="delete something" />
     <MESSAGE value="fork Jekyll Theme" />
     <MESSAGE value="Fix some Problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix some Problem" />
+    <MESSAGE value="Add Post" />
+    <MESSAGE value="Edit Post" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Post" />
   </component>
 </project>
