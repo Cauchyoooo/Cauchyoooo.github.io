@@ -27,20 +27,20 @@ subtitle: '从“严肃游戏”角度看《みんなで空気読み》'
 
 ​		:tea:我个人比较喜欢的一款严肃游戏是日本游戏公司G-MODE制作的《みんなで空気読み》（又名《阅读空气》或《大家一起察言观色》），PC版于2020年在steam平台上线。目前该系列有3部，还有一部online版本可以和其他玩家在线游玩。实际上，早在2013年左右，我就已经在塞班系统上玩过这款游戏，它当时就给我留下了深刻印象。当然，那个时候我还在念小学，玩不太明白。
 
-![image-3](img src =“https://github.com/Cauchyoooo/Cauchyoooo.github.io/blob/main/assets/game/0906/3.jpg?raw=true” alt="3" style="zoom:50%;" /)
+![image-3](https://github.com/Cauchyoooo/Cauchyoooo.github.io/blob/main/assets/game/0906/3.jpg?raw=true)
 
 ​		:apple:“空気読み”直译过来是“读空气”，也是网络词汇“KY”(不会读空气)的由来。这个意思跟我们中文的“察言观色”或者“有眼力见儿”差不多。玩家在普通的“察言观色”模式需要做的是根据氛围，快速地判断需要作出反应。操作很简单，通过键盘上的上下左右与空格键控制即可，由于什么时候用什么按键游戏没有说明，要自己去思考探索。
 
 ​		 :custard:玩法这么普通，横跨这么多年又上线不同平台，有它的道理。我认为这款游戏的**创新点在于其功能性**，而其功能性又在于教育，玩家通过游玩这款游戏可以注意到一些生活小细节，了解到一些日本的文化等。比如说，在日本，地铁的站位和地区有关，东京地区习惯“左站右行”，而大阪地区习惯“左行右站”；你要和一位牛头朋友(代表忌口)去吃饭，有烧肉和寿司两个选项，就需要避开含牛量较高的烧肉了；当你作为一名老师上公开课问问题时，台下几位同学都举手了，但只有一位同学看起来很高兴，就需要思考点他了...... 每玩完5个场景，会给你一个反馈，例如5个都做对了(官方做法)，会告诉你“简单明了地做到了察言观色”；玩完所有场景后，会给你一个六边形结果反馈，包含决心、同情心、适应能力、责任感、敏捷思维及运用能力6个方面。
 
-![image-4](img src =“https://github.com/Cauchyoooo/Cauchyoooo.github.io/blob/main/assets/game/0906/4.jpg?raw=true” alt="4" style="zoom:50%;" /)
+![image-4](https://github.com/Cauchyoooo/Cauchyoooo.github.io/blob/main/assets/game/0906/4.jpg?raw=true)
 
 ​		:tangerine:这看起来像心理测试的游戏，有功能性的同时，当然也不失**趣味性**。尽管操作很简单，但是每个场景可以作出的反应是多样性的，有些甚至都不太能想到，当你做出来的时候，会get到这种幽默感。比如说，你在一个电视节目要举一个牌子，左方会有一个标题，右边有个人，正常想法是可以举左边、右边或者上面，一些神奇的操作就是不断切换左上右按键，你就会把这个牌子转起来。除了普通测试的“察言观色”模式，有可以让你无限装疯卖傻、随心所欲各种捣蛋的“不察言观色”模式，有可以和朋友本地快(ben)乐(bi)玩(hu)耍(ou)的“双人察言观色”模式，可以浏览所有场景的“剧情模式”，还有满足收集癖的成就系统“秘密”，以及看到自己在“察言观色”模式的过往表现的“以前的你”。
 
-![image-2](img src =“https://github.com/Cauchyoooo/Cauchyoooo.github.io/blob/main/assets/game/0906/2.jpg?raw=true” alt="2" style="zoom:50%;" /)
+![image-2](https://github.com/Cauchyoooo/Cauchyoooo.github.io/blob/main/assets/game/0906/2.jpg?raw=true)
 
 ​		:ghost:我一个比较深刻的感受是，可以帮助玩家更好地认识自我和理解社会的氛围。尽管各种场景都更贴近日本文化，由于一些礼仪的共通性，我们还是能很好地体会。在做出各种行为的时候，可能这个举动是可以帮助到他人的，但是自己会不会不开心；“不麻烦他人”又是不是一直都是好的；又应该选择做一个怎样的人等等。通过对比不同时期(一般是隔半年以上)的反馈结果，也能看到自己的一些变化，更好地去认识自己与了解自己。还有一点是，这款严肃游戏很好地结合**教育**、**心理**、**文化**等方面，对于我们东方注重礼仪的社会，是非常有价值的。
 
-![image-6](img src =“https://github.com/Cauchyoooo/Cauchyoooo.github.io/blob/main/assets/game/0906/6.jpg?raw=true” alt="6" style="zoom:50%;" /)
+![image-6](https://github.com/Cauchyoooo/Cauchyoooo.github.io/blob/main/assets/game/0906/6.jpg?raw=true)
 
 > Cauchy 20220906
