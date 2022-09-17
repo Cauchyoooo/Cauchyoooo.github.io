@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e5d4bcb-36a5-4dac-999c-dd08d3c61e72" name="Changes" comment="Edit Post">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6e5d4bcb-36a5-4dac-999c-dd08d3c61e72" name="Changes" comment="Edit Image">
+      <change beforePath="$PROJECT_DIR$/_posts/2022-09-06-Serious-Games.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-09-06-Serious-Games.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662563762053</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Edit Image">
+      <created>1663426839129</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663426839129</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +140,7 @@
     <MESSAGE value="Fix some Problem" />
     <MESSAGE value="Add Post" />
     <MESSAGE value="Edit Post" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit Post" />
+    <MESSAGE value="Edit Image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Image" />
   </component>
 </project>
