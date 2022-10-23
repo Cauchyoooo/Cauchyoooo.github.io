@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e5d4bcb-36a5-4dac-999c-dd08d3c61e72" name="Changes" comment="edit config">
+    <list default="true" id="6e5d4bcb-36a5-4dac-999c-dd08d3c61e72" name="Changes" comment="edit post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/profile.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendLink.html" beforeDir="false" afterPath="$PROJECT_DIR$/friendLink.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666508790086</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="edit post">
+      <created>1666526348349</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1666526348349</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,10 +216,10 @@
     <MESSAGE value="add remark" />
     <MESSAGE value="edit image" />
     <MESSAGE value="edit image route" />
-    <MESSAGE value="edit post" />
     <MESSAGE value="edit past post" />
     <MESSAGE value="add new post" />
     <MESSAGE value="edit config" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit config" />
+    <MESSAGE value="edit post" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit post" />
   </component>
 </project>
