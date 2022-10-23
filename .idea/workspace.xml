@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e5d4bcb-36a5-4dac-999c-dd08d3c61e72" name="Changes" comment="add new post">
+    <list default="true" id="6e5d4bcb-36a5-4dac-999c-dd08d3c61e72" name="Changes" comment="edit config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2022-10-04-Homework2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-10-04-Homework2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2022-10-23-Homework3.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-10-23-Homework3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/profile.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666503222097</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="edit config">
+      <created>1666508790086</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1666508790086</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +211,7 @@
     <MESSAGE value="edit post" />
     <MESSAGE value="edit past post" />
     <MESSAGE value="add new post" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new post" />
+    <MESSAGE value="edit config" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit config" />
   </component>
 </project>
