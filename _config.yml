@@ -1,98 +1,87 @@
-# Site settings 配置站点
-title: 'Blog of Cauchy'
-description: 'There is no web description temporarily.'
-keywords: 'unity'
-url: 'https://Cauchyoooo.github.io' # your host
+# Blog config
+keywords: Blog,博客,Hexo
+author: Yourname
+description: A simple and beautiful blog
 
-# 导航栏 nav 中文字符空格：&emsp;
-nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
-  首页: '/'
-  标签: '/tags.html'
-  时间线: '/timeline.html'
-  关于博主: '/about.html'
-  友情链接: '/friendLink.html'
+# icon
+# If the is size is incorrect, please edit /source.css/style.styl
+favicon: /images/favicon.webp
+avatar: /images/logo.webp
+logo_dir: /images/logo@2x.webp
+logo_style: width:220px;
 
-# 博主
-author: true
-name: 'Ekin'
-NickName: 'Cauchy'
-webtitle: "Cauchy's Blog"
-bio: 'A Student.'
-about: true
-aboutyou: "A junior in SYSU."
-portraits: '/assets/profile.jpg' # your portraits image file path
+copyright:
+  show: true
+  default: "本文采用CC-BY-SA-3.0协议，转载请注明出处"
+  show_author: true
 
-# SNS
-SNS: true
-SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagram', 'weixin', 'Codepen']
-  mail: 'mailto:903729210@qq.com'
-  weixin: 'https://u.wechat.com/MIo5usQ6XFUC8hIxKUGpSWo' # 你的微信二维码存放的地址
-  qq: "https://qm.qq.com/cgi-bin/qm/qr?k=DH4YfUJjtW7Hydqq0z1Ax8AuMq3LtrC2&noverify=0&personal_qrcode_source=3" # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='你的QQ号'&site=qq&menu=yes
-  #github: ''
-  #Codepen: ''
-  #weibo: ''
-  #instagram: ''
-  #Twitter: ''
-  #Dribbble: ''
-  #Facebook: ''
-  #Google: ''
-  #zhihu: ''
-  #juejin: ''
-  #twitch: ''
+# 你可以在文章中对文章进行单独设置copyright
+# 例如: 
+# copyright: "本文著作权归作者所有"
+# author: "Li Hua and Han Meimei"
+# ---
 
-# 分页
-paginate: 10
-paginatepath: ['page:num']
 
-# since
-footer:
-  since: 2022
+footbar:
+  # Copyright
+  copyright: 全站CC-BY-SA-3.0
+  # 对于中国用户，如果你有网站备案：
+  beian: 
+  gongan: 
 
-# Markdown
-markdown: kramdown
-kramdown:
-  input: GFM
-# 代码高亮 使用rouge
-highlighter: rouge
-# 代码高亮主题使用pygments主题: autumn\ default\ emacs\ friendly\ manni\ murphy\ pastie\ perldoc\ tango 任选一个你喜欢的主题名称填在下面的单引号中
-pygmentsTheme: 'tango'
 
-# 友情链接
-friends:
-  myGithub: 'https://github.com/Cauchyoooo'
-  myGitee: 'https://gitee.com/Cauchyoooo'
-  UnityAssestStore: 'https://assetstore.unity.com/'
-  HumbleBundle: 'https://www.humblebundle.com/'
-  GodotEngine: 'https://godotengine.org/'
+# Social Links
+# If you want to add more, go to sidebar.pug
+github: https://github.com/Lhcfl
+mail: yourname@example.com
+zhihu: https://zhihu.com/people/jin-xin-4-68
+QQ: 
+twitter:
+instagram:
+rss:
+facebook:
+weibo:
 
-# 评论 最佳体验 在disqus、livere和Gitment之间三选一
-# disqus 评论
-disqus: false
-disqus_url: '' # https://abc.disqus.com/embed.js
-# 来必力评论
-livere: false
-livere_uid: 'MTAyMC8zNDI2OS8xMDgwNg==' # MTAyMC8zNDI2OS8xMDgwNg==
-# Gitment评论 OAuth Application
-Gitment: false
-Gitment_owner: ''  # github用户名
-Gitment_repo: ''  # github博客存放的仓库名
-client_id: ''  # 注册 OAuth Application 后获得的 client_id
-client_secret: ''  # 注册 OAuth Application 后获得的 client_secret
+# Nav menu
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /tags
+  About: /about
+  Links: /links
 
-# Share : weibo, qq, wechat, tencent, douban, qzone, linkedin, diandian, facebook, twitter, google
-social-share: true
-social-share-items: ['qq', 'qzone', 'wechat', 'weibo', 'twitter', 'facebook']
+# Navbar rightbtn
+rightbtn:
+  back: true
+  search: true       # 从Icarus抠出来的搜索框，关掉可以稍微提高速度
+  avatar: true
 
-# 百度统计 在baidu-url里填写自己相关的url代码
-baidu: false
-baidu-url: ''
-# 谷歌分析 在google-ID里填写自己在谷歌分析获得的追踪ID
-google: false
-google-ID: ''
 
-# 博客头信息备选颜色（该部分在站点中不充当站点变量，将其写在post的头信息中用来充当页面变量）
-color: rgb(154,133,255) rgb(255,90,90) rgb(255,210,32) rgb(98,170,255)
+# Some settings
+useSummary: false    # enable it will use summary of your posts in index
 
-plugins:
-  - jekyll-paginate
-  - jemoji
+useTagCloud: false   # use tagcloud instead of tag list
+tocMaxDepth: 6       # if you set 0, toc will close. The maximum is 6.
+
+
+  
+# Comment
+duoshuo: 
+disqus: 
+gentie: 
+# Valine comments https://valine.js.org
+valine:
+  enable: false # if you want use valine, please set enable: true
+  appid:  # your leancloud appid
+  appkey:  # your leancloud appkey
+  notify: false # true/false:mail notify !!!Test,Caution. https://github.com/xCss/Valine/wiki/Valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%82%AE%E4%BB%B6%E6%8F%90%E9%86%92%E8%AE%BE%E7%BD%AE
+  verify: false # true/false:verify code
+  avatar: mm # avatar style https://github.com/xCss/Valine/wiki/avatar-setting-for-valine
+  placeholder: hello, world # comment box placeholder
+
+
+# 百度统计设置
+# 请访问 https://tongji.baidu.com/ 
+# 获取统计JS代码放入 Anatolo/source/js/baidu-tongji.js
+
+Baidutongji: false
