@@ -1,7 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1983bc33-dfc3-4698-a482-b8a9034a24eb" name="变更" comment="" />
+    <list default="true" id="1983bc33-dfc3-4698-a482-b8a9034a24eb" name="变更" comment="change">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/_config.fluid.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/_config.landscape.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/_config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/scaffolds/draft.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/scaffolds/page.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/scaffolds/post.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework1/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework1/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework1/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework1/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework1/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework1/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework1/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework1/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework1/Homework1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/Homework2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework2/win.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/Boat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/Coast.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/Devil.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/Homework3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/Map.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/PandD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/Priest.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/Water.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/hw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/parabola.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework3/solar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/Camera.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/Homework4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/Light.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/anime.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/audio.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/scene.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/skybox.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/skybox2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/terrain1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/terrain2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework4/uml.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework5/01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework5/02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework5/03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework5/04.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework5/Homework5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework5/cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework6/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework6/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework6/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework6/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework6/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework6/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework6/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework6/Homework6.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework6/cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework6/射箭游戏.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/Homework7.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/Patrol.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/game.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2022/Homework7/map.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/1a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/1color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/1emission.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/1main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/1pshape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/1shape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/1ss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/1transform.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/2color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/2emission.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/2main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/2shape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/2size.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/2transform.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/2velocity.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/3collision.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/3emission.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/3main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/3shape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/3size.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/3sub.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/3trail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/3transform.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/4collision.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/4color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/4emission.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/4main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/4noise.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/4shape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/4size.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/4transform.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/5main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/Homework8.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/ParticleSystem.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/Scripts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/ball.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/btrail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/cloud.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/design.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/emission.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/gradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/shape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/show.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/trail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/_posts/2023/Homework8/对象结构图.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/source/about/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/themes/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/yarn.lock" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +163,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="change">
+      <created>1684491638367</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684491638367</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -23,5 +183,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change" />
+    <option name="LAST_COMMIT_MESSAGE" value="change" />
   </component>
 </project>
