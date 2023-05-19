@@ -22,7 +22,7 @@ subtitle: '游戏对象与图形基础'
 
 * 下载Fantasy Skybox FREE，构建自己的游戏场景（含天空、光源、音效、地形）
 
-![scene](../../../assets/game/1105/scene.jpg)
+![scene](/img/2022/Homework4/scene.jpg)
 
 * 写一个简单的总结，总结游戏对象的使用
 
@@ -32,19 +32,19 @@ subtitle: '游戏对象与图形基础'
 
 - Terrain：地面，通过Terrain自带的编辑工具可以编辑地形，如更改地形大小，修改地形高度，给地形“上色”，还可以添加树木花草等。我们更多地会选择使用别人做好现成的素材。
 
-    ![terrain1](../../../assets/game/1105/terrain1.jpg)
+    ![terrain1](/img/2022/Homework4/terrain1.jpg)
 
-    ![terrain2](../../../assets/game/1105/terrain2.jpg)
+    ![terrain2](/img/2022/Homework4/terrain2.jpg)
 
 - Light：灯光。光影的合理设置能更好地表达3D环境的颜色与情绪。有平行光、聚光灯、点光源、区域光等，不同光有不同属性面板。
 
     如点光源这个面板，我们能看到像颜色、阴影等设置。
 
-    ![Light](../../../assets/game/1105/Light.jpg)
+    ![Light](/img/2022/Homework4/Light.jpg)
 
 - Camera：摄影机。第一人称游戏可以作为玩家的眼睛，第三人称游戏可以跟随玩家运动。多摄像机是制造效果的重要手段。摄像机属性面板如下：
 
-    ![Camera](../../../assets/game/1105/Camera.jpg)
+    ![Camera](/img/2022/Homework4/Camera.jpg)
 
     各属性说明可参考官方文档：[https://docs.unity.cn/cn/2021.3/Manual/class-Camera.html][link1]
 
@@ -52,13 +52,13 @@ subtitle: '游戏对象与图形基础'
 
 - Skybox：天空盒（一种材料）。根据shader着色器的类型不同，需要配置不同的天空盒素材。如Skybox/Cubemap是一个圆形图片、Mobile/Skybox是6面图片、Skybox/Panoramic是一张全景图。制作好天空盒材质后，可以放到Camera的Skybox部件中。
 
-    ![skybox](../../../assets/game/1105/skybox.jpg)
+    ![skybox](/img/2022/Homework4/skybox.jpg)
 
-    ![skybox2](../../../assets/game/1105/skybox2.jpg)
+    ![skybox2](/img/2022/Homework4/skybox2.jpg)
 
 - Audio：音源。可利用Audio Source在场景中播放声音，利用附着在角色对象上的Audio Listener监听场景中的声音。Audio Source可以设置为3D，听起来有立体的效果。通过混响等技巧可以产生更复杂的效果。
 
-    ![audio](../../../assets/game/1105/audio.jpg)
+    ![audio](/img/2022/Homework4/audio.jpg)
 
 :ramen:
 
@@ -79,13 +79,13 @@ subtitle: '游戏对象与图形基础'
 
 实际效果如下图：
 
-![anime](../../../assets/game/1105/anime.gif)
+![anime](/img/2022/Homework4/anime.gif)
 
 
 
 #### 1 动作管理器的设计
 
-![uml](../../../assets/game/1105/uml.jpg)
+![uml](/img/2022/Homework4/uml.jpg)
 
 * 通过门面模式（控制器模式）输出组合好的几个动作，供原来程序调用。
 * 通过组合模式实现动作组合，按组合模式设计方法

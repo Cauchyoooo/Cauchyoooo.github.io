@@ -24,7 +24,7 @@ subtitle: '离散仿真引擎基础'
 
     **GameObjects**：是 Unity 中的基础对象，表示角色、道具和景物。它们本身并没有取得多大作为，但它们充当组件(Component)的容器，而组件可实现功能。
 
-    ![02.jpg](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/02.jpg)
+    ![](/img/2022/Homework2/02.jpg)
 
     我们可以看到GameObject列表下有各种属性的对象，包括空属性对象、3D对象、效果、灯光等
 
@@ -32,7 +32,7 @@ subtitle: '离散仿真引擎基础'
 
     **Assets**：表示 Unity 项目中用来创建游戏或应用的任何项；也可以代表项目中的视觉或音频元素，例如 3D 模型、纹理、精灵、音效或音乐；还可以表示更抽象的项目，例如任何用途的颜色渐变、动画遮罩或任意文本或数字数据。
 
-    ![03.jpg](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/03.jpg)
+    ![](/img/2022/Homework2/03.jpg)
 
     我们可以看到Assets创建下有很多类型的资源，如C#脚本，着色器，预制件等。
 
@@ -40,7 +40,7 @@ subtitle: '离散仿真引擎基础'
 
     简单地理解，游戏对象是真正加入到游戏场景里的实体，类似一个空盒子，需要向里面添加各种组件来实功能。资源是创建或外导入的各种数据，可以应用到不同游戏对象身上，可以只是存储在项目里，不一定会使用到当前的游戏场景中。
 
-    ![01.jpg](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/01.jpg)
+    ![](/img/2022/Homework2/01.jpg)
 
     
 
@@ -48,15 +48,15 @@ subtitle: '离散仿真引擎基础'
 
      这里用作展示的是官方的游戏教程里的资源与对象的组织和结构。
 
-     ![04.jpg](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/04.jpg)
+     ![](/img/2022/Homework2/04.jpg)
 
      我们可以看到**资源**一般是按**用途**来分的，不同的文件夹存放不同类别的资源，包括音频、角色、环境、脚本、预制件、场景等，这里还可以看到模型资源里的环境精灵是按颜色来分类的，脚本里面按使用场景分类。
 
      
 
-     ![05.jpg](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/05.jpg)
+     ![](/img/2022/Homework2/05.jpg)
 
-     ![06.jpg](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/06.jpg)
+     ![](/img/2022/Homework2/06.jpg)
 
      **游戏对象**主要是根据**功能**不同分类的，可以看到第一个游戏对象树有UI画布、摄像机、角色、格子、敌人等分支，第二个游戏对象树则是利用空对象来写分割线区分结构。
 
@@ -103,7 +103,7 @@ subtitle: '离散仿真引擎基础'
     }
     ```
 
-    ![07.jpg](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/07.jpg)
+    ![](/img/2022/Homework2/07.jpg)
 
     
 
@@ -125,7 +125,7 @@ subtitle: '离散仿真引擎基础'
 
     **图**
 
-    ![08.jpg](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/08.jpg)
+    ![](/img/2022/Homework2/08.jpg)
 
     Table的GameObject属性包含Tag(标签)、Layer(层)、Static(是否静态)、勾选框(是否活动)、属性名；
     Table的Transform属性包含Position(坐标)、Rotation(旋转角)、Scale(大小)；
@@ -133,7 +133,7 @@ subtitle: '离散仿真引擎基础'
 
     **UML图**
 
-    ![09.jpg](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/09.jpg)
+    ![](/img/2022/Homework2/09.jpg)
 
      
 
@@ -176,7 +176,7 @@ subtitle: '离散仿真引擎基础'
 
 实现的效果如下图
 
-![win](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/win.gif)
+![](/img/2022/Homework2/win.gif)
 
 **数据定义部分代码：**
 
@@ -558,9 +558,9 @@ void showAllMine(){
 
     * 使用 BroadcastMessage() 方法，向子对象发送消息。写出 BroadcastMessage() 的伪代码。
 
-        ![10](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/10.jpg)
-        ![11](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/11.jpg)
-        ![12](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/12.jpg)
+        ![](/img/2022/Homework2/10.jpg)
+        ![](/img/2022/Homework2/11.jpg)
+        ![](/img/2022/Homework2/12.jpg)
 
         ```c#
         public class BcM : MonoBehaviour
@@ -586,7 +586,7 @@ void showAllMine(){
         }
         ```
 
-        ![13](https://github.com/Cauchyoooo/BlogImg/blob/08abf092369216bf39c76374fd8c4b2ed27061e4/2022/Homework2/13.jpg)
+        ![](/img/2022/Homework2/13.jpg)
 
         
 

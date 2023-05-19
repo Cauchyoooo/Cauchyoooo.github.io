@@ -40,7 +40,7 @@ subtitle: '粒子系统与流动效果'
 
 ### 三、效果展示图
 
-![show](../../../assets/game/0105/show.gif)
+![show](/img/2023/Homework8/show.gif)
 
 
 
@@ -64,7 +64,7 @@ subtitle: '粒子系统与流动效果'
 
 ####  模块总结图
 
-![ParticleSystem](../../../assets/game/0105/ParticleSystem.png)
+![ParticleSystem](/img/2023/Homework8/ParticleSystem.png)
 
 * 打“√”的模块是初始粒子系统默认勾选的，也是基本必须模块；打<u>下划线</u>的模块是“雨云弹”所用到的。
 * 这些模块都可以通过脚本 [`ParticleSystem.xx `][linkapi] 来访问使用。事实上，这里没有用脚本访问使用粒子系统，因为初始就直观地设定好了粒子效果，也无需在过程中修改它。
@@ -81,7 +81,7 @@ subtitle: '粒子系统与流动效果'
 
     用于控制粒子系统在场景的播放演示，可以看到场景中的粒子属性如粒子数量、速度区间等。
 
-    ![win](../../../assets/game/0105/win.png)
+    ![win](/img/2023/Homework8/win.png)
 
     * Play - 播放；Restart - 重置；Stop - 停止播放；Playback Speed - 播放速度；Playback Time - 已播放时间；
 
@@ -91,7 +91,7 @@ subtitle: '粒子系统与流动效果'
 
 * Main 模块
 
-    ![main](../../../assets/game/0105/main.png)
+    ![main](/img/2023/Homework8/main.png)
 
     * 右边有三角形的都是下拉列表，可以更改选项或模式。右上角的"＋"号，可以选择显示所有模块或勾选的模块。
 
@@ -109,7 +109,7 @@ subtitle: '粒子系统与流动效果'
 
     当进行“大小数值”设置时，选择带有Curve的模式就会出现一条线，如果高亮该线就可以在Curve面板编辑它，不高亮时不代表没有应用，只是没有显示在面板里。
 
-    ![curve](../../../assets/game/0105/curve.png)
+    ![curve](/img/2023/Homework8/curve.png)
 
     * 最下方是一些系统预设，可通过实践来理解变化趋势。
     * 面板左上角的数值是峰值。
@@ -121,7 +121,7 @@ subtitle: '粒子系统与流动效果'
 
     当进行颜色设置，选择“Gradient”模式时，点击色条可打开编辑。
 
-    ![gradient](../../../assets/game/0105/gradient.png)
+    ![gradient](/img/2023/Homework8/gradient.png)
 
     * Mode可以选择Blend或者Fixed，这个两端选择不同颜色，自己尝试一下就知道区别，一般使用Blend模式，过渡比较自然。
 
@@ -139,7 +139,7 @@ subtitle: '粒子系统与流动效果'
 
     粒子发射大致有3种方式，随时间发射、随距离变化发射、特定时间点发射，这三种模式可叠加使用。
 
-    ![emission](../../../assets/game/0105/emission.png)
+    ![emission](/img/2023/Homework8/emission.png)
 
     * Rate over Time 为每秒发射的粒子数量。
 
@@ -153,7 +153,7 @@ subtitle: '粒子系统与流动效果'
 
     Shape 用于描述发射器的形状，即粒子沿着什么样的形状发射出去的。不同的shape会有不同的属性设置，在Texture上方的那部分。这里给出一些自己的理解例子。
 
-    ![shape](../../../assets/game/0105/shape.png)
+    ![shape](/img/2023/Homework8/shape.png)
 
     * 默认的Shape是Cone(圆锥)，将其Angle设为0就是圆柱，修改Thickness可以呈现环状。
     * Sphere是球状发射，Hemisphere是半球状发射，可用于一些需要中心向外发散的3d效果。
@@ -166,7 +166,7 @@ subtitle: '粒子系统与流动效果'
 
     如果会用GameObject的Trail，这个是相通的。可以用于制作拖尾效果。本人对这个也是初步了解状态，只会做很简陋的效果。
 
-    ![trail](../../../assets/game/0105/trail.png)
+    ![trail](/img/2023/Homework8/trail.png)
 
     * Mode模式选择：Particles是对每个粒子单独使用；Ribbon是通过粒子间连接形成。
     * Paricles模式：Ratio表示粒子会应用Trail的百分比；Lifetime为Trail的生命周期；Die with Particles表示是否随粒子销毁而销毁。
@@ -188,7 +188,7 @@ subtitle: '粒子系统与流动效果'
 
 “雨云弹”分为四个部分：①上升雾，②云，③雨，④雨滴溅射。
 
-![对象结构图](../../../assets/game/0105/对象结构图.png)
+![对象结构图](/img/2023/Homework8/对象结构图.png)
 
 **注**：
 
@@ -207,29 +207,29 @@ subtitle: '粒子系统与流动效果'
 
 ##### 效果图
 
-![up](../../../assets/game/0105/up.png)
+![up](/img/2023/Homework8/up.png)
 
 ##### 模块参数图
 
 * Transform
 
-    ![1transform](../../../assets/game/0105/1transform.png)
+    ![1transform](/img/2023/Homework8/1transform.png)
 
 * Main
 
-    ![1main](../../../assets/game/0105/1main.png)
+    ![1main](/img/2023/Homework8/1main.png)
 
 * Emission
 
-    ![1emission](../../../assets/game/0105/1emission.png)
+    ![1emission](/img/2023/Homework8/1emission.png)
 
 * Shape
 
-    ![1shape](../../../assets/game/0105/1shape.png)
+    ![1shape](/img/2023/Homework8/1shape.png)
 
 * Color over Lifetime
 
-    ![1color](../../../assets/game/0105/1color.png)
+    ![1color](/img/2023/Homework8/1color.png)
 
 
 
@@ -247,37 +247,37 @@ subtitle: '粒子系统与流动效果'
 
 ##### 效果图
 
-![cloud](../../../assets/game/0105/cloud.png)
+![cloud](/img/2023/Homework8/cloud.png)
 
 ##### 模块参数图
 
 * Transform
 
-    ![2transform](../../../assets/game/0105/2transform.png)
+    ![2transform](/img/2023/Homework8/2transform.png)
 
 * Main
 
-    ![2main](../../../assets/game/0105/2main.png)
+    ![2main](/img/2023/Homework8/2main.png)
 
 * Emission
 
-    ![2emission](../../../assets/game/0105/2emission.png)
+    ![2emission](/img/2023/Homework8/2emission.png)
 
 * Shape
 
-    ![2shape](../../../assets/game/0105/2shape.png)
+    ![2shape](/img/2023/Homework8/2shape.png)
 
 * Velocity over Lifetime
 
-    ![2velocity](../../../assets/game/0105/2velocity.png)
+    ![2velocity](/img/2023/Homework8/2velocity.png)
 
 * Color over Lifetime
 
-    ![2color](../../../assets/game/0105/2color.png)
+    ![2color](/img/2023/Homework8/2color.png)
 
 * Size over Lifetime
 
-    ![2size](../../../assets/game/0105/2size.png)
+    ![2size](/img/2023/Homework8/2size.png)
 
 
 
@@ -295,43 +295,43 @@ subtitle: '粒子系统与流动效果'
 
 ##### 效果图
 
-![down](../../../assets/game/0105/down.png)
+![down](/img/2023/Homework8/down.png)
 
 ##### 模块参数图
 
 * Transform
 
-    ![3transform](../../../assets/game/0105/3transform.png)
+    ![3transform](/img/2023/Homework8/3transform.png)
 
 * Main
 
-    ![3main](../../../assets/game/0105/3main.png)
+    ![3main](/img/2023/Homework8/3main.png)
 
 * Emission
 
-    ![3emission](../../../assets/game/0105/3emission.png)
+    ![3emission](/img/2023/Homework8/3emission.png)
 
 * Shape
 
-    ![3shape](../../../assets/game/0105/3shape.png)
+    ![3shape](/img/2023/Homework8/3shape.png)
 
 * Size over Lifetime
 
-    ![3size](../../../assets/game/0105/3size.png)
+    ![3size](/img/2023/Homework8/3size.png)
 
 * Collision
 
-    ![3collision](../../../assets/game/0105/3collision.png)
+    ![3collision](/img/2023/Homework8/3collision.png)
 
 * Sub Emitters
 
     需做好“**4 雨滴溅射**”部分再勾选修改该模块。
 
-    ![3sub](../../../assets/game/0105/3sub.png)
+    ![3sub](/img/2023/Homework8/3sub.png)
 
 * Trails
 
-    ![3trail](../../../assets/game/0105/3trail.png)
+    ![3trail](/img/2023/Homework8/3trail.png)
 
 
 
@@ -348,7 +348,7 @@ subtitle: '粒子系统与流动效果'
 
 ##### 效果图
 
-![circle](../../../assets/game/0105/circle.png)
+![circle](/img/2023/Homework8/circle.png)
 
 
 
@@ -356,35 +356,35 @@ subtitle: '粒子系统与流动效果'
 
 * Transform
 
-    ![4transform](../../../assets/game/0105/4transform.png)
+    ![4transform](/img/2023/Homework8/4transform.png)
 
 * Main
 
-    ![4main](../../../assets/game/0105/4main.png)
+    ![4main](/img/2023/Homework8/4main.png)
 
 * Emission
 
-    ![4emission](../../../assets/game/0105/4emission.png)
+    ![4emission](/img/2023/Homework8/4emission.png)
 
 * Shape
 
-    ![4shape](../../../assets/game/0105/4shape.png)
+    ![4shape](/img/2023/Homework8/4shape.png)
 
 * Color over Lifetime
 
-    ![4color](../../../assets/game/0105/4color.png)
+    ![4color](/img/2023/Homework8/4color.png)
 
 * Size over Lifetime
 
-    ![4size](../../../assets/game/0105/4size.png)
+    ![4size](/img/2023/Homework8/4size.png)
 
 * Noise
 
-    ![4noise](../../../assets/game/0105/4noise.png)
+    ![4noise](/img/2023/Homework8/4noise.png)
 
 * Collision
 
-    ![4collision](../../../assets/game/0105/4collision.png)
+    ![4collision](/img/2023/Homework8/4collision.png)
 
 
 
@@ -398,7 +398,7 @@ subtitle: '粒子系统与流动效果'
 
 当然，如果不带这个组件，处理方式也可以修改为，一开始就在场景初始化这个粒子系统，并设置不播放，每检测碰撞，就对这个空对象下挂载的三个粒子系统进行同时播放一次。我觉得比较麻烦，就采取了第一种方法，这在性能方面可能有所增加。
 
-![5main](../../../assets/game/0105/5main.png)
+![5main](/img/2023/Homework8/5main.png)
 
 
 
@@ -410,7 +410,7 @@ subtitle: '粒子系统与流动效果'
 
 ​		由5个带上黑色材质球的Plane简单拼凑组成，注意Plane的朝向并检查是否带有碰撞器。用于粒子系统碰撞及颜色衬托。
 
-![bg](../../../assets/game/0105/bg.png)
+![bg](/img/2023/Homework8/bg.png)
 
 
 
@@ -418,11 +418,11 @@ subtitle: '粒子系统与流动效果'
 
 * 一个带有Trail子对象的球体，组件勾上碰撞器，加入刚体和碰撞检测的脚本，设置如下图。
 
-    ![ball](../../../assets/game/0105/ball.png)
+    ![ball](/img/2023/Homework8/ball.png)
 
 * 球体的Trail拖尾效果做得比较简陋，设置如下图。
 
-    ![btrail](../../../assets/game/0105/btrail.png)
+    ![btrail](/img/2023/Homework8/btrail.png)
 
 
 
@@ -440,7 +440,7 @@ subtitle: '粒子系统与流动效果'
 
 设计模式采用课堂上的设计模式，参考的UML图如下。画的很好了，这里就不重新画了。
 
-![design](../../../assets/game/0105/design.png)
+![design](/img/2023/Homework8/design.png)
 
 
 
@@ -448,7 +448,7 @@ subtitle: '粒子系统与流动效果'
 
 日常上代码结构图，dddd。
 
-![Scripts](../../../assets/game/0105/Scripts.png)
+![Scripts](/img/2023/Homework8/Scripts.png)
 
 
 

@@ -31,7 +31,7 @@ subtitle: '空间与运动-牧师与恶魔'
 
     效果图：
 
-    ![parabola](../../../assets/game/1023/parabola.gif)
+    ![parabola](/img/2022/Homework3/parabola.gif)
 
     * 法一：对transform.position分方向加变化值
 
@@ -117,17 +117,17 @@ subtitle: '空间与运动-牧师与恶魔'
   
   实际效果：
   
-    ![solar](../../../assets/game/1023/solar.gif)
+    ![](/img/2022/Homework3/solar.gif)
 
 :lollipop:
 
 ### 二、编程实践
 
-![hw](../../../assets/game/1023/hw.jpg)
+![](/img/2022/Homework3/hw.jpg)
 
 试玩游戏界面
 
-![1](../../../assets/game/1023/1.jpg)
+![](/img/2022/Homework3/1.jpg)
 
 **游戏规则：**
 
@@ -168,29 +168,29 @@ subtitle: '空间与运动-牧师与恶魔'
 
 河岸(Coast)
 
-![Coast](../../../assets/game/1023/Coast.jpg)
+![](/img/2022/Homework3/Coast.jpg)
 
 河水(Water)
 
-![Water](../../../assets/game/1023/Water.jpg)
+![](/img/2022/Homework3/Water.jpg)
 
 船(Boat)
 
-![Boat](../../../assets/game/1023/Boat.jpg)
+![](/img/2022/Homework3/Boat.jpg)
 
 牧师(Priest)
 
-![Priest](../../../assets/game/1023/Priest.jpg)
+![](/img/2022/Homework3/Priest.jpg)
 
 恶魔(Devil)
 
-![Devil](../../../assets/game/1023/Devil.jpg)
+![](/img/2022/Homework3/Devil.jpg)
 
 
 
 #### MVC框架
 
-![Map](../../../assets/game/1023/Map.jpg)
+![Map](/img/2022/Homework3/Map.jpg)
 
 
 
@@ -830,7 +830,7 @@ public class myUserGUI : MonoBehaviour
 
 ##### 实现效果
 
-![PandD](../../../assets/game/1023/PandD.gif)
+![PandD](/img/2022/Homework3/PandD.gif)
 
 
 

@@ -59,7 +59,7 @@ public class DiskItem : ScriptableObject
 
 形状颜色与之匹配的分数规则如下图所示：
 
-![01](../../../assets/game/1113/01.png)
+![01](/img/2022/Homework5/01.png)
 
 再利用Monobehavior脚本为各飞碟附上相应属性
 
@@ -100,7 +100,7 @@ public class Test : MonoBehaviour
 
 在Unity中，**工厂方法+单实例+对象池** 通常都是同时一起用。这里给出一个设计例子：
 
-![02](../../../assets/game/1113/02.png)
+![02](/img/2022/Homework5/02.png)
 
 其中：
 
@@ -113,13 +113,13 @@ public class Test : MonoBehaviour
 
 #### 实现效果
 
-![04](../../../assets/game/1113/04.gif)
+![04](/img/2022/Homework5/04.gif)
 
 
 
 #### 代码框架
 
-![03](../../../assets/game/1113/03.png)
+![03](/img/2022/Homework5/03.png)
 
 其中标注了**固定模板**的类是基本与前几次作业使用的代码一致，除了`Singleton`是本次作业新增的。
 

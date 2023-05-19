@@ -36,13 +36,13 @@ subtitle: '物理系统与碰撞'
 
 **效果展示图：**
 
-![1](../../../assets/game/1204/1.gif)
+![1](/img/2022/Homework6/1.gif)
 
 
 
 **代码框架图：**
 
-![射箭游戏](../../../assets/game/1204/射箭游戏.png)
+![射箭游戏](/img/2022/Homework6/射箭游戏.png)
 
 
 
@@ -52,29 +52,29 @@ subtitle: '物理系统与碰撞'
 
 1个空对象作为父对象，包含5个圆柱体(Cylinder)。通过前后位置的摆放，可以在正面形成环状视觉效果。
 
-![2](../../../assets/game/1204/2.png)
+![2](/img/2022/Homework6/2.png)
 
 空对象上只挂载刚体组件rigidbody，碰撞检测选择连续的Continus。
 
-![4](../../../assets/game/1204/4.png)
+![4](/img/2022/Homework6/4.png)
 
 圆柱子对象则挂载MeshCollider，并勾选Convex和其下的Is Trigger让其有碰撞检测功能。
 
-![3](../../../assets/game/1204/3.png)
+![3](/img/2022/Homework6/3.png)
 
 * 箭
 
 1个空对象作为父对象，包含1个长方体(Cube)箭头、1个圆柱体(Cylinder)箭身、3个长方体(Cube)箭尾。
 
-![5](../../../assets/game/1204/5.png)
+![5](/img/2022/Homework6/5.png)
 
 空对象同样只挂载刚体组件rigidbody，注意勾选使用重力Use Gravity及使用动力学Is Kinematic。碰撞检测选择动态连续Continuous Dynamic。
 
-![6](../../../assets/game/1204/6.png)
+![6](/img/2022/Homework6/6.png)
 
 子对象只在箭头挂载碰撞器与箭头脚本。**注意：**如果箭头长度太短，又配合高速运动的话，碰撞检测很有可能会出现异常，比如一次性检测到多个或者少检测到几个。
 
-![7](../../../assets/game/1204/7.png)
+![7](/img/2022/Homework6/7.png)
 
 
 
