@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/Blog/img/favic.png">
-  <link rel="icon" href="/Blog/img/favic.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/project/img/favic.png">
+  <link rel="icon" href="/project/img/favic.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,21 +19,21 @@
     <meta name="description" content="作业简介： 1.自定义组件：涉及SciptableObject 2.编程实践（Hit UFO）：涉及工厂模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HW5: 与游戏世界交互">
-<meta property="og:url" content="https://cauchyoooo.github.io/Blog/2022/11/13/2022/Homework5/Homework5/index.html">
+<meta property="og:url" content="https://cauchyoooo.github.io/project/2022/11/13/2022/Homework5/Homework5/index.html">
 <meta property="og:site_name" content="Cauchy&#39;s Blog">
 <meta property="og:description" content="作业简介： 1.自定义组件：涉及SciptableObject 2.编程实践（Hit UFO）：涉及工厂模式">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/11/13/assets/game/1113/01.png">
-<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/11/13/assets/game/1113/02.png">
-<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/11/13/assets/game/1113/04.gif">
-<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/11/13/assets/game/1113/03.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/project/2022/11/13/assets/game/1113/01.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/project/2022/11/13/assets/game/1113/02.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/project/2022/11/13/assets/game/1113/04.gif">
+<meta property="og:image" content="https://cauchyoooo.github.io/project/2022/11/13/assets/game/1113/03.png">
 <meta property="article:published_time" content="2022-11-13T06:00:00.000Z">
 <meta property="article:modified_time" content="2023-05-19T07:05:30.680Z">
 <meta property="article:author" content="Cauchy">
 <meta property="article:tag" content="unity">
 <meta property="article:tag" content="singleton">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cauchyoooo.github.io/Blog/2022/11/13/assets/game/1113/01.png">
+<meta name="twitter:image" content="https://cauchyoooo.github.io/project/2022/11/13/assets/game/1113/01.png">
   
   
   
@@ -61,12 +61,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/Blog/css/main.css" />
+<link  rel="stylesheet" href="/project/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/Blog/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/project/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/Blog/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/project/css/highlight-dark.css" />
   
 
 
@@ -75,15 +75,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"cauchyoooo.github.io","root":"/Blog/","version":"1.9.4","typing":{"enable":true,"typeSpeed":50,"cursorChar":"!","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/Blog/local-search.xml"};
+    var CONFIG = {"hostname":"cauchyoooo.github.io","root":"/project/","version":"1.9.4","typing":{"enable":true,"typeSpeed":50,"cursorChar":"!","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/project/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/Blog/js/utils.js" ></script>
-  <script  src="/Blog/js/color-schema.js" ></script>
+  <script  src="/project/js/utils.js" ></script>
+  <script  src="/project/js/color-schema.js" ></script>
   
 
 
@@ -100,7 +100,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/Blog/">
+    <a class="navbar-brand" href="/project/">
       <strong>Cauchy</strong>
     </a>
 
@@ -119,7 +119,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/Blog/">
+              <a class="nav-link" href="/project/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -131,7 +131,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/Blog/archives/">
+              <a class="nav-link" href="/project/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -143,7 +143,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/Blog/categories/">
+              <a class="nav-link" href="/project/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -155,7 +155,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/Blog/tags/">
+              <a class="nav-link" href="/project/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -167,7 +167,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/Blog/about/">
+              <a class="nav-link" href="/project/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -197,7 +197,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/Blog/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/project/img/default.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -327,7 +327,7 @@
 </tbody>
 </table>
 <p>形状颜色与之匹配的分数规则如下图所示：</p>
-<p><img src="../../../assets/game/1113/01.png" srcset="/Blog/img/loading.gif" lazyload alt="01"></p>
+<p><img src="../../../assets/game/1113/01.png" srcset="/project/img/loading.gif" lazyload alt="01"></p>
 <p>再利用Monobehavior脚本为各飞碟附上相应属性</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">public</span> DiskItem diskItem;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>这样，我们自定义的预制件就做好了。</p>
@@ -357,7 +357,7 @@
 <li>屏蔽创建与销毁的业务逻辑，是程序易于扩展。</li>
 </ul>
 <p>在Unity中，<strong>工厂方法+单实例+对象池</strong> 通常都是同时一起用。这里给出一个设计例子：</p>
-<p><img src="../../../assets/game/1113/02.png" srcset="/Blog/img/loading.gif" lazyload alt="02"></p>
+<p><img src="../../../assets/game/1113/02.png" srcset="/project/img/loading.gif" lazyload alt="02"></p>
 <p>其中：</p>
 <ul>
 <li>DiskFactory 类是一个单实例类，用钱买场景单实例创建</li>
@@ -366,9 +366,9 @@
 <li>对象模板包括飞碟对象与飞碟数据</li>
 </ul>
 <h4 id="实现效果">实现效果</h4>
-<p><img src="../../../assets/game/1113/04.gif" srcset="/Blog/img/loading.gif" lazyload alt="04"></p>
+<p><img src="../../../assets/game/1113/04.gif" srcset="/project/img/loading.gif" lazyload alt="04"></p>
 <h4 id="代码框架">代码框架</h4>
-<p><img src="../../../assets/game/1113/03.png" srcset="/Blog/img/loading.gif" lazyload alt="03"></p>
+<p><img src="../../../assets/game/1113/03.png" srcset="/project/img/loading.gif" lazyload alt="03"></p>
 <p>其中标注了<strong>固定模板</strong>的类是基本与前几次作业使用的代码一致，除了<code>Singleton</code>是本次作业新增的。</p>
 <p><code>Singleton</code>代码如下：</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Singleton</span>&lt;<span class="hljs-title">T</span>&gt; : <span class="hljs-title">MonoBehaviour</span> <span class="hljs-keyword">where</span> <span class="hljs-title">T</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">static</span> T instance;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> T Instance&#123;<br>        <span class="hljs-keyword">get</span>&#123;<br>            <span class="hljs-keyword">if</span>(instance == <span class="hljs-literal">null</span>)&#123;<br>                instance = (T)FindObjectOfType(<span class="hljs-keyword">typeof</span>(T));<br>                <span class="hljs-keyword">if</span>(instance == <span class="hljs-literal">null</span>)&#123;<br>                    Debug.LogError(<br>                        <span class="hljs-string">&quot;An instance of &quot;</span>+<br>                        <span class="hljs-keyword">typeof</span>(T)+<br>                        <span class="hljs-string">&quot; is needed in the scene, but there is none.&quot;</span><br>                    );<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">return</span> instance;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -416,7 +416,7 @@
     
       <span class="category-chain">
         
-  <a href="/Blog/categories/Game/" class="category-chain-item">Game</a>
+  <a href="/project/categories/Game/" class="category-chain-item">Game</a>
   
   
 
@@ -431,9 +431,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/Blog/tags/unity/">#unity</a>
+        <a href="/project/tags/unity/">#unity</a>
       
-        <a href="/Blog/tags/singleton/">#singleton</a>
+        <a href="/project/tags/singleton/">#singleton</a>
       
     </div>
   
@@ -446,7 +446,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>HW5: 与游戏世界交互</div>
-      <div>https://cauchyoooo.github.io/Blog/2022/11/13/2022/Homework5/Homework5/</div>
+      <div>https://cauchyoooo.github.io/project/2022/11/13/2022/Homework5/Homework5/</div>
     </div>
     <div class="license-meta">
       
@@ -490,7 +490,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/Blog/2022/12/04/2022/Homework6/Homework6/" title="HW6: 物理系统与碰撞">
+                      <a href="/project/2022/12/04/2022/Homework6/Homework6/" title="HW6: 物理系统与碰撞">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">HW6: 物理系统与碰撞</span>
                         <span class="visible-mobile">上一篇</span>
@@ -500,7 +500,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/Blog/2022/11/05/2022/Homework4/Homework4/" title="HW4: 游戏对象与图形基础">
+                      <a href="/project/2022/11/05/2022/Homework4/Homework4/" title="HW4: 游戏对象与图形基础">
                         <span class="hidden-mobile">HW4: 游戏对象与图形基础</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -630,15 +630,15 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/Blog/js/events.js" ></script>
-<script  src="/Blog/js/plugins.js" ></script>
+<script  src="/project/js/events.js" ></script>
+<script  src="/project/js/plugins.js" ></script>
 
 
 
 
 
   
-    <script  src="/Blog/js/img-lazyload.js" ></script>
+    <script  src="/project/js/img-lazyload.js" ></script>
   
 
 
@@ -737,7 +737,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/Blog/js/local-search.js" ></script>
+  <script  src="/project/js/local-search.js" ></script>
 
 
 
@@ -745,7 +745,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/Blog/js/boot.js" ></script>
+<script  src="/project/js/boot.js" ></script>
 
 
   
