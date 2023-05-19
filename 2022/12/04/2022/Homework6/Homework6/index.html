@@ -1,0 +1,725 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/Blog/img/favic.png">
+  <link rel="icon" href="/Blog/img/favic.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cauchy">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="作业简介：  打靶游戏（涉及刚体物理学、碰撞）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HW6: 物理系统与碰撞">
+<meta property="og:url" content="https://cauchyoooo.github.io/Blog/2022/12/04/2022/Homework6/Homework6/index.html">
+<meta property="og:site_name" content="Cauchy&#39;s Blog">
+<meta property="og:description" content="作业简介：  打靶游戏（涉及刚体物理学、碰撞）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/12/04/assets/game/1204/1.gif">
+<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/12/04/assets/game/1204/%E5%B0%84%E7%AE%AD%E6%B8%B8%E6%88%8F.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/12/04/assets/game/1204/2.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/12/04/assets/game/1204/4.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/12/04/assets/game/1204/3.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/12/04/assets/game/1204/5.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/12/04/assets/game/1204/6.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/Blog/2022/12/04/assets/game/1204/7.png">
+<meta property="article:published_time" content="2022-12-04T06:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-19T07:05:06.336Z">
+<meta property="article:author" content="Cauchy">
+<meta property="article:tag" content="unity">
+<meta property="article:tag" content="rigidbody">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cauchyoooo.github.io/Blog/2022/12/04/assets/game/1204/1.gif">
+  
+  
+  
+  <title>HW6: 物理系统与碰撞 - Cauchy&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/Blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/Blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/Blog/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"cauchyoooo.github.io","root":"/Blog/","version":"1.9.4","typing":{"enable":true,"typeSpeed":50,"cursorChar":"!","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/Blog/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/Blog/js/utils.js" ></script>
+  <script  src="/Blog/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/Blog/">
+      <strong>Cauchy</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Blog/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Blog/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Blog/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Blog/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Blog/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/Blog/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">物理系统与碰撞</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-12-04 14:00" pubdate>
+          2022年12月4日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          9.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          77 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">物理系统与碰撞</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>作业简介：</p>
+<ol>
+<li>打靶游戏（涉及刚体物理学、碰撞）</li>
+</ol>
+</blockquote>
+<span id="more"></span>
+<p>🐎</p>
+<h2 id="打靶游戏">打靶游戏</h2>
+<ul>
+<li>靶对象为5环，按环记分；</li>
+<li>箭对象，射中后要插在靶上；射中后，箭对象产生颤抖效果，到下一次射击或1秒以后；</li>
+<li>游戏仅一轮，无限trials；添加一个风向和强度标志，提高难度。</li>
+</ul>
+<p><strong>项目地址：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw6/Assets">https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw6/Assets</a></p>
+<p><strong>效果展示图：</strong></p>
+<p><img src="../../../assets/game/1204/1.gif" srcset="/Blog/img/loading.gif" lazyload alt="1"></p>
+<p><strong>代码框架图：</strong></p>
+<p><img src="../../../assets/game/1204/%E5%B0%84%E7%AE%AD%E6%B8%B8%E6%88%8F.png" srcset="/Blog/img/loading.gif" lazyload alt="射箭游戏"></p>
+<h4 id="1、预制件制作">1、预制件制作</h4>
+<ul>
+<li>靶子</li>
+</ul>
+<p>1个空对象作为父对象，包含5个圆柱体(Cylinder)。通过前后位置的摆放，可以在正面形成环状视觉效果。</p>
+<p><img src="../../../assets/game/1204/2.png" srcset="/Blog/img/loading.gif" lazyload alt="2"></p>
+<p>空对象上只挂载刚体组件rigidbody，碰撞检测选择连续的Continus。</p>
+<p><img src="../../../assets/game/1204/4.png" srcset="/Blog/img/loading.gif" lazyload alt="4"></p>
+<p>圆柱子对象则挂载MeshCollider，并勾选Convex和其下的Is Trigger让其有碰撞检测功能。</p>
+<p><img src="../../../assets/game/1204/3.png" srcset="/Blog/img/loading.gif" lazyload alt="3"></p>
+<ul>
+<li>箭</li>
+</ul>
+<p>1个空对象作为父对象，包含1个长方体(Cube)箭头、1个圆柱体(Cylinder)箭身、3个长方体(Cube)箭尾。</p>
+<p><img src="../../../assets/game/1204/5.png" srcset="/Blog/img/loading.gif" lazyload alt="5"></p>
+<p>空对象同样只挂载刚体组件rigidbody，注意勾选使用重力Use Gravity及使用动力学Is Kinematic。碰撞检测选择动态连续Continuous Dynamic。</p>
+<p><img src="../../../assets/game/1204/6.png" srcset="/Blog/img/loading.gif" lazyload alt="6"></p>
+<p>子对象只在箭头挂载碰撞器与箭头脚本。**注意：**如果箭头长度太短，又配合高速运动的话，碰撞检测很有可能会出现异常，比如一次性检测到多个或者少检测到几个。</p>
+<p><img src="../../../assets/game/1204/7.png" srcset="/Blog/img/loading.gif" lazyload alt="7"></p>
+<p>这样，主要的预制件就做好了。这里还做了一个背景板的预制件，附带了碰撞器效果，使射出靶范围的箭能停在“墙”上。</p>
+<h4 id="2、部分代码解析">2、部分代码解析</h4>
+<ul>
+<li>arrowScript</li>
+</ul>
+<p>箭头脚本：检测箭与靶子的碰撞。</p>
+<p>这里利用靶子的圆柱组件Tag来识别打到哪个环，从而计分。为避免多次碰撞，加入cnt计数限制只计分一次碰撞。碰撞完成后，将箭的空对象的刚体属性更改为is Kinematic，且速度归零；箭的tag改为”Hit“，用于触发抖动运动。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">arrowScript</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> cnt = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">string</span> ColliderTag;<br>    <span class="hljs-keyword">private</span> ScoreController scoreController;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnTriggerEnter</span>(<span class="hljs-params">Collider tar</span>)</span> &#123;<br>        cnt++;<br>        <span class="hljs-keyword">if</span>(cnt&gt;<span class="hljs-number">1</span>) <span class="hljs-keyword">return</span>;<br>        ColliderTag = tar.gameObject.tag;<br>        Rigidbody parent = <span class="hljs-keyword">this</span>.gameObject.transform.parent.gameObject.GetComponent&lt;Rigidbody&gt;();<br>        parent.isKinematic = <span class="hljs-literal">true</span>;<br>        parent.velocity = Vector3.zero;<br>        parent.gameObject.tag = <span class="hljs-string">&quot;Hit&quot;</span>;<br>        scoreController.Record(ColliderTag);<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">reset</span>()</span>&#123;<br>        cnt = <span class="hljs-number">0</span>;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Awake</span>()</span>&#123;<br>        scoreController = (ScoreController)FindObjectOfType(<span class="hljs-keyword">typeof</span>(ScoreController));<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<ul>
+<li>CCFlyAction</li>
+</ul>
+<p>箭飞行运动：传入wind和force参数，来控制箭上施加的物理学的力。rot参数根据wind参数，增加自旋效果。为确保Tremble抖动运动值运行一次，这里加入了isTrem判断。只有运行完飞行运动且Tag为&quot;Hit&quot;的物体才会发生抖动。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CCFlyAction</span> : <span class="hljs-title">SSAction</span><br>&#123;<br>    <span class="hljs-keyword">public</span> Vector3 force;<br>    <span class="hljs-keyword">public</span> Vector3 wind;<br>    <span class="hljs-keyword">private</span> Vector3 rot = <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">bool</span> isTrem = <span class="hljs-literal">false</span>;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> CCFlyAction <span class="hljs-title">GetCCFlyAction</span>(<span class="hljs-params">Vector3 _wind, Vector3 _force</span>)</span>&#123;<br>        CCFlyAction action = ScriptableObject.CreateInstance&lt;CCFlyAction&gt;();<br>        action.force = _force;<br>        action.wind = _wind;<br>        action.rot.z = _wind.x;<br>        <span class="hljs-keyword">return</span> action;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span>&#123;<br>        isTrem = <span class="hljs-literal">false</span>;<br>        gameObject.transform.LookAt(force);<br>		gameObject.GetComponent&lt;Rigidbody&gt;().isKinematic = <span class="hljs-literal">false</span>;<br>		gameObject.GetComponent&lt;Rigidbody&gt;().AddForce(force, ForceMode.Impulse);<br>		gameObject.GetComponent&lt;Rigidbody&gt;().velocity = Vector3.zero;<br>		gameObject.GetComponent&lt;Rigidbody&gt;().AddForce(force + wind, ForceMode.Impulse);<br>        gameObject.GetComponent&lt;Rigidbody&gt;().angularVelocity = rot;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span>&#123;&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">FixedUpdate</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">this</span>.gameObject.GetComponent&lt;Rigidbody&gt;().AddForce(wind, ForceMode.Force);<br>        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.gameObject.tag == <span class="hljs-string">&quot;Hit&quot;</span> &amp;&amp; isTrem == <span class="hljs-literal">false</span>)&#123;<br>            <span class="hljs-keyword">this</span>.callback.SSActionEvent(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">this</span>.gameObject);<br>            isTrem = <span class="hljs-literal">true</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (transform.position.y &lt; <span class="hljs-number">-10</span> || transform.position.z &gt; <span class="hljs-number">-6.7</span>) &#123;<br>            <span class="hljs-keyword">this</span>.destroy = <span class="hljs-literal">true</span>;<br>        &#125;<br>    &#125;<br><br>&#125;<br><br><br></code></pre></td></tr></table></figure>
+<ul>
+<li>CCTrembleAction</li>
+</ul>
+<p>箭抖动运动：抖动时间为0.5秒，通过箭的轻微上下运动来模拟抖动效果。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CCTrembleAction</span> : <span class="hljs-title">SSAction</span><br>&#123;<br>    <span class="hljs-built_in">float</span> radian = <span class="hljs-number">0</span>;<br>	<span class="hljs-built_in">float</span> per_radian = <span class="hljs-number">3f</span>;<br>	<span class="hljs-built_in">float</span> radius = <span class="hljs-number">0.01f</span>;<br>	Vector3 old_pos;<br>	<span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> left_time = <span class="hljs-number">0.5f</span>;<br><br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span>&#123;<br>        old_pos = transform.position;<br>    &#125;<br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> CCTrembleAction <span class="hljs-title">GetSSAction</span>()</span>&#123;<br>		CCTrembleAction tremble = CreateInstance&lt;CCTrembleAction&gt;();<br>		<span class="hljs-keyword">return</span> tremble;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span>&#123;<br>		left_time -= Time.deltaTime;<br>		<span class="hljs-keyword">if</span> (left_time &lt;= <span class="hljs-number">0</span>)&#123;<br>			transform.position = old_pos;<br>			<span class="hljs-keyword">this</span>.destroy = <span class="hljs-literal">true</span>;<br>			<span class="hljs-keyword">this</span>.callback.SSActionEvent(<span class="hljs-keyword">this</span>);<br>		&#125;<br>		radian += per_radian;<br>		<span class="hljs-built_in">float</span> dy = Mathf.Cos(radian) * radius; <br>		transform.position = old_pos + <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0</span>, dy, <span class="hljs-number">0</span>);<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">FixedUpdate</span>()</span>&#123;&#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>ArrowFactory</li>
+</ul>
+<p>箭工厂：用于生成与回收箭。这里是相当于最多生成10支箭，用完了则回收最先用的箭来用。生成箭或利用回收的箭时，记得恢复箭的初始属性。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ArrowFactory</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">public</span> GameObject arrow = <span class="hljs-literal">null</span>;<br>    List&lt;GameObject&gt; used;<br>    Queue&lt;GameObject&gt; free;<br><br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        used = <span class="hljs-keyword">new</span> List&lt;GameObject&gt;();<br>        free = <span class="hljs-keyword">new</span> Queue&lt;GameObject&gt;();<br>        <br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> GameObject <span class="hljs-title">GetArrow</span>()</span>&#123;<br>        <span class="hljs-keyword">if</span>(free.Count == <span class="hljs-number">0</span>)&#123;<br>            arrow = Instantiate(Resources.Load&lt;GameObject&gt;(<span class="hljs-string">&quot;Prefabs/arrow&quot;</span>));<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            arrow = free.Dequeue();<br>            arrow.gameObject.SetActive(<span class="hljs-literal">true</span>);<br>            arrow.gameObject.tag = <span class="hljs-string">&quot;Untagged&quot;</span>;<br>            arrow.gameObject.transform.Find(<span class="hljs-string">&quot;head&quot;</span>).gameObject.SetActive(<span class="hljs-literal">true</span>);<br>            arrow.gameObject.transform.Find(<span class="hljs-string">&quot;body&quot;</span>).gameObject.SetActive(<span class="hljs-literal">true</span>);<br>            arrow.gameObject.transform.Find(<span class="hljs-string">&quot;head&quot;</span>).GetComponent&lt;arrowScript&gt;().reset();<br>        &#125;<br>        arrow.transform.position = <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">2.5f</span>, <span class="hljs-number">-12.5F</span>);<br>        used.Add(arrow);<br>        <span class="hljs-keyword">return</span> arrow; <br>    &#125;<br><br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">FreeArrow</span>()</span>&#123;<br>        <span class="hljs-keyword">if</span>(used.Count&lt;=<span class="hljs-number">10</span>)<br>            <span class="hljs-keyword">return</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>; i&lt;used.Count; i++)&#123;<br>            <span class="hljs-keyword">if</span>(used[i].gameObject.transform.position.y &lt;= <span class="hljs-number">-10</span> || used[i].gameObject.transform.position.z &gt;= <span class="hljs-number">-5</span> || used[i].gameObject.tag == <span class="hljs-string">&quot;Hit&quot;</span>)&#123;<br>                used[i].GetComponent&lt;Rigidbody&gt;().isKinematic = <span class="hljs-literal">true</span>;<br>                used[i].gameObject.SetActive(<span class="hljs-literal">false</span>);<br>                used[i].transform.position =  <span class="hljs-keyword">new</span> Vector3 (<span class="hljs-number">0</span>, <span class="hljs-number">2.5f</span>, <span class="hljs-number">-12.5f</span>);<br>                free.Enqueue(used[i]);<br>                used.Remove(used[i]);<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>RoundController</li>
+</ul>
+<p>场景控制器：加载资源（靶子、墙体等），生成风，移动箭等的功能实现。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">RoundController</span> : <span class="hljs-title">MonoBehaviour</span>, <span class="hljs-title">ISceneController</span>, <span class="hljs-title">IUserAction</span><br>&#123;<br>    ArrowFactory factory;<br>    <span class="hljs-keyword">public</span> CCActionManager actionManager;<br>    <span class="hljs-keyword">public</span> ScoreController scoreController;<br>    <span class="hljs-keyword">public</span> myUserGUI userGUI;<br><br>    <span class="hljs-keyword">public</span> GameObject target;<br>    <span class="hljs-keyword">public</span> GameObject arrow;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> isStart = <span class="hljs-literal">false</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> windTag = <span class="hljs-string">&quot;&quot;</span>;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">float</span> wind_directX;     <br>	<span class="hljs-keyword">private</span> <span class="hljs-built_in">float</span> wind_directY; <br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;   <br>        Director director = Director.getInstance();<br>        director.currentSceneController = <span class="hljs-keyword">this</span>;<br>        gameObject.AddComponent&lt;ArrowFactory&gt;();<br>        factory = Singleton&lt;ArrowFactory&gt;.Instance;<br>        actionManager = gameObject.AddComponent&lt;CCActionManager&gt;() <span class="hljs-keyword">as</span> CCActionManager;<br>        scoreController = gameObject.AddComponent&lt;ScoreController&gt;() <span class="hljs-keyword">as</span> ScoreController;<br>        userGUI = gameObject.AddComponent&lt;myUserGUI&gt;() <span class="hljs-keyword">as</span> myUserGUI;<br>        LoadResource();<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadResource</span>()</span><br>    &#123;<br>        target = GameObject.Instantiate&lt;GameObject&gt;(Resources.Load&lt;GameObject&gt;(<span class="hljs-string">&quot;Prefabs/target&quot;</span>));<br>        GameObject.Instantiate&lt;GameObject&gt;(Resources.Load&lt;GameObject&gt;(<span class="hljs-string">&quot;Prefabs/wall&quot;</span>));<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">if</span>(isStart) &#123;<br>            factory.FreeArrow();<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Init</span>()</span>&#123;<br>        <span class="hljs-keyword">if</span>(arrow == <span class="hljs-literal">null</span>)&#123;<br>            wind_directX = Random.Range(<span class="hljs-number">-4</span>, <span class="hljs-number">4</span>);<br>			wind_directY = Random.Range(<span class="hljs-number">-4</span>, <span class="hljs-number">4</span>);<br>            CreateWind();<br>            arrow = factory.GetArrow();<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">moveBow</span>(<span class="hljs-params">Vector3 mousePos</span>)</span>&#123;<br>        <span class="hljs-keyword">if</span>(!isStart)<br>            <span class="hljs-keyword">return</span>;<br>        arrow.transform.LookAt(mousePos * <span class="hljs-number">30</span>);<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shootArrow</span>(<span class="hljs-params">Vector3 force</span>)</span>&#123;<br>        <span class="hljs-keyword">if</span>(isStart)<br>		&#123;<br>			Vector3 wind = <span class="hljs-keyword">new</span> Vector3(wind_directX, wind_directY, <span class="hljs-number">0</span>);<br>			actionManager.MoveArrow(arrow, wind, force * <span class="hljs-number">10</span>);<br>			arrow = <span class="hljs-literal">null</span>;<br>		&#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> <span class="hljs-title">GetStart</span>()</span>&#123;<br>        <span class="hljs-keyword">return</span> isStart;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> <span class="hljs-title">GetWind</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> windTag;<br>    &#125;<br><br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Begin</span>()</span><br>    &#123;<br>        isStart = <span class="hljs-literal">true</span>;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> <span class="hljs-title">GetScore</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> scoreController.score;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">CreateWind</span>()</span>&#123;<br>        <span class="hljs-built_in">string</span> Horizontal = <span class="hljs-string">&quot;&quot;</span>, Vertical = <span class="hljs-string">&quot;&quot;</span>, level = <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">if</span> (wind_directX &gt; <span class="hljs-number">0</span>) &#123;<br>            Horizontal = <span class="hljs-string">&quot;西&quot;</span>;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (wind_directX &lt;= <span class="hljs-number">0</span>) &#123;<br>            Horizontal = <span class="hljs-string">&quot;东&quot;</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (wind_directY &gt; <span class="hljs-number">0</span>) &#123;<br>            Vertical = <span class="hljs-string">&quot;南&quot;</span>;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (wind_directY &lt;= <span class="hljs-number">0</span>) &#123;<br>            Vertical = <span class="hljs-string">&quot;北&quot;</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span> ((wind_directX + wind_directY) / <span class="hljs-number">2</span> &gt; <span class="hljs-number">-1</span> &amp;&amp; (wind_directX + wind_directY) / <span class="hljs-number">2</span> &lt; <span class="hljs-number">1</span>)<br>		&#123;<br>			level = <span class="hljs-string">&quot;1 级&quot;</span>;<br>		&#125;<br>		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((wind_directX + wind_directY) / <span class="hljs-number">2</span> &gt; <span class="hljs-number">-2</span> &amp;&amp; (wind_directX + wind_directY) / <span class="hljs-number">2</span> &lt; <span class="hljs-number">2</span>)<br>		&#123;<br>			level = <span class="hljs-string">&quot;2 级&quot;</span>;<br>		&#125;<br>		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((wind_directX + wind_directY) / <span class="hljs-number">2</span> &gt; <span class="hljs-number">-3</span> &amp;&amp; (wind_directX + wind_directY) / <span class="hljs-number">2</span> &lt; <span class="hljs-number">3</span>)<br>		&#123;<br>			level = <span class="hljs-string">&quot;3 级&quot;</span>;<br>		&#125;<br>		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((wind_directX + wind_directY) / <span class="hljs-number">2</span> &gt; <span class="hljs-number">-5</span> &amp;&amp; (wind_directX + wind_directY) / <span class="hljs-number">2</span> &lt; <span class="hljs-number">5</span>)<br>		&#123;<br>			level = <span class="hljs-string">&quot;4 级&quot;</span>;<br>		&#125;<br>        windTag = Horizontal + Vertical + <span class="hljs-string">&quot;风&quot;</span> + <span class="hljs-string">&quot; &quot;</span> + level;<br>    <br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> <span class="hljs-title">isArrowNull</span>()</span>&#123;<br>        <span class="hljs-keyword">return</span> (arrow != <span class="hljs-literal">null</span>);<br>    &#125;<br><br>    <br>&#125;<br><br></code></pre></td></tr></table></figure>
+<ul>
+<li>ScoreController</li>
+</ul>
+<p>计分器：利用靶子上带有碰撞器的物体的tag来计分。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ScoreController</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> score;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span>&#123;<br>        score = <span class="hljs-number">0</span>;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Record</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> ColliderTag</span>)</span>&#123;<br>        <span class="hljs-keyword">if</span>(ColliderTag == <span class="hljs-string">&quot;10&quot;</span>)&#123;<br>            score+=<span class="hljs-number">10</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(ColliderTag == <span class="hljs-string">&quot;8&quot;</span>)&#123;<br>            score+=<span class="hljs-number">8</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(ColliderTag == <span class="hljs-string">&quot;6&quot;</span>)&#123;<br>            score+=<span class="hljs-number">6</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(ColliderTag == <span class="hljs-string">&quot;4&quot;</span>)&#123;<br>            score+=<span class="hljs-number">4</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(ColliderTag == <span class="hljs-string">&quot;2&quot;</span>)&#123;<br>            score+=<span class="hljs-number">2</span>;<br>        &#125;<br>                <br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Reset</span>()</span>&#123;<br>        score = <span class="hljs-number">0</span>;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<h4 id="3、小结">3、小结</h4>
+<ul>
+<li>要区分物理学与运动学，Rigidbody与isKinematic等的使用。</li>
+<li>要区分各种碰撞检测模式，Discrete、Continus、Continus Dynamic等，有性能上的差异。</li>
+<li>碰撞异常要思考：物体是否启用碰撞器、碰撞检测模式是否正确、物体运动是否过于高速、物体碰撞器体积是否过小等。</li>
+<li>熟悉Rigidbody的一些属性与使用，方便实现物理运动效果。</li>
+</ul>
+<blockquote>
+<p>Cauchy        2022.12.04</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/Blog/categories/Game/" class="category-chain-item">Game</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/Blog/tags/unity/">#unity</a>
+      
+        <a href="/Blog/tags/rigidbody/">#rigidbody</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>HW6: 物理系统与碰撞</div>
+      <div>https://cauchyoooo.github.io/Blog/2022/12/04/2022/Homework6/Homework6/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Cauchy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年12月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/Blog/2022/12/18/2022/Homework7/Homework7/" title="HW7: 模型与动画">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">HW7: 模型与动画</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/Blog/2022/11/13/2022/Homework5/Homework5/" title="HW5: 与游戏世界交互">
+                        <span class="hidden-mobile">HW5: 与游戏世界交互</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/Blog/js/events.js" ></script>
+<script  src="/Blog/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/Blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/Blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/Blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
