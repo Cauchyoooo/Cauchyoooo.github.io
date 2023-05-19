@@ -23,24 +23,24 @@
 <meta property="og:site_name" content="Cauchy&#39;s Blog">
 <meta property="og:description" content="作业简介： 1.简答题（涉及游戏对象运动） 2.编程实践 ps. GIF图片加载比较慢">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/parabola.gif">
-<meta property="og:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/solar.gif">
-<meta property="og:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/hw.jpg">
-<meta property="og:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/1.jpg">
-<meta property="og:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/Coast.jpg">
-<meta property="og:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/Water.jpg">
-<meta property="og:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/Boat.jpg">
-<meta property="og:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/Priest.jpg">
-<meta property="og:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/Devil.jpg">
-<meta property="og:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/Map.jpg">
-<meta property="og:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/PandD.gif">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework3/parabola.gif">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework3/solar.gif">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework3/hw.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework3/1.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework3/Coast.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework3/Water.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework3/Boat.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework3/Priest.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework3/Devil.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework3/Map.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework3/PandD.gif">
 <meta property="article:published_time" content="2022-10-22T22:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-19T13:05:44.761Z">
+<meta property="article:modified_time" content="2023-05-19T13:35:27.204Z">
 <meta property="article:author" content="Cauchy">
 <meta property="article:tag" content="unity">
 <meta property="article:tag" content="MVC">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cauchyoooo.github.io/2022/10/assets/game/1023/parabola.gif">
+<meta name="twitter:image" content="https://cauchyoooo.github.io/img/2022/Homework3/parabola.gif">
   
   
   
@@ -305,7 +305,7 @@
 <p>用三种以上方法实现物体的抛物线运动。</p>
 <p>抛物线运动的实质是一个方向匀速运动，与其垂直的一个方向进行匀加速运动。</p>
 <p>效果图：</p>
-<p><img src="../../../assets/game/1023/parabola.gif" srcset="/img/loading.gif" lazyload alt="parabola"></p>
+<p><img src="/img/2022/Homework3/parabola.gif" srcset="/img/loading.gif" lazyload alt="parabola"></p>
 <ul>
 <li>
 <p>法一：对transform.position分方向加变化值</p>
@@ -326,14 +326,14 @@
 <p>这里的实现方式是写了个脚本，将围绕太阳旋转的星球都加入这个脚本，然后手动设置不同星球的自传和公转的速度。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">planetAround</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">public</span> GameObject target;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> selfround = <span class="hljs-number">1f</span>; <span class="hljs-comment">//自转速度</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> pubaround = <span class="hljs-number">1f</span>; <span class="hljs-comment">//公转速度</span><br>    <br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">this</span>.transform.Rotate(Vector3.up * Time.deltaTime *selfround);<br>        <span class="hljs-keyword">this</span>.transform.RotateAround(target.transform.position, Vector3.up, <span class="hljs-number">5</span> * pubaround * Time.deltaTime);<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 <p>实际效果：</p>
-<p><img src="../../../assets/game/1023/solar.gif" srcset="/img/loading.gif" lazyload alt="solar"></p>
+<p><img src="/img/2022/Homework3/solar.gif" srcset="/img/loading.gif" lazyload alt=""></p>
 </li>
 </ul>
 <p>🍭</p>
 <h3 id="二、编程实践">二、编程实践</h3>
-<p><img src="../../../assets/game/1023/hw.jpg" srcset="/img/loading.gif" lazyload alt="hw"></p>
+<p><img src="/img/2022/Homework3/hw.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>试玩游戏界面</p>
-<p><img src="../../../assets/game/1023/1.jpg" srcset="/img/loading.gif" lazyload alt="1"></p>
+<p><img src="/img/2022/Homework3/1.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
 <p><strong>游戏规则：</strong></p>
 <ul>
 <li>游戏开始时，在河岸的一边有3个牧师与3个魔鬼，他们都想过到河的另一边。</li>
@@ -408,17 +408,17 @@
 <h4 id="Prefabs">Prefabs</h4>
 <p>涉及的材质与部分预制来源于Assest Store。</p>
 <p>河岸(Coast)</p>
-<p><img src="../../../assets/game/1023/Coast.jpg" srcset="/img/loading.gif" lazyload alt="Coast"></p>
+<p><img src="/img/2022/Homework3/Coast.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>河水(Water)</p>
-<p><img src="../../../assets/game/1023/Water.jpg" srcset="/img/loading.gif" lazyload alt="Water"></p>
+<p><img src="/img/2022/Homework3/Water.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>船(Boat)</p>
-<p><img src="../../../assets/game/1023/Boat.jpg" srcset="/img/loading.gif" lazyload alt="Boat"></p>
+<p><img src="/img/2022/Homework3/Boat.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>牧师(Priest)</p>
-<p><img src="../../../assets/game/1023/Priest.jpg" srcset="/img/loading.gif" lazyload alt="Priest"></p>
+<p><img src="/img/2022/Homework3/Priest.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>恶魔(Devil)</p>
-<p><img src="../../../assets/game/1023/Devil.jpg" srcset="/img/loading.gif" lazyload alt="Devil"></p>
+<p><img src="/img/2022/Homework3/Devil.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
 <h4 id="MVC框架">MVC框架</h4>
-<p><img src="../../../assets/game/1023/Map.jpg" srcset="/img/loading.gif" lazyload alt="Map"></p>
+<p><img src="/img/2022/Homework3/Map.jpg" srcset="/img/loading.gif" lazyload alt="Map"></p>
 <h4 id="主要代码">主要代码</h4>
 <p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw3/Assets">https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw3/Assets</a></p>
 <h5 id="Director">Director</h5>
@@ -452,7 +452,7 @@
 <p>游戏结束的界面设计。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">myUserGUI</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">private</span> IUserAction action;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> status = <span class="hljs-number">0</span>;<br>    GUIStyle style;<br>    GUIStyle buttonStyle;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span>&#123;<br>        action = Director.getInstance ().currentSceneController <span class="hljs-keyword">as</span> IUserAction;<br><br>		style = <span class="hljs-keyword">new</span> GUIStyle();<br>		style.fontSize = <span class="hljs-number">40</span>;<br>		style.alignment = TextAnchor.MiddleCenter;<br><br>		buttonStyle = <span class="hljs-keyword">new</span> GUIStyle(<span class="hljs-string">&quot;button&quot;</span>);<br>		buttonStyle.fontSize = <span class="hljs-number">30</span>;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnGUI</span>()</span> &#123;<br>		<span class="hljs-keyword">if</span> (status == <span class="hljs-number">-1</span>) &#123;<br>			GUI.Label(<span class="hljs-keyword">new</span> Rect(Screen.width/<span class="hljs-number">2</span><span class="hljs-number">-50</span>, Screen.height/<span class="hljs-number">2</span><span class="hljs-number">-85</span>, <span class="hljs-number">100</span>, <span class="hljs-number">50</span>), <span class="hljs-string">&quot;Gameover!&quot;</span>, style);<br>			<span class="hljs-keyword">if</span> (GUI.Button(<span class="hljs-keyword">new</span> Rect(Screen.width/<span class="hljs-number">2</span><span class="hljs-number">-70</span>, Screen.height/<span class="hljs-number">2</span>, <span class="hljs-number">140</span>, <span class="hljs-number">70</span>), <span class="hljs-string">&quot;Restart&quot;</span>, buttonStyle)) &#123;<br>				status = <span class="hljs-number">0</span>;<br>				action.Restart ();<br>			&#125;<br>		&#125; <br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(status == <span class="hljs-number">1</span>) &#123;<br>			GUI.Label(<span class="hljs-keyword">new</span> Rect(Screen.width/<span class="hljs-number">2</span><span class="hljs-number">-50</span>, Screen.height/<span class="hljs-number">2</span><span class="hljs-number">-85</span>, <span class="hljs-number">100</span>, <span class="hljs-number">50</span>), <span class="hljs-string">&quot;You win!&quot;</span>, style);<br>			<span class="hljs-keyword">if</span> (GUI.Button(<span class="hljs-keyword">new</span> Rect(Screen.width/<span class="hljs-number">2</span><span class="hljs-number">-70</span>, Screen.height/<span class="hljs-number">2</span>, <span class="hljs-number">140</span>, <span class="hljs-number">70</span>), <span class="hljs-string">&quot;Restart&quot;</span>, buttonStyle)) &#123;<br>				status = <span class="hljs-number">0</span>;<br>				action.Restart ();<br>			&#125;<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <h5 id="实现效果">实现效果</h5>
-<p><img src="../../../assets/game/1023/PandD.gif" srcset="/img/loading.gif" lazyload alt="PandD"></p>
+<p><img src="/img/2022/Homework3/PandD.gif" srcset="/img/loading.gif" lazyload alt="PandD"></p>
 <h5 id="有待改进">有待改进</h5>
 <ul>
 <li>没有添加角色行走的动画，及制作朝向</li>
