@@ -104,8 +104,8 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  respository: git@github.com:Cauchyoooo/Cauchyoooo.github.io.git
-  branch: main
+  repository: git@github.com:Cauchyoooo/Cauchyoooo.github.io.git
+  branch: gh-pages
   message: 'update blog'
 
 ## markdown 渲染引擎配置，默认是hexo-renderer-marked，这个插件渲染速度更快，且有新特性
