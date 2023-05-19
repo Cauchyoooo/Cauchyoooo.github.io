@@ -30,6 +30,8 @@ subtitle: '游戏的本质'
 
 ![Image 3](3.jpg)
 
+![img3](https://github.com/Cauchyoooo/Cauchyoooo.github.io/blob/d10a3e902bc0d7ee8d88e4fd1e66666e4f227479/source/_posts/2022/Homework1/3.jpg)
+
 
 
 ​		:apple:		“空気読み”直译过来是“读空气”，也是网络词汇“KY”(不会读空气)的由来。这个意思跟我们中文的“察言观色”或者“有眼力见儿”差不多。玩家在普通的“察言观色”模式需要做的是根据氛围，快速地判断需要作出反应。操作很简单，通过键盘上的上下左右与空格键控制即可，由于什么时候用什么按键游戏没有说明，要自己去思考探索。
