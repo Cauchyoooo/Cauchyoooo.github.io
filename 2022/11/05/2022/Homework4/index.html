@@ -1,0 +1,789 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cauchy">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="作业简介： 1.基本操作演练（游戏场景） 2.编程实践">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HW4: 游戏对象与图形基础">
+<meta property="og:url" content="https://cauchyoooo.github.io/2022/11/05/2022/Homework4/index.html">
+<meta property="og:site_name" content="Cauchy&#39;s Blog">
+<meta property="og:description" content="作业简介： 1.基本操作演练（游戏场景） 2.编程实践">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework4/scene.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework4/terrain1.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework4/terrain2.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework4/Light.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework4/Camera.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework4/skybox.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework4/skybox2.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework4/audio.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework4/anime.gif">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework4/uml.jpg">
+<meta property="article:published_time" content="2022-11-05T06:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-19T13:26:21.610Z">
+<meta property="article:author" content="Cauchy">
+<meta property="article:tag" content="unity">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cauchyoooo.github.io/img/2022/Homework4/scene.jpg">
+  
+  
+  
+  <title>HW4: 游戏对象与图形基础 - Cauchy&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"cauchyoooo.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":50,"cursorChar":"!","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Cauchy</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">游戏对象与图形基础</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-11-05 14:00" pubdate>
+          2022年11月5日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          23 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">游戏对象与图形基础</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>作业简介：</p>
+<p>1.基本操作演练（游戏场景）</p>
+<p>2.编程实践</p>
+</blockquote>
+<span id="more"></span>
+
+<p>:shallow_pan_of_food:</p>
+<h3 id="一、基本操作演练"><a href="#一、基本操作演练" class="headerlink" title="一、基本操作演练"></a>一、基本操作演练</h3><ul>
+<li>下载Fantasy Skybox FREE，构建自己的游戏场景（含天空、光源、音效、地形）</li>
+</ul>
+<p><img src="/img/2022/Homework4/scene.jpg" srcset="/img/loading.gif" lazyload alt="scene"></p>
+<ul>
+<li>写一个简单的总结，总结游戏对象的使用</li>
+</ul>
+<p>目前学习到的一些游戏对象包括：3D Object里的基本物体和Terrain、Light、Camera、Skybox、Audio。每个GameObject都有Transform属性来设置位置旋转大小等。</p>
+<ul>
+<li><p>基本物体（Cube、Sphere之类的）：单纯的物体，通过添加材质更改外观，添加各种组件实现功能。</p>
+</li>
+<li><p>Terrain：地面，通过Terrain自带的编辑工具可以编辑地形，如更改地形大小，修改地形高度，给地形“上色”，还可以添加树木花草等。我们更多地会选择使用别人做好现成的素材。</p>
+<p>  <img src="/img/2022/Homework4/terrain1.jpg" srcset="/img/loading.gif" lazyload alt="terrain1"></p>
+<p>  <img src="/img/2022/Homework4/terrain2.jpg" srcset="/img/loading.gif" lazyload alt="terrain2"></p>
+</li>
+<li><p>Light：灯光。光影的合理设置能更好地表达3D环境的颜色与情绪。有平行光、聚光灯、点光源、区域光等，不同光有不同属性面板。</p>
+<p>  如点光源这个面板，我们能看到像颜色、阴影等设置。</p>
+<p>  <img src="/img/2022/Homework4/Light.jpg" srcset="/img/loading.gif" lazyload alt="Light"></p>
+</li>
+<li><p>Camera：摄影机。第一人称游戏可以作为玩家的眼睛，第三人称游戏可以跟随玩家运动。多摄像机是制造效果的重要手段。摄像机属性面板如下：</p>
+<p>  <img src="/img/2022/Homework4/Camera.jpg" srcset="/img/loading.gif" lazyload alt="Camera"></p>
+<p>  各属性说明可参考官方文档：<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/class-Camera.html">https://docs.unity.cn/cn/2021.3/Manual/class-Camera.html</a></p>
+</li>
+<li><p>Skybox：天空盒（一种材料）。根据shader着色器的类型不同，需要配置不同的天空盒素材。如Skybox&#x2F;Cubemap是一个圆形图片、Mobile&#x2F;Skybox是6面图片、Skybox&#x2F;Panoramic是一张全景图。制作好天空盒材质后，可以放到Camera的Skybox部件中。</p>
+<p>  <img src="/img/2022/Homework4/skybox.jpg" srcset="/img/loading.gif" lazyload alt="skybox"></p>
+<p>  <img src="/img/2022/Homework4/skybox2.jpg" srcset="/img/loading.gif" lazyload alt="skybox2"></p>
+</li>
+<li><p>Audio：音源。可利用Audio Source在场景中播放声音，利用附着在角色对象上的Audio Listener监听场景中的声音。Audio Source可以设置为3D，听起来有立体的效果。通过混响等技巧可以产生更复杂的效果。</p>
+<p>  <img src="/img/2022/Homework4/audio.jpg" srcset="/img/loading.gif" lazyload alt="audio"></p>
+</li>
+</ul>
+<p>:ramen:</p>
+<h3 id="二、编程实践"><a href="#二、编程实践" class="headerlink" title="二、编程实践"></a>二、编程实践</h3><p>牧师与魔鬼 动作分离版+设计一个裁判类（当游戏到达结束条件时，通知场景控制器游戏结束）</p>
+<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw4/Assets/Scripts">https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw4/Assets/Scripts</a></p>
+<p>对比上一个版本的一些区别：</p>
+<ul>
+<li>将动作抽离出来形成一个动作管理器</li>
+<li>增加了裁判类通知游戏结束</li>
+<li>增加了计时器功能</li>
+<li>游戏结束会在船靠岸之后才提示弹出来</li>
+</ul>
+<p>实际效果如下图：</p>
+<p><img src="/img/2022/Homework4/anime.gif" srcset="/img/loading.gif" lazyload alt="anime"></p>
+<h4 id="1-动作管理器的设计"><a href="#1-动作管理器的设计" class="headerlink" title="1 动作管理器的设计"></a>1 动作管理器的设计</h4><p><img src="/img/2022/Homework4/uml.jpg" srcset="/img/loading.gif" lazyload alt="uml"></p>
+<ul>
+<li>通过门面模式（控制器模式）输出组合好的几个动作，供原来程序调用。</li>
+<li>通过组合模式实现动作组合，按组合模式设计方法</li>
+<li>接口回调（函数回调）实现管理者与被管理者解耦</li>
+<li>通过模板方法，让使用者减少对动作管理过程细节的要求</li>
+<li>优点：<ul>
+<li>程序更能适应需求变化</li>
+<li>对象更容易被复用</li>
+<li>程序更易于维护</li>
+</ul>
+</li>
+</ul>
+<p><strong>1.动作基类(SSAction)</strong></p>
+<ul>
+<li>SSAction是动作的基类，其他动作类都继承于它。</li>
+<li>ScriptableObject是不需要绑定GameObject对象的可编程基类。这些对象受Unity引擎场景管理。</li>
+<li>protected 防止用户自己new抽象的对象</li>
+<li>使用virtual申明虚方法，通过重写实现多态。</li>
+<li>利用接口(ISSActionCallback)实现消息通知，避免与动作管理者直接依赖</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">SSAction</span> : <span class="hljs-title">ScriptableObject</span> <br>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> enable = <span class="hljs-literal">true</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> destroy = <span class="hljs-literal">false</span>;<br><br>    <span class="hljs-keyword">public</span> GameObject gameObject &#123;<span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>;&#125;<br>    <span class="hljs-keyword">public</span> Transform transform &#123;<span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>;&#125;<br>    <span class="hljs-keyword">public</span> ISSActionCallback callback &#123;<span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>;&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-title">SSAction</span>()</span>&#123;&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> System.NotImplementedException();<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> System.NotImplementedException();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>2.动作管理基类(SSActionManager)</strong></p>
+<ul>
+<li>该类实现所有动作的基本管理，CCActionManager会继承于它。</li>
+<li>利用一个动作字典来进行动作的运行，先将waitingAdd中的动作加入字典中，运行动作后，再将它加入到waitingDelete中销毁。由于字典是线程不安全的，如果控制好队列，如每次最多存在一个动作，就不会导致动作的混乱。</li>
+<li>提供了添加新动作的方法RunAction。该方法把游戏对象与动作绑定，并绑定该动作事件的消息接受者。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">SSActionManager</span> : <span class="hljs-title">MonoBehaviour</span> &#123;<br>    <span class="hljs-comment">//动作集，以字典形式存在</span><br>    <span class="hljs-keyword">private</span> Dictionary&lt;<span class="hljs-built_in">int</span>, SSAction&gt; actions = <span class="hljs-keyword">new</span> Dictionary&lt;<span class="hljs-built_in">int</span>, SSAction&gt;();<br>    <span class="hljs-comment">//等待被加入的动作队列(动作即将开始)</span><br>    <span class="hljs-keyword">private</span> List&lt;SSAction&gt; waitingAdd = <span class="hljs-keyword">new</span> List&lt;SSAction&gt;();<br>    <span class="hljs-comment">//等待被删除的动作队列(动作已完成)</span><br>    <span class="hljs-keyword">private</span> List&lt;<span class="hljs-built_in">int</span>&gt; waitingDelete = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-built_in">int</span>&gt;();<br><br>    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-comment">//将waitingAdd中的动作保存</span><br>        <span class="hljs-keyword">foreach</span> (SSAction ac <span class="hljs-keyword">in</span> waitingAdd)<br>            actions[ac.GetInstanceID()] = ac;<br>        waitingAdd.Clear();<br><br>        <span class="hljs-comment">//运行被保存的事件</span><br>        <span class="hljs-keyword">foreach</span> (KeyValuePair&lt;<span class="hljs-built_in">int</span>, SSAction&gt; kv <span class="hljs-keyword">in</span> actions)<br>        &#123;<br>            SSAction ac = kv.Value;<br>            <span class="hljs-keyword">if</span> (ac.destroy)<br>            &#123;<br>                waitingDelete.Add(ac.GetInstanceID());<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (ac.enable)<br>            &#123;<br>                ac.Update();<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-comment">//销毁waitingDelete中的动作</span><br>        <span class="hljs-keyword">foreach</span> (<span class="hljs-built_in">int</span> key <span class="hljs-keyword">in</span> waitingDelete)<br>        &#123;<br>            SSAction ac = actions[key];<br>            actions.Remove(key);<br>            Destroy(ac);<br>        &#125;<br>        waitingDelete.Clear();<br>    &#125;<br><br>    <span class="hljs-comment">//准备运行一个动作，将动作初始化，并加入到waitingAdd</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">RunAction</span>(<span class="hljs-params">GameObject gameObject, SSAction action, ISSActionCallback manager</span>)</span><br>    &#123;<br>        action.gameObject = gameObject;<br>        action.transform = gameObject.transform;<br>        action.callback = manager;<br>        waitingAdd.Add(action);<br>        action.Start();<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>3.动作事件接口定义(ISSActionCallback)</strong></p>
+<ul>
+<li>接口作为接收通知对象的抽象类型，所有事件管理者都必须实现该接口，来实现事件调度。</li>
+<li>事件类型定义，使用了<strong>枚举变量</strong>。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-built_in">enum</span> SSActionEventType:<span class="hljs-built_in">int</span> &#123;Started, Completed&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title">ISSActionCallback</span><br>&#123;<br>    <span class="hljs-comment">//回调函数</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SSActionEvent</span>(<span class="hljs-params"></span></span><br><span class="hljs-params"><span class="hljs-function">        SSAction source,</span></span><br><span class="hljs-params"><span class="hljs-function">        SSActionEventType events = SSActionEventType.Completed,</span></span><br><span class="hljs-params"><span class="hljs-function">        <span class="hljs-built_in">int</span> intParam = <span class="hljs-number">0</span>,</span></span><br><span class="hljs-params"><span class="hljs-function">        <span class="hljs-built_in">string</span> strParam = <span class="hljs-literal">null</span>,</span></span><br><span class="hljs-params"><span class="hljs-function">        Object objectParam = <span class="hljs-literal">null</span></span></span><br><span class="hljs-params"><span class="hljs-function">    </span>)</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>4.简单动作实现(CCMoveToAction)</strong></p>
+<ul>
+<li>实现移动动作，将物体移动到目标位置，并通知任务完成。</li>
+<li>让Unity创建动作类，确保内存正确回收。</li>
+<li>override 多态，c++必须申明重写，java则默认重写。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CCMoveToAction</span> : <span class="hljs-title">SSAction</span><br>&#123;<br>    <br>    <span class="hljs-keyword">public</span> Vector3 target; <span class="hljs-comment">//目的地</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> speed; <span class="hljs-comment">//速度</span><br>    <br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">CCMoveToAction</span>()</span>&#123;&#125;<br><br>    <span class="hljs-comment">//生产函数(工厂模式)</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> CCMoveToAction <span class="hljs-title">GetSSAction</span>(<span class="hljs-params">Vector3 target, <span class="hljs-built_in">float</span> speed</span>)</span><br>    &#123;<br>        CCMoveToAction action = ScriptableObject.CreateInstance&lt;CCMoveToAction&gt;();<br>        action.target = target;<br>        action.speed = speed;<br>        <span class="hljs-keyword">return</span> action;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span>&#123;&#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-comment">//判断是否符合移动条件</span><br>        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.gameObject == <span class="hljs-literal">null</span> || <span class="hljs-keyword">this</span>.transform.position == target)<br>        &#123;<br><br>            <span class="hljs-keyword">this</span>.destroy = <span class="hljs-literal">true</span>;<br>            <span class="hljs-keyword">this</span>.callback.SSActionEvent(<span class="hljs-keyword">this</span>);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <span class="hljs-comment">//移动</span><br>        <span class="hljs-keyword">this</span>.transform.position = Vector3.MoveTowards(<span class="hljs-keyword">this</span>.transform.position, target, speed * Time.deltaTime);<br>    &#125;    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>5.顺序动作组合类实现(CCSequenceAction)</strong></p>
+<ul>
+<li>实现一个动作组合序列，顺序播放动作。</li>
+<li>让动作组合继承抽象动作SSAction，能够进一步组合；实现回调接收，能接受被组合动作的事件。</li>
+<li>创建一个动作顺序执行序列，-1表示无限循环，start开始动作。</li>
+<li>SSActionEvent 收到当前动作执行完成，推下一个动作，如果完成一次循环，减次数。如完成，通知该动作的管理者。</li>
+<li>Start 执行动作前，为每个动作注入当前动作游戏对象，并将自己作为动作事件的接收者。</li>
+<li>OnDestroy 如果自己被注销，应该释放自己管理的动作。这里不会被注销，因此没有实现该功能。</li>
+<li>这是标准的组合设计模式。被组合对象和组合对象同属一种类型。通过该模式，我们能实现几乎满足所有越位需要、非常复杂的动作管理。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CCSequenceAction</span> : <span class="hljs-title">SSAction</span>, <span class="hljs-title">ISSActionCallback</span><br>&#123;<br>    <span class="hljs-keyword">public</span> List&lt;SSAction&gt; sequence; <span class="hljs-comment">//动作序列</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> repeat = <span class="hljs-number">-1</span>; <span class="hljs-comment">//重复次数</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> start = <span class="hljs-number">0</span>; <span class="hljs-comment">//动作开始指针</span><br><br>    <span class="hljs-comment">//生产函数(工厂模式)</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> CCSequenceAction <span class="hljs-title">GetSSAction</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> repeat, <span class="hljs-built_in">int</span> start, List&lt;SSAction&gt; sequence</span>)</span><br>    &#123;<br>        CCSequenceAction action = ScriptableObject.CreateInstance&lt;CCSequenceAction&gt;();<br>        action.repeat = repeat;<br>        action.sequence = sequence;<br>        action.start = start;<br>        <span class="hljs-keyword">return</span> action;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">foreach</span> (SSAction action <span class="hljs-keyword">in</span> sequence)<br>        &#123;<br>            action.gameObject = <span class="hljs-keyword">this</span>.gameObject;<br>            action.transform = <span class="hljs-keyword">this</span>.transform;<br>            action.callback = <span class="hljs-keyword">this</span>;<br>            action.Start();<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (sequence.Count == <span class="hljs-number">0</span>)    <br>            <span class="hljs-keyword">return</span>;<br>        <span class="hljs-keyword">if</span> (start &lt; sequence.Count)<br>            sequence[start].Update();<br>    &#125;<br><br>    <span class="hljs-comment">//回调处理，当有动作完成时触发</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSActionEvent</span>(<span class="hljs-params"></span></span><br><span class="hljs-params"><span class="hljs-function">        SSAction source,</span></span><br><span class="hljs-params"><span class="hljs-function">        SSActionEventType events = SSActionEventType.Completed,</span></span><br><span class="hljs-params"><span class="hljs-function">        <span class="hljs-built_in">int</span> Param = <span class="hljs-number">0</span>,</span></span><br><span class="hljs-params"><span class="hljs-function">        <span class="hljs-built_in">string</span> strParam = <span class="hljs-literal">null</span>,</span></span><br><span class="hljs-params"><span class="hljs-function">        Object objectParam = <span class="hljs-literal">null</span></span>)</span><br>    &#123;<br>        source.destroy = <span class="hljs-literal">false</span>;<br>        <span class="hljs-keyword">this</span>.start++;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.start &gt;= sequence.Count)<br>        &#123;<br>            <span class="hljs-keyword">this</span>.start = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">if</span> (repeat &gt; <span class="hljs-number">0</span>)<br>                repeat--;<br>            <span class="hljs-keyword">if</span> (repeat == <span class="hljs-number">0</span>)<br>            &#123;<br>                <span class="hljs-keyword">this</span>.destroy = <span class="hljs-literal">true</span>;<br>                <span class="hljs-keyword">this</span>.callback.SSActionEvent(<span class="hljs-keyword">this</span>);<br>            &#125;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnDestroy</span>()</span><br>    &#123;<br>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> Something</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>6.动作组合管理(CCActionManager)</strong></p>
+<p>上一版本的moveable脚本拆分到这个类和FirstController的方法中，实现船和角色的移动管理。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-comment">// 将原来移动的方法 放在这里</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CCActionManager</span> : <span class="hljs-title">SSActionManager</span>, <span class="hljs-title">ISSActionCallback</span><br>&#123;<br>    <span class="hljs-comment">//是否正在运动</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">bool</span> isMoving = <span class="hljs-literal">false</span>;<br>    <span class="hljs-comment">//船移动动作类</span><br>    <span class="hljs-keyword">public</span> CCMoveToAction moveBoatAction;<br>    <span class="hljs-comment">//人移动动作类(需要组合)</span><br>    <span class="hljs-keyword">public</span> CCSequenceAction moveRoleAction;<br>    <span class="hljs-comment">//控制器</span><br>    <span class="hljs-keyword">public</span> FirstController controller;<br><br>    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        controller = (FirstController)Director.getInstance().currentSceneController;<br>        controller.actionManager = <span class="hljs-keyword">this</span>;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> <span class="hljs-title">IsMoving</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> isMoving;<br>    &#125;<br><br>    <span class="hljs-comment">//移动船</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MoveBoat</span>(<span class="hljs-params">GameObject boat, Vector3 target, <span class="hljs-built_in">float</span> speed</span>)</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (isMoving)<br>            <span class="hljs-keyword">return</span>;<br>        isMoving = <span class="hljs-literal">true</span>;<br>        moveBoatAction = CCMoveToAction.GetSSAction(target, speed);<br>        <span class="hljs-keyword">this</span>.RunAction(boat, moveBoatAction, <span class="hljs-keyword">this</span>);<br>    &#125;<br><br>    <span class="hljs-comment">//移动人</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MoveRole</span>(<span class="hljs-params">GameObject role, Vector3 mid_destination, Vector3 destination, <span class="hljs-built_in">int</span> speed</span>)</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (isMoving)<br>            <span class="hljs-keyword">return</span>;<br>        isMoving = <span class="hljs-literal">true</span>;<br>        moveRoleAction = CCSequenceAction.GetSSAction(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> List&lt;SSAction&gt; <br>            &#123;   CCMoveToAction.GetSSAction(mid_destination, speed), <br>                CCMoveToAction.GetSSAction(destination, speed) &#125;);<br>        <span class="hljs-keyword">this</span>.RunAction(role, moveRoleAction, <span class="hljs-keyword">this</span>);<br>    &#125;<br><br>    <span class="hljs-comment">//回调函数</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSActionEvent</span>(<span class="hljs-params">SSAction source,</span></span><br><span class="hljs-params"><span class="hljs-function">    SSActionEventType events = SSActionEventType.Completed,</span></span><br><span class="hljs-params"><span class="hljs-function">    <span class="hljs-built_in">int</span> intParam = <span class="hljs-number">0</span>,</span></span><br><span class="hljs-params"><span class="hljs-function">    <span class="hljs-built_in">string</span> strParam = <span class="hljs-literal">null</span>,</span></span><br><span class="hljs-params"><span class="hljs-function">    Object objectParam = <span class="hljs-literal">null</span></span>)</span><br>    &#123;<br>        isMoving = <span class="hljs-literal">false</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-部分控制类的设计"><a href="#2-部分控制类的设计" class="headerlink" title="2 部分控制类的设计"></a>2 部分控制类的设计</h4><p><strong>1.最高层控制器(FirstController)</strong></p>
+<ul>
+<li>这里仅展示有增改的函数方法，增添了一个裁判反馈信息<code>JudgeCallback</code>，实现裁判类的回调函数。</li>
+<li>将原有检测游戏状态的check函数抽离给裁判类JudgeController处理。</li>
+<li>处理了原有可移动脚本moveable的一些部分，利于与动作管理器结合。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">FirstController</span> : <span class="hljs-title">MonoBehaviour</span>, <span class="hljs-title">ISceneController</span>, <span class="hljs-title">IUserAction</span><br>&#123;<br>    <span class="hljs-keyword">readonly</span> Vector3 waterPos = <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0</span>,<span class="hljs-number">0.5F</span>,<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">public</span> CCActionManager actionManager;<br>    <span class="hljs-keyword">public</span> JudgeController judgeController;<br>    <span class="hljs-keyword">public</span> CoastController startCoast;<br>    <span class="hljs-keyword">public</span> CoastController endCoast;<br>    <span class="hljs-keyword">public</span> BoatController boat;<br>    <span class="hljs-keyword">private</span> myCharacterController[] characters;<br>    myUserGUI userGUI;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> isRunning;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> time;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">JudgeCallback</span>(<span class="hljs-params"><span class="hljs-built_in">bool</span> _isRunning, <span class="hljs-built_in">string</span> message</span>)</span><br>    &#123;<br>        userGUI.gameMessage = message;<br>        userGUI.time = (<span class="hljs-built_in">int</span>)time;<br>        <span class="hljs-keyword">this</span>.isRunning = _isRunning;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> ()</span><br>    &#123;<br>        Director director = Director.getInstance();<br>        director.currentSceneController = <span class="hljs-keyword">this</span>;<br>        userGUI = gameObject.AddComponent&lt;myUserGUI&gt;() <span class="hljs-keyword">as</span> myUserGUI;<br>        actionManager = gameObject.AddComponent&lt;CCActionManager&gt;() <span class="hljs-keyword">as</span> CCActionManager;<br>        judgeController = gameObject.AddComponent&lt;JudgeController&gt;() <span class="hljs-keyword">as</span> JudgeController;<br>        characters = <span class="hljs-keyword">new</span> myCharacterController[<span class="hljs-number">6</span>];<br>        isRunning = <span class="hljs-literal">true</span>;<br>        time = <span class="hljs-number">60</span>;<br>        LoadResources();<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">moveBoat</span>()</span>&#123;<br>        <span class="hljs-keyword">if</span>(isRunning == <span class="hljs-literal">false</span> || actionManager.IsMoving())<br>            <span class="hljs-keyword">return</span>;<br>        <span class="hljs-keyword">if</span>(boat.isEmpty())<br>            <span class="hljs-keyword">return</span>;<br>        <span class="hljs-built_in">string</span> direct = boat.getDirection();<br>        Vector3 destination = boat.getPosition();        <br>        <span class="hljs-keyword">if</span> (direct == <span class="hljs-string">&quot;End&quot;</span>) &#123;<br>			boat.setDirection(<span class="hljs-string">&quot;Start&quot;</span>);<br>		&#125; <br>		<span class="hljs-keyword">else</span> &#123;<br>			boat.setDirection(<span class="hljs-string">&quot;End&quot;</span>);<br>		&#125;<br>        actionManager.MoveBoat(boat.getGameobj(), destination, <span class="hljs-number">20</span>);<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ClickCharacter</span>(<span class="hljs-params">myCharacterController cC</span>)</span>&#123;<br>        <span class="hljs-keyword">if</span>(isRunning == <span class="hljs-literal">false</span> || actionManager.IsMoving())<br>            <span class="hljs-keyword">return</span>;<br>        <span class="hljs-keyword">if</span>(cC.isOnBoat())&#123;<br>            CoastController coast;<br>            <span class="hljs-keyword">if</span>(boat.getDirection()==<span class="hljs-string">&quot;Start&quot;</span>)<br>                coast = startCoast;<br>            <span class="hljs-keyword">else</span><br>                coast = endCoast;<br><br>            boat.getOffBoat(cC.getName());<br>            Vector3 destination = coast.getEmptyPosition();<br>            Vector3 middle = destination;<br>            <span class="hljs-keyword">if</span> (destination.y &lt; cC.GetGameObject().transform.position.y) &#123;<br>			    middle.y = cC.GetGameObject().transform.position.y;<br>		    &#125; <br>		    <span class="hljs-keyword">else</span> &#123;<br>			    middle.x = cC.GetGameObject().transform.position.x;<br>		    &#125;<br>            <span class="hljs-comment">// cC.moveTo(coast.getEmptyPosition());</span><br>            actionManager.MoveRole(cC.GetGameObject(), middle, destination, <span class="hljs-number">20</span>);<br>            cC.getOnCoast(coast);<br>            coast.getOnCoast(cC);<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            CoastController coast = cC.getCoastController();<br>            <span class="hljs-keyword">if</span>(boat.getEmptyIndex () == <span class="hljs-number">-1</span> || coast.getDirection() != boat.getDirection())<br>                <span class="hljs-keyword">return</span>;<br>            coast.getOffCoast(cC.getName());<br>            Vector3 destination = boat.getEmptyPosition();<br>            Vector3 middle = destination;<br>            <span class="hljs-keyword">if</span> (destination.y &lt; cC.GetGameObject().transform.position.y) &#123;<br>			    middle.y = cC.GetGameObject().transform.position.y;<br>		    &#125; <br>		    <span class="hljs-keyword">else</span> &#123;<br>			    middle.x = cC.GetGameObject().transform.position.x;<br>		    &#125;<br>            actionManager.MoveRole(cC.GetGameObject(), middle, destination, <span class="hljs-number">20</span>);<br>            <span class="hljs-comment">// cC.moveTo(boat.getEmptyPosition());</span><br>            cC.getOnBoat(boat);<br>            boat.getOnBoat(cC);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Restart</span>()</span>&#123;<br>        <span class="hljs-comment">//boat 移动归位</span><br>        <span class="hljs-keyword">if</span>(boat.getDirection()==<span class="hljs-string">&quot;End&quot;</span>)&#123;<br>            Vector3 destination = boat.getPosition();<br>            actionManager.MoveBoat(boat.getGameobj(), destination, <span class="hljs-number">20</span>);<br>        &#125;<br>        boat.reset();<br>        startCoast.reset();<br>        endCoast.reset();<br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;characters.Length;i++)<br>            characters[i].reset();<br>        isRunning = <span class="hljs-literal">true</span>;<br>        time = <span class="hljs-number">60</span>;<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>2.裁判类(JudgeController)</strong></p>
+<p>实现原有FristController的check函数功能，检测游戏状态，在游戏结束时用过回调信息通知FirstController。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">JudgeController</span> : <span class="hljs-title">MonoBehaviour</span> &#123;<br>    <span class="hljs-keyword">public</span> FirstController mainController;<br>    <span class="hljs-keyword">public</span> CoastController startCoast;<br>    <span class="hljs-keyword">public</span> CoastController endCoast;<br>    <span class="hljs-keyword">public</span> BoatController boat;<br><br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">this</span>.mainController = (FirstController)Director.getInstance().currentSceneController;<br>        <span class="hljs-keyword">this</span>.startCoast = mainController.startCoast;<br>        <span class="hljs-keyword">this</span>.endCoast = mainController.endCoast;<br>        <span class="hljs-keyword">this</span>.boat = mainController.boat;<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (!mainController.isRunning)<br>            <span class="hljs-keyword">return</span>;<br>        <span class="hljs-keyword">if</span>(!boat.isStop())<br>            <span class="hljs-keyword">return</span>;<br>        <span class="hljs-keyword">if</span> (mainController.time &lt;= <span class="hljs-number">0</span>)<br>        &#123;<br>            mainController.JudgeCallback(<span class="hljs-literal">false</span>, <span class="hljs-string">&quot;Game Over!&quot;</span>);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <br>        <span class="hljs-keyword">this</span>.gameObject.GetComponent&lt;myUserGUI&gt;().gameMessage = <span class="hljs-string">&quot;&quot;</span>;<br><br>        <span class="hljs-built_in">int</span> startPriest = <span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">int</span> endPriest = <span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">int</span> startDevil = <span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">int</span> endDevil = <span class="hljs-number">0</span>;<br><br>        <span class="hljs-built_in">int</span>[] startCount = startCoast.getNum();<br>        startPriest += startCount[<span class="hljs-number">0</span>];<br>        startDevil += startCount[<span class="hljs-number">1</span>];<br><br>        <span class="hljs-built_in">int</span>[] endCount = endCoast.getNum();<br>        endPriest += endCount[<span class="hljs-number">0</span>];<br>        endDevil += endCount[<span class="hljs-number">1</span>];<br><br>        <span class="hljs-keyword">if</span>(endDevil+endPriest ==<span class="hljs-number">6</span>)&#123;<br>            mainController.JudgeCallback(<span class="hljs-literal">false</span>, <span class="hljs-string">&quot;You Win!&quot;</span>);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br><br>        <span class="hljs-built_in">int</span>[] boatCount = boat.getNum();<br>        <span class="hljs-keyword">if</span>(boat.getDirection() == <span class="hljs-string">&quot;End&quot;</span>)&#123;<br>            endPriest += boatCount[<span class="hljs-number">0</span>];<br>            endDevil += boatCount[<span class="hljs-number">1</span>];<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            startPriest += boatCount[<span class="hljs-number">0</span>];<br>            startDevil += boatCount[<span class="hljs-number">1</span>];<br>        &#125;<br><br>        <span class="hljs-keyword">if</span>(startPriest&lt;startDevil &amp;&amp; startPriest&gt;<span class="hljs-number">0</span>)&#123;<br>            mainController.JudgeCallback(<span class="hljs-literal">false</span>, <span class="hljs-string">&quot;Game Over!&quot;</span>);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(endPriest&lt;endDevil &amp;&amp; endPriest&gt;<span class="hljs-number">0</span>)&#123;<br>            mainController.JudgeCallback(<span class="hljs-literal">false</span>, <span class="hljs-string">&quot;Game Over!&quot;</span>);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<blockquote>
+<p>Cauchy        2022.11.05</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Game/" class="category-chain-item">Game</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/unity/" class="print-no-link">#unity</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>HW4: 游戏对象与图形基础</div>
+      <div>https://cauchyoooo.github.io/2022/11/05/2022/Homework4/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Cauchy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年11月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/11/13/2022/Homework5/" title="HW5: 与游戏世界交互">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">HW5: 与游戏世界交互</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/10/23/2022/Homework3/" title="HW3: 空间与运动">
+                        <span class="hidden-mobile">HW3: 空间与运动</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

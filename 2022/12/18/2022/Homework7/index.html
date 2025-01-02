@@ -1,0 +1,787 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cauchy">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="作业简介：  智能巡逻兵(动画、订阅&#x2F;发布模式)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HW7: 模型与动画">
+<meta property="og:url" content="https://cauchyoooo.github.io/2022/12/18/2022/Homework7/index.html">
+<meta property="og:site_name" content="Cauchy&#39;s Blog">
+<meta property="og:description" content="作业简介：  智能巡逻兵(动画、订阅&#x2F;发布模式)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/map.gif">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/game.gif">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/01.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/02.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/03.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/04.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/05.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/06.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/07.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/08.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/09.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/10.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/11.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/12.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/13.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/Patrol.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/14.png">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework7/15.png">
+<meta property="article:published_time" content="2022-12-18T06:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-19T13:27:09.184Z">
+<meta property="article:author" content="Cauchy">
+<meta property="article:tag" content="unity">
+<meta property="article:tag" content="animator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cauchyoooo.github.io/img/2022/Homework7/map.gif">
+  
+  
+  
+  <title>HW7: 模型与动画 - Cauchy&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"cauchyoooo.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":50,"cursorChar":"!","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Cauchy</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">模型与动画</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-12-18 14:00" pubdate>
+          2022年12月18日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          36 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">模型与动画</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>作业简介：</p>
+<ol>
+<li>智能巡逻兵(动画、订阅&#x2F;发布模式)</li>
+</ol>
+</blockquote>
+<span id="more"></span>
+
+<p>:fox_face:</p>
+<h2 id="智能巡逻兵"><a href="#智能巡逻兵" class="headerlink" title="智能巡逻兵"></a>智能巡逻兵</h2><h4 id="设计要求"><a href="#设计要求" class="headerlink" title="设计要求"></a>设计要求</h4><ul>
+<li>创建一个地图和若干巡逻兵（使用动画）；</li>
+<li>每个巡逻兵走一个3-5个边的凸多边形，位置数据是相对地址。即每次确定下一个目标位置，用自己当前位置为原点计算；</li>
+<li>巡逻兵碰撞到障碍物，则会自动选下一个点为目标；</li>
+<li>巡逻兵在设定范围内感知到玩家，会自动追击玩家；</li>
+<li>失去玩家目标后，继续巡逻；</li>
+<li>计分：玩家每次甩掉一个巡逻兵计一分，与巡逻兵碰撞游戏结束；</li>
+</ul>
+<h4 id="程序设计要求"><a href="#程序设计要求" class="headerlink" title="程序设计要求"></a>程序设计要求</h4><ul>
+<li>必须使用订阅与发布模式传消息</li>
+<li>工厂模式生产巡逻兵</li>
+</ul>
+<h4 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h4><p><a target="_blank" rel="noopener" href="https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw7/Assets">https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw7/Assets</a></p>
+<h4 id="效果展示图"><a href="#效果展示图" class="headerlink" title="效果展示图"></a>效果展示图</h4><p>地图展示</p>
+<p><img src="/img/2022/Homework7/map.gif" srcset="/img/loading.gif" lazyload alt="map"></p>
+<p>游戏展示</p>
+<p><img src="/img/2022/Homework7/game.gif" srcset="/img/loading.gif" lazyload alt="game"></p>
+<h4 id="玩法"><a href="#玩法" class="headerlink" title="玩法"></a>玩法</h4><p>​	你是一个狐狸妈咪，你在和你的7个小狐狸宝贝玩捉迷藏。你有一堆烦人的动物朋友，分别为猩猩、老虎和鸽子，你一靠近他们，他们就会追着你喋喋不休。要是被它们逮到，你就会被他们烦死。你要做的是快速地绕开你的烦人朋友，找到你的所有宝贝狐狸们。<strong>方向键控制行进，按住左shift键进行加速，鼠标右键移动视角。</strong></p>
+<h3 id="1-预制件制作"><a href="#1-预制件制作" class="headerlink" title="1.  预制件制作"></a>1.  预制件制作</h3><p>本次作业选用了Asset store里的资源包<a target="_blank" rel="noopener" href="https://assetstore.unity.com/packages/3d/characters/animals/quirky-series-animals-mega-pack-vol-2-183280">《Quirky Series Vol.2 [v1.3]》</a>。</p>
+<p>角色主要分为3类：Player玩家：大狐狸；巡逻兵：其他动物；可拾取物体：小狐狸。</p>
+<h4 id="组件设置"><a href="#组件设置" class="headerlink" title="组件设置"></a>组件设置</h4><p>​	点开Jungle Vol.1&#x2F;Prefabs&#x2F;RedPanda_LOD1，可以看到如图所示。为了简化模型，没有使用带有Lod Group的prefabs，这里选取的是较为精细的lod1。</p>
+<p><img src="/img/2022/Homework7/01.png" srcset="/img/loading.gif" lazyload alt="01"></p>
+<p>​	对于<strong>Player玩家</strong>来说，我们只需要在最外层的父对象挂一个rigidbody就行，碰撞检测的部分由其他碰撞体实现。该rigidbody属性如下图所示。这里为了方便没有使用重力。注意到Constraints处勾选了几项，是因为在调试过程中，遇到了<strong>碰撞抖动</strong>问题。本次作业角色移动没有利用物理学，碰撞后受力就会发生奇怪的运动。这里采取锁定刚体旋转和部分位移的方式解决。</p>
+<p><img src="/img/2022/Homework7/02.png" srcset="/img/loading.gif" lazyload alt="02"></p>
+<p>​	</p>
+<p>​	对于<strong>巡逻兵</strong>来说，在最外层的父对象挂上rigidbody和两个脚本（一个是属性脚本，一个是检测玩家碰撞的脚本）。这里的rigidbody和上述设置类似。创建Collider空子对象，挂上一个方盒碰撞器并设为触发器，再挂上一个用于检测玩家范围的脚本。巡逻兵大体都也是这样做。差异只在属性脚本和检测范围上面。</p>
+<p><img src="/img/2022/Homework7/03.png" srcset="/img/loading.gif" lazyload alt="03"></p>
+<p><img src="/img/2022/Homework7/04.png" srcset="/img/loading.gif" lazyload alt="04"></p>
+<p>​	对于<strong>拾取的物体</strong>来说，父对象挂一个碰撞器并设为触发器，再挂一个检测玩家碰撞的脚本即可。这里没有用mesh碰撞器，觉得拾取范围可以模糊一点。</p>
+<p><img src="/img/2022/Homework7/05.png" srcset="/img/loading.gif" lazyload alt="05"></p>
+<h4 id="动画控制器制作"><a href="#动画控制器制作" class="headerlink" title="动画控制器制作"></a>动画控制器制作</h4><p>​	点开官方的AC_Red Panda(Animator Controller)，我们可以看到有两个层，一个是控制整体动作，一个是控制眼睛动作。其中，整体动作可以直接通过Inspector预览，而眼睛动作需要将模型拖到Inspector才可预览，也可直接先在官方给出的Demo场景中预览。</p>
+<p><img src="/img/2022/Homework7/06.png" srcset="/img/loading.gif" lazyload alt="06"></p>
+<p><img src="/img/2022/Homework7/07.png" srcset="/img/loading.gif" lazyload alt="07"></p>
+<p>为了简单起见，本作业只用到了其中很少的动作。</p>
+<p>​	下图是Player的动画控制器，包含三个bool类型参数：存活live、是否行走isWalk、是否奔跑isRun。动作只有默认状态Idle、行走Walk、奔跑Run及死亡Death。这里Idle到Exit的过渡没有条件，会被系统自动忽略。</p>
+<p><img src="/img/2022/Homework7/08.png" srcset="/img/loading.gif" lazyload alt="08"></p>
+<p>​	下图是Idle过渡到Walk的设置。注意，这里的动作大多没有Exit Time，因为满足过渡条件时，如进入行走、进入攻击等动作变化需要马上执行，不需要等待上一个动作做完。</p>
+<p><img src="/img/2022/Homework7/09.png" srcset="/img/loading.gif" lazyload alt="09"></p>
+<p>​	下图是<strong>巡逻兵</strong>的动画控制器，这个更简单，其实只有行走和攻击两种状态，不过在游戏结束时，我们还是让它进入到静止状态的Idle。这里只是给出一个例子，不同的模型要匹配相应的模型动作，不然执行时模型会变成动画控制器的那个 (别问怎么知道的，问就是干过这种蠢事)。</p>
+<p><img src="/img/2022/Homework7/10.png" srcset="/img/loading.gif" lazyload alt="10"></p>
+<p>​	下图是<strong>拾取的物体</strong>的动画控制器，由于动作比较简单，也加入了眼睛的变化。没被找到时，就坐在原地哭唧唧，被找到后就高兴跳起来。</p>
+<p><img src="/img/2022/Homework7/11.png" srcset="/img/loading.gif" lazyload alt="11"><img src="/img/2022/Homework7/12.png" srcset="/img/loading.gif" lazyload alt="12"></p>
+<p>到此，角色的预制件就做得差不多了。后面就是根据实际情况，还要去预先设计并记录一下巡逻兵属性脚本的数据值。</p>
+<h3 id="2-场景制作"><a href="#2-场景制作" class="headerlink" title="2.  场景制作"></a>2.  场景制作</h3><p>场景分两部分，摄像机Camera和地图Map。为了方便加载，这个地图是预先摆好并保存为预制件。</p>
+<p>​	地图部分如下图，是Map空对象下放了子对象墙体地板等组成的。子对象部分有4类：Wall、InnerWall、Plane、Area，分别代表四面围墙、内部障碍墙、地板和各巡逻区域。Wall和InnerWall都是普通的Cube对象，Plane就是Plane对象，Area则是空对象挂上一个Box Collider和一个区域检测的脚本。位置摆放及数值等都是本人自己设计的，没什么好讲的。<del>(这里有扇墙是假的)</del></p>
+<p><img src="/img/2022/Homework7/13.png" srcset="/img/loading.gif" lazyload alt="13"></p>
+<p>​	然后，我们将第一步做的预制件先放在想要放的位置，记录位置数据等。因为要求用工厂模式生成巡逻兵，拾取的物体也顺便通过该模式生成了。</p>
+<p>​	摄像机是使用Main Camera，为了可以通过鼠标控制视角，并跟随玩家，挂上一个Camera Flow脚本。确定好Player的初始位置，就可以确定好摄像机的初始位置了。</p>
+<p>到此，预制部分就全部做完了，可以开始写代码了。</p>
+<h3 id="3-代码解析"><a href="#3-代码解析" class="headerlink" title="3.  代码解析"></a>3.  代码解析</h3><h4 id="代码框架图"><a href="#代码框架图" class="headerlink" title="代码框架图"></a>代码框架图</h4><p>(本人还是不太习惯用UML图，思维导图既能帮助我整理结构，又能标记完成情况等，比较方便。)</p>
+<p><img src="/img/2022/Homework7/Patrol.png" srcset="/img/loading.gif" lazyload alt="Patrol"></p>
+<h4 id="Models部分"><a href="#Models部分" class="headerlink" title="Models部分"></a>Models部分</h4><p><strong>Camera Flow</strong></p>
+<p>摄像机跟随脚本，网络上挺多这样的模板的，这里也是随便参考了一个。因为视角只希望在水平方向移动，不希望上下或者前后移动，这里的RotateAround就只是绕着跟随的目标的Y轴旋转。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CameraFlow</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">public</span> GameObject target;<br><br>    Vector3 offset;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        offset = <span class="hljs-keyword">this</span>.transform.position - target.transform.position;<br>    &#125;<br><br>    <span class="hljs-comment">// Update is called once per frame</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">this</span>.transform.position = target.transform.position + offset;<br>        Rotate();<br>        Scale();<br>    &#125;<br>    <span class="hljs-comment">//缩放</span><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Scale</span>()</span><br>    &#123;<br>        <span class="hljs-built_in">float</span> dis = offset.magnitude;<br>        dis += Input.GetAxis(<span class="hljs-string">&quot;Mouse ScrollWheel&quot;</span>) * <span class="hljs-number">5</span>;<br>        <span class="hljs-keyword">if</span> (dis &lt; <span class="hljs-number">3</span> || dis &gt; <span class="hljs-number">20</span>)<br>        &#123;<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        offset = offset.normalized * dis;<br>    &#125;<br>    <span class="hljs-comment">//左右移动</span><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Rotate</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (Input.GetMouseButton(<span class="hljs-number">1</span>))<br>        &#123;<br>            Vector3 pos = <span class="hljs-keyword">this</span>.transform.position;<br>            <span class="hljs-keyword">this</span>.transform.RotateAround(target.transform.position, Vector3.up, Input.GetAxis(<span class="hljs-string">&quot;Mouse X&quot;</span>) * <span class="hljs-number">10</span>);<br>            <span class="hljs-comment">//  更新相对差值</span><br>            offset = <span class="hljs-keyword">this</span>.transform.position - target.transform.position;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>Enemy Data</strong></p>
+<p>巡逻兵属性。每个数据的含义如注释所写。在工厂模式生成的时候，初始化数值。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">EnemyData</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> AreaID;                      <span class="hljs-comment">//  Enemy巡逻区域序号</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> isFollow = <span class="hljs-literal">false</span>;           <span class="hljs-comment">// 是否跟随玩家</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> CurID = <span class="hljs-number">-1</span>;                  <span class="hljs-comment">//  当前玩家所在区域序号</span><br>    <span class="hljs-keyword">public</span> GameObject player;               <span class="hljs-comment">//  玩家游戏对象</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> kind;                        <span class="hljs-comment">//  巡逻类型 3/4/5边</span><br>    <span class="hljs-keyword">public</span> Vector3 startPos;                <span class="hljs-comment">//  Enemy初始位置   </span><br>    <span class="hljs-keyword">public</span> Vector3 lu;                      <span class="hljs-comment">//  Enemy巡逻区域左上角坐标</span><br>    <span class="hljs-keyword">public</span> Vector3 rd;                      <span class="hljs-comment">//  Enemy巡逻区域右下角坐标</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>Patrol Detection</strong></p>
+<p>巡逻检测，玩家进入范围就追捕，走出范围就停止追捕。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PatrolDetection</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnTriggerEnter</span>(<span class="hljs-params">Collider collider</span>)</span><br>    &#123;<br>        EnemyData parent = <span class="hljs-keyword">this</span>.gameObject.transform.parent.GetComponent&lt;EnemyData&gt;();<br>    	<span class="hljs-comment">//玩家进入Enemy追捕范围，开始追捕</span><br>        <span class="hljs-keyword">if</span> (collider.gameObject.tag == <span class="hljs-string">&quot;Player&quot;</span>)<br>        &#123;<br>            <span class="hljs-comment">//启动追捕模式</span><br>            parent.isFollow = <span class="hljs-literal">true</span>;<br>            <span class="hljs-comment">//将追捕对象设置为玩家</span><br>            parent.player = collider.gameObject;<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnTriggerExit</span>(<span class="hljs-params">Collider collider</span>)</span><br>    &#123;<br>        EnemyData parent = <span class="hljs-keyword">this</span>.gameObject.transform.parent.GetComponent&lt;EnemyData&gt;();<br>        <span class="hljs-comment">//玩家跑出Enemy追捕范围/玩家跑出Enemy管控范围，结束追捕</span><br>        <span class="hljs-keyword">if</span> (collider.gameObject.tag == <span class="hljs-string">&quot;Player&quot;</span> || parent.AreaID != parent.CurID)<br>        &#123;<br>            <span class="hljs-comment">//关闭追捕模式</span><br>            parent.isFollow = <span class="hljs-literal">false</span>;<br>            <span class="hljs-comment">//将追捕对象设置为空</span><br>            parent.player = <span class="hljs-literal">null</span>;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>Other Detection</strong> </p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-comment">// 检测玩家与巡逻兵碰撞</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PlayerDetection</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnCollisionEnter</span>(<span class="hljs-params">Collision other</span>)</span><br>    &#123;<br>        <span class="hljs-comment">//当玩家与巡逻兵相撞</span><br>        <span class="hljs-keyword">if</span> (other.gameObject.tag == <span class="hljs-string">&quot;Player&quot;</span>)<br>        &#123;<br>            <span class="hljs-comment">//玩家死亡</span><br>            other.gameObject.GetComponent&lt;Animator&gt;().SetBool(<span class="hljs-string">&quot;live&quot;</span>,<span class="hljs-literal">false</span>);<br>            <span class="hljs-comment">//Enemy发动攻击</span><br>            <span class="hljs-keyword">this</span>.GetComponent&lt;Animator&gt;().SetTrigger(<span class="hljs-string">&quot;attack_tri&quot;</span>);<br>            <span class="hljs-comment">//游戏结束</span><br>            Singleton&lt;GameEventManager&gt;.Instance.playerGameOver();<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// 检测被拾取的物体(Baby)是否被碰撞(拾取)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">BabyDetection</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnTriggerEnter</span>(<span class="hljs-params">Collider collider</span>)</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (collider.gameObject.tag == <span class="hljs-string">&quot;Player&quot;</span> &amp;&amp; <span class="hljs-keyword">this</span>.gameObject.activeSelf)<br>        &#123;<br>            <span class="hljs-keyword">this</span>.gameObject.GetComponent&lt;Animator&gt;().SetBool(<span class="hljs-string">&quot;isFind&quot;</span>,<span class="hljs-literal">true</span>);<br>            <span class="hljs-keyword">this</span>.gameObject.GetComponent&lt;BoxCollider&gt;().enabled = <span class="hljs-literal">false</span>;<br>            Singleton&lt;GameEventManager&gt;.Instance.reduceBabyNum();<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// 区域标志、检测玩家进入哪个区域</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">AreaDetection</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> AreaID = <span class="hljs-number">0</span>;<br>    FirstSceneController sceneController;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        sceneController = Director.getInstance().currentSceneController <span class="hljs-keyword">as</span> FirstSceneController;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnTriggerEnter</span>(<span class="hljs-params">Collider collider</span>)</span>&#123;<br>        <span class="hljs-keyword">if</span>(collider.gameObject.tag == <span class="hljs-string">&quot;Player&quot;</span>)&#123;<br>            sceneController.CurID = AreaID;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="Actions部分"><a href="#Actions部分" class="headerlink" title="Actions部分"></a>Actions部分</h4><p>这里只介绍巡逻动作的脚本。</p>
+<p><strong>Enemy Walk Action</strong></p>
+<p>​	通过在矩形画凸多边形，在多边形上任意取点。多边形取点逻辑如下图所示。橙色边为给定的巡逻大范围。<strong>三角形</strong>则在紫色、绿色及黄色三条线段依次任取点；<strong>四边形</strong>则在紫色、绿色、黄色、蓝色四条线段上依次任取点；<strong>五边形</strong>则在紫色、绿色、右侧粉色、粉色定点、上方粉色，四条线段加一个定点依次取点。忽略边界的小概率实践，形成的轨迹就是指定的凸多边形。</p>
+<p><img src="/img/2022/Homework7/14.png" srcset="/img/loading.gif" lazyload alt="14"></p>
+<p>​	也许会留意到轨迹周围有一段留白，那是为了避免巡逻兵在指定轨迹上行走，碰上障碍物原地不动的情况设置的。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">EnemyWalkAction</span> : <span class="hljs-title">SSAction</span><br>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> kind = <span class="hljs-number">4</span>;                           <span class="hljs-comment">//  多边形边数</span><br>    <span class="hljs-comment">// 运动范围为(areaDown,areaUp),(areaLeft,areaRight)</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">float</span> areaLeft = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">float</span> areaUp = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">float</span> areaRight = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">float</span> areaDown = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">float</span> moveSpeed = <span class="hljs-number">1.8f</span>;                 <span class="hljs-comment">//  移动速度</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">bool</span> isReach = <span class="hljs-literal">true</span>;                    <span class="hljs-comment">//  是否到达目的地</span><br>    <span class="hljs-keyword">private</span> EnemyData enemyData;                    <span class="hljs-comment">//  Enemy数据</span><br>    <span class="hljs-keyword">private</span> List&lt;Vector3&gt; path = <span class="hljs-keyword">new</span> List&lt;Vector3&gt;();   <span class="hljs-comment">//存储路径点</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> curTar = <span class="hljs-number">0</span>;     <span class="hljs-comment">//  当前目标地索引</span><br><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">EnemyWalkAction</span>()</span> &#123; &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> EnemyWalkAction <span class="hljs-title">GetSSAction</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> k, Vector3 start, Vector3 lu, Vector3 rd</span>)</span><br>    &#123;<br>        EnemyWalkAction action = CreateInstance&lt;EnemyWalkAction&gt;();<br>        action.kind = k;<br>        action.areaLeft = lu.x;<br>        action.areaRight = rd.x;<br>        action.areaUp = lu.z;<br>        action.areaDown = rd.z;<br>        action.initPath();<br>        <br>        <span class="hljs-keyword">return</span> action;<br>    &#125;<br>    <span class="hljs-function">Vector3 <span class="hljs-title">getPoint</span>(<span class="hljs-params"><span class="hljs-built_in">float</span> left, <span class="hljs-built_in">float</span> right, <span class="hljs-built_in">float</span> down, <span class="hljs-built_in">float</span> up</span>)</span>&#123;<br>        Vector3 res= <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">if</span>(left==right)&#123;    <span class="hljs-comment">//竖线</span><br>            res.x = left;<br>            res.z = Random.Range(down,up); <br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(down==up)&#123;<br>            res.x = Random.Range(left,right);<br>            res.z = down;<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            res.x = Random.Range(left,right);<br>            res.z = Random.Range(down,up);<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initPath</span>()</span><br>    &#123;<br>        <span class="hljs-built_in">float</span> midx = (areaLeft+areaRight)/<span class="hljs-number">2</span>;<br>        <span class="hljs-built_in">float</span> midz = (areaUp+areaDown)/<span class="hljs-number">2</span>;<br>        path.Add(getPoint(areaLeft+<span class="hljs-number">2f</span>,areaLeft+<span class="hljs-number">2f</span>,areaDown+<span class="hljs-number">2f</span>,areaUp<span class="hljs-number">-2f</span>));<br>        path.Add(getPoint(areaLeft+<span class="hljs-number">2f</span>,areaRight<span class="hljs-number">-2f</span>,areaDown+<span class="hljs-number">2f</span>,areaDown+<span class="hljs-number">2f</span>));<br>        <span class="hljs-comment">// 三角形</span><br>        <span class="hljs-keyword">if</span>(kind==<span class="hljs-number">3</span>)&#123;<br>            path.Add(getPoint(areaRight<span class="hljs-number">-2f</span>,areaRight<span class="hljs-number">-2f</span>,midz,areaUp<span class="hljs-number">-2f</span>));<br>        &#125;<br>        <span class="hljs-comment">// 四边形</span><br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(kind==<span class="hljs-number">4</span>)&#123;<br>            path.Add(getPoint(areaRight<span class="hljs-number">-2f</span>,areaRight<span class="hljs-number">-2f</span>,areaDown+<span class="hljs-number">2f</span>,areaUp<span class="hljs-number">-2f</span>));<br>            path.Add(getPoint(areaLeft+<span class="hljs-number">2f</span>,areaRight<span class="hljs-number">-2f</span>,areaUp<span class="hljs-number">-2f</span>,areaUp<span class="hljs-number">-2f</span>));<br>        &#125;<br>        <span class="hljs-comment">// 五边形</span><br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(kind==<span class="hljs-number">5</span>)&#123;<br>            <span class="hljs-built_in">float</span> quax = (midx+areaRight)/<span class="hljs-number">2</span>;<br>            <span class="hljs-built_in">float</span> quaz = (midz+areaUp)/<span class="hljs-number">2</span>;<br>            path.Add(getPoint(areaRight<span class="hljs-number">-2f</span>,areaRight<span class="hljs-number">-2f</span>,areaDown+<span class="hljs-number">2f</span>,midz));<br>            path.Add(<span class="hljs-keyword">new</span> Vector3(quax,<span class="hljs-number">0</span>,quaz));<br>            path.Add(getPoint(areaLeft+<span class="hljs-number">2f</span>,midx,areaUp<span class="hljs-number">-2f</span>,areaUp<span class="hljs-number">-2f</span>));<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">goPatrol</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">if</span>(isReach)&#123;<br>            curTar ++;<br>            curTar %= kind;<br>            isReach = <span class="hljs-literal">false</span>;<br>        &#125;<br>        <span class="hljs-keyword">this</span>.transform.LookAt(path[curTar]);<br>        <span class="hljs-comment">// 只要很接近地点就相当于到了</span><br>        <span class="hljs-built_in">float</span> distance = Vector3.Distance(transform.position, path[curTar]);<br>        <span class="hljs-keyword">if</span> (distance &gt; <span class="hljs-number">0.9</span>)<br>        &#123;<br>            transform.position = Vector3.MoveTowards(<span class="hljs-keyword">this</span>.transform.position, path[curTar], moveSpeed * Time.deltaTime);<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            isReach = <span class="hljs-literal">true</span>;<br>        &#125;<br>    &#125;<br>    <br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-comment">// 巡逻移动</span><br>        goPatrol();<br>        <span class="hljs-comment">// 如果巡逻兵需要跟随玩家并且玩家就在巡逻兵所在的区域，巡逻动作停止</span><br>        <span class="hljs-keyword">if</span> (enemyData.isFollow &amp;&amp; enemyData.CurID == enemyData.AreaID)<br>        &#123;<br>            <span class="hljs-keyword">this</span>.destroy = <span class="hljs-literal">true</span>;<br>            <span class="hljs-keyword">this</span>.callback.SSActionEvent(<span class="hljs-keyword">this</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">this</span>.gameObject);<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">this</span>.gameObject.GetComponent&lt;Animator&gt;().SetBool(<span class="hljs-string">&quot;isWalk&quot;</span>, <span class="hljs-literal">true</span>);<br>        enemyData = <span class="hljs-keyword">this</span>.gameObject.GetComponent&lt;EnemyData&gt;();<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="Controllers部分"><a href="#Controllers部分" class="headerlink" title="Controllers部分"></a>Controllers部分</h4><p><strong>First Scene Controller</strong></p>
+<p>简单讲一下场景控制器。实现了消息订阅，实现了用户动作接口和场景动作接口。其中，有一个需要注意的点是 Restart 使用了<code>SceneManager.LoadScene();</code>，可以加载指定场景，比较方便。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">FirstSceneController</span> : <span class="hljs-title">MonoBehaviour</span>, <span class="hljs-title">IUserAction</span>, <span class="hljs-title">ISceneController</span><br>&#123;<br>    <span class="hljs-keyword">public</span> PropFactory factory;                              <span class="hljs-comment">// Enemy和Baby工厂</span><br>    <span class="hljs-keyword">public</span> ScoreController scoreController;                  <span class="hljs-comment">// 记分员</span><br>    <span class="hljs-keyword">public</span> EnemyActionManager manager;                       <span class="hljs-comment">// 运动管理器</span><br>    <span class="hljs-keyword">public</span> myUserGUI userGUI;                                <span class="hljs-comment">// 用户界面</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> CurID = <span class="hljs-number">-1</span>;                                   <span class="hljs-comment">// 当前玩家所于检测区域的序号</span><br>    <span class="hljs-keyword">public</span> GameObject player;                                <span class="hljs-comment">// 玩家</span><br>    <span class="hljs-keyword">public</span> Camera cam;                                       <span class="hljs-comment">// 主相机</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> moveSpeed = <span class="hljs-number">5</span>;                              <span class="hljs-comment">// 玩家移动速度</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> rotateSpeed = <span class="hljs-number">250f</span>;                         <span class="hljs-comment">// 玩家旋转速度</span><br>    <span class="hljs-keyword">private</span> List&lt;GameObject&gt; enemies;                        <span class="hljs-comment">// 场景中Enemy列表</span><br>    <span class="hljs-keyword">private</span> List&lt;GameObject&gt; babies;                         <span class="hljs-comment">// 场景Baby列表</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">bool</span> isGameOver = <span class="hljs-literal">false</span>;                         <span class="hljs-comment">// 游戏是否结束</span><br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; enemies.Count; i++)<br>        &#123;<br>            enemies[i].gameObject.GetComponent&lt;EnemyData&gt;().CurID = CurID;<br>        &#125;<br>        <span class="hljs-comment">// Baby收集完毕</span><br>        <span class="hljs-keyword">if</span>(scoreController.getBabyNum() == <span class="hljs-number">0</span>)<br>        &#123;<br>            GameOver();<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        Director director = Director.getInstance();<br>        director.currentSceneController = <span class="hljs-keyword">this</span>;<br>        gameObject.AddComponent&lt;PropFactory&gt;();<br>        factory = Singleton&lt;PropFactory&gt;.Instance;<br>        manager = gameObject.AddComponent&lt;EnemyActionManager&gt;() <span class="hljs-keyword">as</span> EnemyActionManager;<br>        scoreController = gameObject.AddComponent&lt;ScoreController&gt;() <span class="hljs-keyword">as</span> ScoreController;<br>        userGUI = gameObject.AddComponent&lt;myUserGUI&gt;() <span class="hljs-keyword">as</span> myUserGUI;<br>        LoadResource();<br>        cam.GetComponent&lt;CameraFlow&gt;().target = player;<br>        <br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadResource</span>()</span><br>    &#123;<br>        Instantiate(Resources.Load&lt;GameObject&gt;(<span class="hljs-string">&quot;Prefabs/Map&quot;</span>));<br>        player = Instantiate(Resources.Load(<span class="hljs-string">&quot;Prefabs/Player&quot;</span>), <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>), Quaternion.identity) <span class="hljs-keyword">as</span> GameObject;<br>        babies = factory.getBabies();<br>        enemies = factory.getEnemies();<br><br>        <span class="hljs-comment">// 所有巡逻兵移动</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; enemies.Count; i++)<br>        &#123;<br>            manager.Walk(enemies[i]);<br>        &#125;<br>    &#125;<br><br><br>    <span class="hljs-comment">// 玩家移动</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">movePlayer</span>(<span class="hljs-params"><span class="hljs-built_in">float</span> tranX, <span class="hljs-built_in">float</span> tranZ, <span class="hljs-built_in">bool</span> isShift</span>)</span><br>    &#123;<br>        <span class="hljs-keyword">if</span>(!isGameOver)<br>        &#123;<br>            <span class="hljs-keyword">if</span> (tranX != <span class="hljs-number">0</span> || tranZ != <span class="hljs-number">0</span>)<br>            &#123;<br>                player.GetComponent&lt;Animator&gt;().SetBool(<span class="hljs-string">&quot;isWalk&quot;</span>, <span class="hljs-literal">true</span>);<br>                <span class="hljs-comment">// 如果shift加速</span><br>                <span class="hljs-keyword">if</span> (isShift)&#123;<br>                    player.GetComponent&lt;Animator&gt;().SetBool(<span class="hljs-string">&quot;isRun&quot;</span>, <span class="hljs-literal">true</span>);<br>                    moveSpeed = <span class="hljs-number">10</span>;<br>                &#125;<br>                <span class="hljs-keyword">else</span>&#123;<br>                    player.GetComponent&lt;Animator&gt;().SetBool(<span class="hljs-string">&quot;isRun&quot;</span>, <span class="hljs-literal">false</span>);<br>                    moveSpeed = <span class="hljs-number">5</span>;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">else</span><br>            &#123;<br>                player.GetComponent&lt;Animator&gt;().SetBool(<span class="hljs-string">&quot;isWalk&quot;</span>, <span class="hljs-literal">false</span>);<br>                <span class="hljs-keyword">return</span>;<br>            &#125;<br>            <span class="hljs-comment">// 移动和旋转</span><br>            player.transform.Translate(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, tranZ * moveSpeed * Time.deltaTime);<br>            player.transform.Rotate(<span class="hljs-number">0</span>, tranX * rotateSpeed * Time.deltaTime, <span class="hljs-number">0</span>);<br><br>            <span class="hljs-comment">// 防止碰撞带来的移动</span><br>            <span class="hljs-keyword">if</span> (player.transform.localEulerAngles.x != <span class="hljs-number">0</span> || player.transform.localEulerAngles.z != <span class="hljs-number">0</span>)<br>            &#123;<br>                player.transform.localEulerAngles = <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0</span>, player.transform.localEulerAngles.y, <span class="hljs-number">0</span>);<br>            &#125;<br>            <span class="hljs-keyword">if</span> (player.transform.position.y != <span class="hljs-number">0</span>)<br>            &#123;<br>                player.transform.position = <span class="hljs-keyword">new</span> Vector3(player.transform.position.x, <span class="hljs-number">0</span>, player.transform.position.z);<br>            &#125;     <br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> <span class="hljs-title">getScore</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> scoreController.getScore();<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> <span class="hljs-title">getBabyNum</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> scoreController.getBabyNum();<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> <span class="hljs-title">getGameOver</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> isGameOver;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Restart</span>()</span><br>    &#123;<br>        SceneManager.LoadScene(<span class="hljs-string">&quot;Scenes/startScene&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnEnable</span>()</span><br>    &#123;<br>        GameEventManager.scoreChange += addScore;<br>        GameEventManager.gameOverChange += GameOver;<br>        GameEventManager.babyChange += reduceBabyNum;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnDisable</span>()</span><br>    &#123;<br>        GameEventManager.scoreChange -= addScore;<br>        GameEventManager.gameOverChange -= GameOver;<br>        GameEventManager.babyChange -= reduceBabyNum;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">reduceBabyNum</span>()</span><br>    &#123;<br>        scoreController.reduceBaby();<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addScore</span>()</span><br>    &#123;<br>        scoreController.addScore();<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">GameOver</span>()</span><br>    &#123;<br>        isGameOver = <span class="hljs-literal">true</span>;<br>        factory.stopEnemies();<br>        manager.DestroyAllAction();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="Others部分"><a href="#Others部分" class="headerlink" title="Others部分"></a>Others部分</h4><p><strong>Game Event Manager</strong></p>
+<p>订阅&#x2F;发布模式（又叫观察者模式，事件-代理机制 ， 事件的代理模型）。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">GameEventManager</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-comment">//  分数变化</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ScoreEvent</span>()</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">event</span> ScoreEvent scoreChange;<br>    <span class="hljs-comment">//  游戏结束</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">GameOverEvent</span>()</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">event</span> GameOverEvent gameOverChange;<br>    <span class="hljs-comment">//  Baby数量</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">BabyEvent</span>()</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">event</span> BabyEvent babyChange;<br><br>    <span class="hljs-comment">//  分数变化</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">playerEscape</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (scoreChange != <span class="hljs-literal">null</span>)<br>        &#123;<br>            scoreChange();<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">//  游戏结束</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">playerGameOver</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (gameOverChange != <span class="hljs-literal">null</span>)<br>        &#123;<br>            gameOverChange();<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">//  Baby数量</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">reduceBabyNum</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (babyChange != <span class="hljs-literal">null</span>)<br>        &#123;<br>            babyChange();<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><code>delegate</code>关键字定义了函数类型<code>ScoreEvent</code>、<code>GameOverEvent</code>、<code>BabyEvent</code>等的代理类型。静态变量scoreChange、gameOverChange、babyChange就是相应的“被订阅的主题”。</p>
+<p>如下图 FirstSceneController 里的调用，+&#x3D; 部分表示左边的函数一被调用，就会通知<strong>所有</strong>带有右边函数的对象要进行调用右边的函数，相当于右边订阅了左边。而 -&#x3D; 就代表取消订阅了。</p>
+<p>这里的<code>playerEscape()</code>等函数是一个接口，当调用时，就在告诉记分员要计分<code>addScore()</code>了。</p>
+<p><img src="/img/2022/Homework7/15.png" srcset="/img/loading.gif" lazyload alt="15"></p>
+<h4 id="Views部分"><a href="#Views部分" class="headerlink" title="Views部分"></a>Views部分</h4><p><strong>myUserGUI</strong></p>
+<p>用户界面，也是大同小异。</p>
+<p>这里主要是为了提到一个悬浮提示的小制作。格式如下，其中<code>tipStyle</code>为可选</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c#">GUI.Button(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>), <span class="hljs-keyword">new</span> GUIContent(<span class="hljs-string">&quot;提示&quot;</span>, <span class="hljs-string">&quot;提示内容&quot;</span>));<br>GUI.Label(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>), GUI.tooltip[, tipStyle]);<br></code></pre></td></tr></table></figure>
+
+<p>第一次知道，IMGUI里的内容可以使用 <code>\n</code> 来换行。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">myUserGUI</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">private</span> IUserAction action;<br>    <span class="hljs-keyword">private</span> GUIStyle scoreNumStyle = <span class="hljs-keyword">new</span> GUIStyle();<br>    <span class="hljs-keyword">private</span> GUIStyle scoreTextStyle = <span class="hljs-keyword">new</span> GUIStyle();<br>    <span class="hljs-keyword">private</span> GUIStyle scoreShadowStyle = <span class="hljs-keyword">new</span> GUIStyle();<br>    <span class="hljs-keyword">private</span> GUIStyle titleStyle = <span class="hljs-keyword">new</span> GUIStyle();<br>    <span class="hljs-keyword">private</span> GUIStyle shadowStyle = <span class="hljs-keyword">new</span> GUIStyle();<br>    <span class="hljs-keyword">private</span> GUIStyle tipStyle = <span class="hljs-keyword">new</span> GUIStyle();<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> ()</span><br>    &#123;<br>        action = Director.getInstance().currentSceneController <span class="hljs-keyword">as</span> IUserAction;<br>        scoreNumStyle.normal.textColor = <span class="hljs-keyword">new</span> Color(<span class="hljs-number">1</span>,<span class="hljs-number">0.92f</span>,<span class="hljs-number">0.016f</span>,<span class="hljs-number">1</span>);<br>        scoreNumStyle.fontSize = <span class="hljs-number">30</span>;<br>        scoreTextStyle.normal.textColor = <span class="hljs-keyword">new</span> Color(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);<br>        scoreTextStyle.fontSize = <span class="hljs-number">30</span>;<br>        scoreShadowStyle.normal.textColor = <span class="hljs-keyword">new</span> Color(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0.4f</span>);<br>        scoreShadowStyle.fontSize = <span class="hljs-number">30</span>;<br>        titleStyle.normal.textColor = <span class="hljs-keyword">new</span> Color(<span class="hljs-number">0.47F</span>,<span class="hljs-number">0.4F</span>,<span class="hljs-number">0.93F</span>,<span class="hljs-number">1</span>);<br>        titleStyle.fontSize = <span class="hljs-number">40</span>;<br>        shadowStyle.normal.textColor = <span class="hljs-keyword">new</span> Color(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0.5f</span>);<br>        shadowStyle.fontSize = <span class="hljs-number">40</span>;<br>        tipStyle.normal.textColor = <span class="hljs-keyword">new</span> Color(<span class="hljs-number">0.54f</span>,<span class="hljs-number">0.27f</span>,<span class="hljs-number">0.04f</span>,<span class="hljs-number">1</span>);<br>        tipStyle.fontSize = <span class="hljs-number">18</span>;<br>        <br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-comment">//获取方向键的偏移量</span><br>        <span class="hljs-built_in">float</span> tranX = Input.GetAxis(<span class="hljs-string">&quot;Horizontal&quot;</span>);<br>        <span class="hljs-built_in">float</span> tranZ = Input.GetAxis(<span class="hljs-string">&quot;Vertical&quot;</span>);<br>        <span class="hljs-built_in">bool</span> isShift = Input.GetKey(KeyCode.LeftShift);<br>        <span class="hljs-comment">//移动玩家</span><br>        action.movePlayer(tranX, tranZ, isShift);<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnGUI</span>()</span><br>    &#123;<br>        GUI.skin.button.fontSize = <span class="hljs-number">20</span>;<br>        GUI.Label(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>), <span class="hljs-string">&quot;分数:&quot;</span>, scoreTextStyle);<br>        GUI.Label(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">9</span>, <span class="hljs-number">4</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>), <span class="hljs-string">&quot;分数:&quot;</span>, scoreShadowStyle);<br>        GUI.Label(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">90</span>, <span class="hljs-number">5</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>), action.getScore().ToString(), scoreNumStyle);<br>        GUI.Label(<span class="hljs-keyword">new</span> Rect(Screen.width - <span class="hljs-number">245</span>, <span class="hljs-number">5</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>), <span class="hljs-string">&quot;剩余小狐狸数:&quot;</span>, scoreTextStyle);<br>        GUI.Label(<span class="hljs-keyword">new</span> Rect(Screen.width - <span class="hljs-number">246</span>, <span class="hljs-number">4</span>, <span class="hljs-number">200</span>, <span class="hljs-number">50</span>), <span class="hljs-string">&quot;剩余小狐狸数:&quot;</span>, scoreShadowStyle);<br>        GUI.Label(<span class="hljs-keyword">new</span> Rect(Screen.width - <span class="hljs-number">50</span>, <span class="hljs-number">5</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>), action.getBabyNum().ToString(), scoreNumStyle);<br>        <span class="hljs-keyword">if</span>(action.getGameOver() &amp;&amp; action.getBabyNum() != <span class="hljs-number">0</span>)<br>        &#123;<br>            GUI.Label(<span class="hljs-keyword">new</span> Rect(Screen.width / <span class="hljs-number">2</span> - <span class="hljs-number">80</span>, Screen.height / <span class="hljs-number">2</span> - <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>), <span class="hljs-string">&quot;游戏结束&quot;</span>, titleStyle);<br>            GUI.Label(<span class="hljs-keyword">new</span> Rect(Screen.width / <span class="hljs-number">2</span> - <span class="hljs-number">78</span>, Screen.height / <span class="hljs-number">2</span> - <span class="hljs-number">98</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>), <span class="hljs-string">&quot;游戏结束&quot;</span>, shadowStyle);<br>            <span class="hljs-keyword">if</span> (GUI.Button(<span class="hljs-keyword">new</span> Rect(Screen.width / <span class="hljs-number">2</span> - <span class="hljs-number">50</span>, Screen.height / <span class="hljs-number">2</span> , <span class="hljs-number">100</span>, <span class="hljs-number">50</span>), <span class="hljs-string">&quot;重新开始&quot;</span>))<br>            &#123;<br>                action.Restart();<br>                <span class="hljs-keyword">return</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(action.getBabyNum() &lt;= <span class="hljs-number">0</span>)<br>        &#123;<br>            GUI.Label(<span class="hljs-keyword">new</span> Rect(Screen.width / <span class="hljs-number">2</span> - <span class="hljs-number">80</span>, Screen.height / <span class="hljs-number">2</span> - <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>), <span class="hljs-string">&quot;恭喜胜利&quot;</span>, titleStyle);<br>            GUI.Label(<span class="hljs-keyword">new</span> Rect(Screen.width / <span class="hljs-number">2</span> - <span class="hljs-number">78</span>, Screen.height / <span class="hljs-number">2</span> - <span class="hljs-number">98</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>), <span class="hljs-string">&quot;恭喜胜利&quot;</span>, shadowStyle);<br>            <span class="hljs-keyword">if</span> (GUI.Button(<span class="hljs-keyword">new</span> Rect(Screen.width / <span class="hljs-number">2</span> - <span class="hljs-number">50</span>, Screen.height / <span class="hljs-number">2</span> , <span class="hljs-number">100</span>, <span class="hljs-number">50</span>), <span class="hljs-string">&quot;重新开始&quot;</span>))<br>            &#123;<br>                action.Restart();<br>                <span class="hljs-keyword">return</span>;<br>            &#125;<br>        &#125;<br><br>        GUI.Button(<span class="hljs-keyword">new</span> Rect(Screen.width / <span class="hljs-number">2</span> - <span class="hljs-number">50</span> ,<span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">50</span>), <span class="hljs-keyword">new</span> GUIContent(<span class="hljs-string">&quot;提示规则&quot;</span>, <span class="hljs-string">&quot;按WSAD或方向键移动\n按左Shift键进行加速\n成功躲避猛兽追捕加1分\n找到所有小狐狸即可获胜\n鼠标右键实现视角转动&quot;</span>));<br>        GUI.Label(<span class="hljs-keyword">new</span> Rect(Screen.width / <span class="hljs-number">2</span> - <span class="hljs-number">80</span> ,<span class="hljs-number">80</span>, <span class="hljs-number">150</span>, <span class="hljs-number">120</span>), GUI.tooltip, tipStyle);<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
+<li><p>学会了动画控制器的使用；</p>
+</li>
+<li><p>理解了订阅&#x2F;发布模式；</p>
+</li>
+<li><p>了解到了碰撞抖动、IMGUI的悬浮提示做法等。</p>
+</li>
+<li><p>Player与一个被拾取物体的碰撞按道理只会触发一次。碰撞很偶尔会出现两次的情况，没有解决这个bug。</p>
+</li>
+<li><p>巡逻兵没有加变速功能，且探测范围设置较小，游戏难度比较低。</p>
+</li>
+</ul>
+<blockquote>
+<p>2022.12.19			Cauchy.</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Game/" class="category-chain-item">Game</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/unity/" class="print-no-link">#unity</a>
+      
+        <a href="/tags/animator/" class="print-no-link">#animator</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>HW7: 模型与动画</div>
+      <div>https://cauchyoooo.github.io/2022/12/18/2022/Homework7/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Cauchy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年12月18日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/01/05/2023/Homework8/" title="Final: 粒子系统与流动效果">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Final: 粒子系统与流动效果</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/12/04/2022/Homework6/" title="HW6: 物理系统与碰撞">
+                        <span class="hidden-mobile">HW6: 物理系统与碰撞</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

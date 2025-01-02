@@ -1,0 +1,807 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cauchy">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="作业简介：1.简答题（涉及GameObject, Transform, Assets, Prefabs, Component, MonoBehaviour等）2.编程实践（仅允许使用IMGUI构建UI，训练数据-控制分离的编程思维）3.思考题（涉及游戏设计模式）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HW2: 离散仿真引擎基础">
+<meta property="og:url" content="https://cauchyoooo.github.io/2022/10/04/2022/Homework2/index.html">
+<meta property="og:site_name" content="Cauchy&#39;s Blog">
+<meta property="og:description" content="作业简介：1.简答题（涉及GameObject, Transform, Assets, Prefabs, Component, MonoBehaviour等）2.编程实践（仅允许使用IMGUI构建UI，训练数据-控制分离的编程思维）3.思考题（涉及游戏设计模式）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/02.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/03.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/01.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/04.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/05.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/06.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/07.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/08.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/09.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/win.gif">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/10.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/11.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/12.jpg">
+<meta property="og:image" content="https://cauchyoooo.github.io/img/2022/Homework2/13.jpg">
+<meta property="article:published_time" content="2022-10-04T06:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-19T13:22:39.457Z">
+<meta property="article:author" content="Cauchy">
+<meta property="article:tag" content="unity">
+<meta property="article:tag" content="IMGUI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cauchyoooo.github.io/img/2022/Homework2/02.jpg">
+  
+  
+  
+  <title>HW2: 离散仿真引擎基础 - Cauchy&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"cauchyoooo.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":50,"cursorChar":"!","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Cauchy</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">离散仿真引擎基础</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-10-04 14:00" pubdate>
+          2022年10月4日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          37 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">离散仿真引擎基础</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>作业简介：<br>1.简答题（涉及GameObject, Transform, Assets, Prefabs, Component, MonoBehaviour等）<br>2.编程实践（仅允许使用IMGUI构建UI，训练数据-控制分离的编程思维）<br>3.思考题（涉及游戏设计模式）</p>
+</blockquote>
+<span id="more"></span>
+
+<p>:rainbow:</p>
+<h3 id="一、简答题"><a href="#一、简答题" class="headerlink" title="一、简答题"></a>一、简答题</h3><ol>
+<li><p>解释游戏对象(<strong>GameObjects</strong>)和资源(<strong>Assets</strong>)的区别与联系</p>
+<p> <strong>GameObjects</strong>：是 Unity 中的基础对象，表示角色、道具和景物。它们本身并没有取得多大作为，但它们充当组件(Component)的容器，而组件可实现功能。</p>
+<p> <img src="/img/2022/Homework2/02.jpg" srcset="/img/loading.gif" lazyload></p>
+<p> 我们可以看到GameObject列表下有各种属性的对象，包括空属性对象、3D对象、效果、灯光等</p>
+<p> <strong>Assets</strong>：表示 Unity 项目中用来创建游戏或应用的任何项；也可以代表项目中的视觉或音频元素，例如 3D 模型、纹理、精灵、音效或音乐；还可以表示更抽象的项目，例如任何用途的颜色渐变、动画遮罩或任意文本或数字数据。</p>
+<p> <img src="/img/2022/Homework2/03.jpg" srcset="/img/loading.gif" lazyload></p>
+<p> 我们可以看到Assets创建下有很多类型的资源，如C#脚本，着色器，预制件等。</p>
+<p> 简单地理解，游戏对象是真正加入到游戏场景里的实体，类似一个空盒子，需要向里面添加各种组件来实功能。资源是创建或外导入的各种数据，可以应用到不同游戏对象身上，可以只是存储在项目里，不一定会使用到当前的游戏场景中。</p>
+<p> <img src="/img/2022/Homework2/01.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>下载几个游戏案列，分别总结资源、对象组织和结构（指资源的目录组织结构与游戏对象树的层次结构）</p>
+<p>  这里用作展示的是官方的游戏教程里的资源与对象的组织和结构。</p>
+<p>  <img src="/img/2022/Homework2/04.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>  我们可以看到<strong>资源</strong>一般是按<strong>用途</strong>来分的，不同的文件夹存放不同类别的资源，包括音频、角色、环境、脚本、预制件、场景等，这里还可以看到模型资源里的环境精灵是按颜色来分类的，脚本里面按使用场景分类。</p>
+<p>  <img src="/img/2022/Homework2/05.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>  <img src="/img/2022/Homework2/06.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>  <strong>游戏对象</strong>主要是根据<strong>功能</strong>不同分类的，可以看到第一个游戏对象树有UI画布、摄像机、角色、格子、敌人等分支，第二个游戏对象树则是利用空对象来写分割线区分结构。</p>
+<p>  养成合理分类资源与游戏对象的好习惯，能让我们更高效地制作游戏。</p>
+</li>
+<li><p>编写一个代码，使用 debug 语句来验证 <code>MonoBehaviour</code> 基本行为或事件触发的条件</p>
+<ul>
+<li>基本行为包括 <code>Awake()</code> <code>Start()</code> <code>Update()</code> <code>FixedUpdate()</code> <code>LateUpdate()</code></li>
+<li>常用事件包括 <code>OnGUI()</code> <code>OnDisable()</code> <code>OnEnable()</code></li>
+</ul>
+<p> <em>“MonoBehaviour 类是一个基类，所有 Unity 脚本都默认派生自该类。MonoBehaviour 类允许您启动、停止和管理协程。MonoBehaviour 类提供对大量事件消息的访问，允许您根据项目中当前发生的情况执行代码。”</em></p>
+<p> <strong>MonoBehaviour 方法简介</strong></p>
+<ul>
+<li><code>Awake</code>：在加载脚本实例时调用，无论该脚本是否启用，初始化脚本时都会调用。其在 Start 前调用</li>
+<li><code>Start</code>：在首次调用任何 Update 方法之前启用脚本时，在帧上调用</li>
+<li><code>Update</code>：如果启用了 MonoBehaviour，则每帧调用 Update</li>
+<li><code>FixedUpdate</code>：具有物理系统的频率；每个固定帧率帧调用该函数；在 FixedUpdate之后，进行Physics系统计算。帧率可以通过 Time.fixedDeltaTime 来访问。与Update相互独立。</li>
+<li><code>LateUpdate</code>：如果启用了 Behaviour（指可启用或禁用的组件），则每帧在Update调用后调用 LateUpdate，对于安排脚本的执行顺序很有用。</li>
+<li><code>OnGUI</code>：系统调用 OnGUI 来渲染和处理 GUI 事件，是唯一可以实现**“即时模式”GUI (IMGUI)**系统来渲染和处理 GUI 事件的函数。OnGUI 实现可以每帧调用多次（每个事件调用一次），若MonoBehaviour 的 enabled 属性设置为 false，则不会调用 OnGUI()。</li>
+<li><code>OnDisable</code>：该函数在行为被禁用时调用。当对象销毁时也会调用该函数，它可用于任何清理代码。 当编译完成后重新加载脚本时，将调用 OnDisable，并在加载脚本后调用 OnEnable。      </li>
+<li><code>OnEnable</code>：该函数在对象变为启用和激活状态时调用。</li>
+</ul>
+<p> 代码验证：</p>
+ <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Awake</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Awake&quot;</span>);&#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Start&quot;</span>);&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Update&quot;</span>);&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">FixedUpdate</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Fixed&quot;</span>);&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnGUI</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;OnGUI&quot;</span>);&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnEnable</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Enabled&quot;</span>);&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnDisable</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Disabled&quot;</span>);&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p> <img src="/img/2022/Homework2/07.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>查找脚本手册，了解 GameObjects, Transform, Component 对象</p>
+<ul>
+<li>分别翻译官方对三个对象的描述(Description)</li>
+<li>描述下图中 table 对象(实体)的属性、table 的 Transform 的属性、table 的部件</li>
+<li>用UML图描述三者的关系</li>
+</ul>
+<p> <strong>官方描述</strong></p>
+<ul>
+<li><p><strong>GameObject</strong> 是 Unity 中的基础对象，表示角色、道具和景物，可以被用来表示所有可以存在于场景中的事物。它是Unity中场景的建筑块，可作为决定GameObject外观功能的功能组件的容器。在脚本中，GameObject类提供了一个可以在代码中使用的方法集合，包括查找、建立连接和在它们 之间发送消息，以及添加或移除附加到 GameObject 的组件和设置它们在场景中与状态有关的值。  </p>
+</li>
+<li><p><strong>Transform</strong> 用于存储游戏对象的位置、旋转、缩放和父子化状态。每个游戏对象始终附加一个变换组件，无法删除变换组件或创建没有变换组件的游戏对象。 </p>
+</li>
+<li><p><strong>Component</strong> 是每个GameObject的功能部分，它包含一些可编辑的属性，可以通过编辑这些属性来定义GameObject的行为。</p>
+</li>
+</ul>
+<p> <strong>图</strong></p>
+<p> <img src="/img/2022/Homework2/08.jpg" srcset="/img/loading.gif" lazyload></p>
+<p> Table的GameObject属性包含Tag(标签)、Layer(层)、Static(是否静态)、勾选框(是否活动)、属性名；<br> Table的Transform属性包含Position(坐标)、Rotation(旋转角)、Scale(大小)；<br> Table的Component属性包括Cube(Mesh Filter)、Mesh Renderer、Box Collider、RIgidbody、Hello(Script)、Red(Material)。</p>
+<p> <strong>UML图</strong></p>
+<p> <img src="/img/2022/Homework2/09.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>资源预设(<strong>Prefabs</strong>)与对象克隆(<strong>clone</strong>)</p>
+<ul>
+<li><p>预设(Prefabs)有什么好处?</p>
+<p>  Unity 的<strong>Prenfabs</strong>系统允许创建、配置和存储游戏对象及其所有组件、属性值和子游戏对象作为可重用资源。预制件资源充当模板，在此模板的基础之上可以在场景中创建新的预制件实例。这可以避免重复制作的无用功，提高资源复用率，节省资源空间。</p>
+</li>
+<li><p>预设与对象克隆(clone or copy or Instantiate of Unity Object)关系?</p>
+<p>  预设本身不需要有实例化的游戏对象，而克隆需要复制实例化的游戏对象。预设也更方便进行批量修改。</p>
+</li>
+<li><p>制作table预制，写一段代码将table预制资源实例化成游戏对象</p>
+  <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">hello</span>:<span class="hljs-title">MonoBehaviour</span><br>&#123;<br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>	&#123;<br>		GameObject table = (GameObject)Resources.Load(<span class="hljs-string">&quot;table&quot;</span>);<br>		table = Instantiate(table);<br>	<br>		table.transform.parent = <span class="hljs-keyword">this</span>.transform;<br>		table.transform.position = <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<p>:cake:</p>
+<h3 id="二、编程实践"><a href="#二、编程实践" class="headerlink" title="二、编程实践"></a>二、编程实践</h3><p>源码地址：<a target="_blank" rel="noopener" href="https://github.com/Cauchyoooo/3DGameDesign/blob/main/hw2/MineGame.cs">https://github.com/Cauchyoooo/3DGameDesign/blob/main/hw2/MineGame.cs</a></p>
+<p>这里是利用IMGUI做了一个扫雷小游戏。运行窗口大小为Full HD(1920x1080)</p>
+<p>实现的效果如下图</p>
+<p><img src="/img/2022/Homework2/win.gif" srcset="/img/loading.gif" lazyload></p>
+<p><strong>数据定义部分代码：</strong></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-comment">// Data</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span>[,] control_arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">16</span>,<span class="hljs-number">20</span>]; <span class="hljs-comment">//用于记录雷和数字 -1是雷 0是空 其他是周围的雷数</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span>[,] show_arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">16</span>,<span class="hljs-number">20</span>]; <span class="hljs-comment">//用于记录格子可见性 0是可见 1是不可见</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span>[,] mark_arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">16</span>,<span class="hljs-number">20</span>]; <span class="hljs-comment">//用于玩家标记雷 标记雷为1 此时按钮不可点击</span><br>   <br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> mine_num = <span class="hljs-number">60</span>; <span class="hljs-comment">//用于记录剩余雷数</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> wrong = <span class="hljs-number">0</span>; <span class="hljs-comment">//用于记录标错的雷数</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> time = <span class="hljs-number">0</span>; <span class="hljs-comment">//用于记录用时</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">float</span> tmptime = <span class="hljs-number">0</span>; <span class="hljs-comment">//用于记录上一帧时间(不会重复初始化)</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> state = <span class="hljs-number">0</span>; <span class="hljs-comment">//0为挖矿模式，1为标记模式 输了为-1，赢了为-2</span><br><br>   <span class="hljs-comment">// Controls Style</span><br>   GUIStyle smileStyle = <span class="hljs-keyword">new</span> GUIStyle();<br>   GUIStyle mineStyle = <span class="hljs-keyword">new</span> GUIStyle();<br>   GUIStyle[] numStyle = <span class="hljs-keyword">new</span> GUIStyle[<span class="hljs-number">8</span>]; <span class="hljs-comment">//记录数字1-8的格式</span><br>   GUIStyle state0 = <span class="hljs-keyword">new</span> GUIStyle();<br>   GUIStyle state1 = <span class="hljs-keyword">new</span> GUIStyle();<br>   GUIStyle worl = <span class="hljs-keyword">new</span> GUIStyle();<br>   GUIStyle txt = <span class="hljs-keyword">new</span> GUIStyle();<br></code></pre></td></tr></table></figure>
+
+<p>由于不是很想利用Texture2D导入图片素材，这里用的是IMGUI里简陋的<code>GUIStyle()</code>，配合可显示的Unicode符号食用。</p>
+<p><strong>数据初始启动部分代码：</strong></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> ()</span> &#123;<br>        <span class="hljs-comment">// 对图标格式的初始化</span><br>        smileStyle.fontSize=<span class="hljs-number">50</span>;<br>        smileStyle.normal.textColor=Color.yellow;<br>        smileStyle.alignment=TextAnchor.MiddleCenter;<br><br>        mineStyle.fontSize=<span class="hljs-number">20</span>;<br>        mineStyle.normal.textColor=Color.red;<br>        mineStyle.alignment=TextAnchor.MiddleCenter;<br><br>        state0.fontSize=<span class="hljs-number">20</span>;<br>        state0.normal.textColor=Color.red;<br>        state0.alignment=TextAnchor.MiddleCenter;<br><br>        state1.fontSize=<span class="hljs-number">20</span>;<br>        state1.normal.textColor=Color.black;<br>        state1.alignment=TextAnchor.MiddleCenter;<br><br>        worl.fontSize = <span class="hljs-number">50</span>;<br>        worl.normal.textColor = Color.red; <span class="hljs-comment">//win=red / lose=blue</span><br>        worl.alignment=TextAnchor.MiddleCenter;<br><br>        txt.fontSize = <span class="hljs-number">30</span>;<br>        txt.normal.textColor=Color.white;<br>        txt.alignment=TextAnchor.MiddleCenter;<br>         <br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">8</span>;i++)&#123;<br>            numStyle[i] = <span class="hljs-keyword">new</span> GUIStyle();<br>            numStyle[i].fontSize = <span class="hljs-number">20</span>;<br>            numStyle[i].alignment = TextAnchor.MiddleCenter;<br>        &#125;<br>        numStyle[<span class="hljs-number">0</span>].normal.textColor=Color.blue; <span class="hljs-comment">//数字1红色</span><br>        numStyle[<span class="hljs-number">1</span>].normal.textColor=Color.green; <span class="hljs-comment">//数字2蓝色</span><br>        numStyle[<span class="hljs-number">2</span>].normal.textColor=Color.red; <span class="hljs-comment">//数字3蓝色</span><br>        numStyle[<span class="hljs-number">3</span>].normal.textColor=<span class="hljs-keyword">new</span> Color(<span class="hljs-number">1.00f</span>,<span class="hljs-number">0.84f</span>,<span class="hljs-number">0.00f</span>,<span class="hljs-number">1.00f</span>); <span class="hljs-comment">//数字4蓝色</span><br>        numStyle[<span class="hljs-number">4</span>].normal.textColor=<span class="hljs-keyword">new</span> Color(<span class="hljs-number">0.63f</span>,<span class="hljs-number">0.13f</span>,<span class="hljs-number">0.94f</span>,<span class="hljs-number">1.00f</span>); <span class="hljs-comment">//数字5紫色</span><br>        numStyle[<span class="hljs-number">5</span>].normal.textColor=<span class="hljs-keyword">new</span> Color(<span class="hljs-number">1.00f</span>,<span class="hljs-number">0.38f</span>,<span class="hljs-number">0.00f</span>,<span class="hljs-number">1.00f</span>); <span class="hljs-comment">//数字6橙色</span><br>        numStyle[<span class="hljs-number">6</span>].normal.textColor=<span class="hljs-keyword">new</span> Color(<span class="hljs-number">1.00f</span>,<span class="hljs-number">0.75f</span>,<span class="hljs-number">0.80f</span>,<span class="hljs-number">1.00f</span>); <span class="hljs-comment">//数字7粉色</span><br>        numStyle[<span class="hljs-number">7</span>].normal.textColor=Color.black; <span class="hljs-comment">//数字8黑色</span><br><br>        Init(); <span class="hljs-comment">//游戏参数初始化</span><br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<p>由于GUIStyle在游戏过程中，基本不会有何变化，就放在Start()函数调用初始化。</p>
+<p><strong>游戏参数初始化代码：</strong></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Init</span>()</span> &#123;<br>        <span class="hljs-comment">// 时间，雷数等参数初始化</span><br>        time = <span class="hljs-number">0</span>;<br>        mine_num = <span class="hljs-number">60</span>;<br>        wrong = <span class="hljs-number">0</span>;<br>        state = <span class="hljs-number">0</span>;<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">16</span>;i++)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">20</span>;j++)&#123;<br>                <span class="hljs-comment">// 格子可见性初始化</span><br>                show_arr[i,j] = <span class="hljs-number">0</span>;<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-comment">// 雷区初始化</span><br>        clearMine();<br>        InitMine();<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<p>每局新游戏开始前的初始化函数，要把各种参数归零，并重新随机生成雷区。</p>
+<p><strong>雷区初始化代码：</strong></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">InitMine</span>()</span>&#123;<br>        <span class="hljs-comment">//初始化数字和雷区</span><br>        <span class="hljs-built_in">int</span> num=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (num&lt;<span class="hljs-number">60</span>)<br>        &#123;<br>            <span class="hljs-built_in">int</span> x=Random.Range(<span class="hljs-number">0</span>,<span class="hljs-number">16</span>);<br>            <span class="hljs-built_in">int</span> y=Random.Range(<span class="hljs-number">0</span>,<span class="hljs-number">20</span>);<br>            <span class="hljs-keyword">if</span>(control_arr[x,y]==<span class="hljs-number">0</span>)&#123;<br>                control_arr[x,y] = <span class="hljs-number">-1</span>;<br>                num++;<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">16</span>;i++)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">20</span>;j++)&#123;<br>                <span class="hljs-keyword">if</span>(control_arr[i,j]&gt;<span class="hljs-number">-1</span>)&#123;<br>                    <span class="hljs-comment">//左边</span><br>                    <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; control_arr[i<span class="hljs-number">-1</span>,j]==<span class="hljs-number">-1</span>)<br>                        control_arr[i,j]++;<br>                    <span class="hljs-comment">//右边</span><br>                    <span class="hljs-keyword">if</span>(i&lt;<span class="hljs-number">15</span> &amp;&amp; control_arr[i+<span class="hljs-number">1</span>,j]==<span class="hljs-number">-1</span>)<br>                        control_arr[i,j]++;<br>                    <span class="hljs-comment">//上方</span><br>                    <span class="hljs-keyword">if</span>(j&gt;<span class="hljs-number">0</span> &amp;&amp; control_arr[i,j<span class="hljs-number">-1</span>]==<span class="hljs-number">-1</span>)<br>                        control_arr[i,j]++;<br>                    <span class="hljs-comment">//下方</span><br>                    <span class="hljs-keyword">if</span>(j&lt;<span class="hljs-number">19</span> &amp;&amp; control_arr[i,j+<span class="hljs-number">1</span>]==<span class="hljs-number">-1</span>)<br>                        control_arr[i,j]++;<br>                    <span class="hljs-comment">//左上角</span><br>                    <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; j&gt;<span class="hljs-number">0</span> &amp;&amp; control_arr[i<span class="hljs-number">-1</span>,j<span class="hljs-number">-1</span>]==<span class="hljs-number">-1</span>)<br>                        control_arr[i,j]++;<br>                    <span class="hljs-comment">//右下角</span><br>                    <span class="hljs-keyword">if</span>(i&lt;<span class="hljs-number">15</span> &amp;&amp; j&lt;<span class="hljs-number">19</span> &amp;&amp; control_arr[i+<span class="hljs-number">1</span>,j+<span class="hljs-number">1</span>]==<span class="hljs-number">-1</span>)<br>                        control_arr[i,j]++;<br>                    <span class="hljs-comment">//右上角</span><br>                    <span class="hljs-keyword">if</span>(i&lt;<span class="hljs-number">15</span> &amp;&amp; j&gt;<span class="hljs-number">0</span> &amp;&amp; control_arr[i+<span class="hljs-number">1</span>,j<span class="hljs-number">-1</span>]==<span class="hljs-number">-1</span>)<br>                        control_arr[i,j]++;<br>                    <span class="hljs-comment">//左下角</span><br>                    <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; j&lt;<span class="hljs-number">19</span> &amp;&amp; control_arr[i<span class="hljs-number">-1</span>,j+<span class="hljs-number">1</span>]==<span class="hljs-number">-1</span>)<br>                        control_arr[i,j]++;<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">clearMine</span>()</span>&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">16</span>;i++)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">20</span>;j++)&#123;<br>                control_arr[i,j]=<span class="hljs-number">0</span>;<br>                mark_arr[i,j]=<span class="hljs-number">0</span>;  <br>            &#125;<br>        &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<p><code>clearMine()</code>函数会把上一局的标记去除，雷全部清除，且格子值全部设为0，配合生成雷的函数<code>InitMine()</code>，<code>InitMine()</code>初始化雷的位置(值为-1)后，会通过循环得出每个格子的数字（周围一圈的雷数）。</p>
+<p><strong>OnGUI()循环代码：</strong></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnGUI</span>()</span> &#123;<br>        GUI.Box(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">720</span>,<span class="hljs-number">180</span>,<span class="hljs-number">480</span>,<span class="hljs-number">720</span>),<span class="hljs-string">&quot;&quot;</span>);<br>            <span class="hljs-comment">// 生成smile按钮 for restart</span><br>            <span class="hljs-keyword">if</span>(GUI.Button(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">935</span>,<span class="hljs-number">220</span>,<span class="hljs-number">50</span>,<span class="hljs-number">50</span>), <span class="hljs-string">&quot;☺&quot;</span>,smileStyle))&#123;<br>                Debug.Log(<span class="hljs-string">&quot;Push Smile&quot;</span>);<br>                <span class="hljs-keyword">if</span>(state&gt;=<span class="hljs-number">0</span>)<br>                    Init();             <br>            &#125;<br>            <span class="hljs-comment">// 生成挖雷按钮</span><br>            <span class="hljs-keyword">if</span>(GUI.Button(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">1000</span>,<span class="hljs-number">200</span>,<span class="hljs-number">50</span>,<span class="hljs-number">50</span>), <span class="hljs-string">&quot;挖&quot;</span>,state0))&#123;<br>                state = <span class="hljs-number">0</span>;<br>                state0.normal.textColor=Color.red;<br>                state1.normal.textColor=Color.black;<br><br>            &#125;<br><br>            <span class="hljs-comment">// 生成标记按钮</span><br>            <span class="hljs-keyword">if</span>(GUI.Button(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">1000</span>,<span class="hljs-number">240</span>,<span class="hljs-number">50</span>,<span class="hljs-number">50</span>), <span class="hljs-string">&quot;标&quot;</span>,state1))&#123;<br>                state = <span class="hljs-number">1</span>;<br>                state0.normal.textColor=Color.black;<br>                state1.normal.textColor=Color.red;<br><br>            &#125;<br>            <span class="hljs-comment">//显示剩余雷数</span><br>            GUI.Button(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">736</span>,<span class="hljs-number">220</span>,<span class="hljs-number">160</span>,<span class="hljs-number">60</span>), <span class="hljs-string">&quot;剩余雷数:&quot;</span>+mine_num.ToString());<br><br>            <span class="hljs-comment">//显示时间</span><br>            GUI.Button(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">1050</span>,<span class="hljs-number">220</span>,<span class="hljs-number">130</span>,<span class="hljs-number">60</span>), <span class="hljs-string">&quot;用时(s):&quot;</span>+time.ToString());<br><br>            <span class="hljs-comment">// 每个大小28*28</span><br>            <span class="hljs-comment">// 生成可点击扫雷按钮</span><br>            <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">16</span>;i++)&#123;<br>                <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">20</span>;j++)&#123;<br>                    <span class="hljs-keyword">if</span>(show_arr[i,j]==<span class="hljs-number">1</span>)    <span class="hljs-keyword">continue</span>;<br>                    <span class="hljs-comment">// 标记的格子可取消标记</span><br>                    <span class="hljs-keyword">if</span>(mark_arr[i,j]==<span class="hljs-number">1</span>)&#123;<br>                        <span class="hljs-keyword">if</span>(GUI.Button(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">736</span>+i*<span class="hljs-number">28</span>,<span class="hljs-number">300</span>+j*<span class="hljs-number">28</span>,<span class="hljs-number">28</span>,<span class="hljs-number">28</span>),<span class="hljs-string">&quot;✯&quot;</span>))&#123;<br>                            <span class="hljs-keyword">if</span>(state == <span class="hljs-number">1</span>)&#123;<br>                                mark_arr[i,j] = <span class="hljs-number">0</span>;<br>                                mine_num++;<br>                                <span class="hljs-keyword">if</span> (control_arr[i,j]&lt;<span class="hljs-number">0</span>)<br>                                    wrong--;<br>                            &#125;<br>                        &#125;<br>                        <span class="hljs-keyword">continue</span>;<br>                    &#125;<br><br>                    <span class="hljs-keyword">if</span>(GUI.Button(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">736</span>+i*<span class="hljs-number">28</span>,<span class="hljs-number">300</span>+j*<span class="hljs-number">28</span>,<span class="hljs-number">28</span>,<span class="hljs-number">28</span>),<span class="hljs-string">&quot;&quot;</span>))&#123;<br>                        <span class="hljs-comment">// 按下按钮的行为</span><br>                        <span class="hljs-keyword">if</span>(state == <span class="hljs-number">1</span>)&#123;<br>                            mark_arr[i,j] = <span class="hljs-number">1</span>;<br>                            mine_num--;<br>                            <span class="hljs-keyword">if</span> (control_arr[i,j]&gt;<span class="hljs-number">-1</span>)<br>                                wrong++;<br>                            <span class="hljs-keyword">if</span> (mine_num==<span class="hljs-number">0</span>)<br>                            &#123;<br>                                <span class="hljs-keyword">if</span>(wrong&gt;<span class="hljs-number">0</span>)&#123;<br>                                    showAllMine();<br>                                    state = <span class="hljs-number">-1</span>; <span class="hljs-comment">//lose</span><br>                                &#125;<br>                                <span class="hljs-keyword">else</span>&#123;    <br>                                    state = <span class="hljs-number">-2</span>; <span class="hljs-comment">//win</span><br>                                &#125;<br>                                <br>                            &#125;<br>                        &#125;<br>                        <span class="hljs-keyword">else</span>&#123;<br>                            <span class="hljs-keyword">if</span>(mark_arr[i,j]==<span class="hljs-number">0</span>)&#123;<br>                                show_arr[i,j]=<span class="hljs-number">1</span>;<br>                                <span class="hljs-keyword">if</span>(control_arr[i,j]==<span class="hljs-number">0</span>)<br>                                    showEmpty(i,j);<br>                                <span class="hljs-keyword">if</span>(control_arr[i,j]&lt;<span class="hljs-number">0</span>)&#123;<br>                                    showAllMine();<br>                                    state = <span class="hljs-number">-1</span>; <span class="hljs-comment">//lose</span><br>                                &#125;<br>                            &#125;<br>                        &#125;<br>                    &#125;<br>                &#125;<br>            &#125;<br>            <span class="hljs-comment">// 显示数字和雷    </span><br>            <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">16</span>;i++)&#123;<br>                <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">20</span>;j++)&#123;<br>                    <span class="hljs-keyword">if</span>(show_arr[i,j]==<span class="hljs-number">0</span>)    <span class="hljs-keyword">continue</span>; <span class="hljs-comment">//</span><br>                    <span class="hljs-built_in">int</span> ctlnum = control_arr[i,j];<br>                    <span class="hljs-keyword">if</span>(ctlnum==<span class="hljs-number">0</span>)&#123;<br>                        GUI.Label(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">736</span>+i*<span class="hljs-number">28</span>,<span class="hljs-number">300</span>+j*<span class="hljs-number">28</span>,<span class="hljs-number">28</span>,<span class="hljs-number">28</span>),<span class="hljs-string">&quot; &quot;</span>);<br>                    &#125;<br>                    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(ctlnum&gt;<span class="hljs-number">0</span>)&#123;<br>                        GUI.Label(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">736</span>+i*<span class="hljs-number">28</span>,<span class="hljs-number">300</span>+j*<span class="hljs-number">28</span>,<span class="hljs-number">28</span>,<span class="hljs-number">28</span>),ctlnum.ToString(),numStyle[ctlnum<span class="hljs-number">-1</span>]);<br>                    &#125;<br>                    <span class="hljs-keyword">else</span>&#123;<br>                        GUI.Label(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">736</span>+i*<span class="hljs-number">28</span>,<span class="hljs-number">300</span>+j*<span class="hljs-number">28</span>,<span class="hljs-number">28</span>,<span class="hljs-number">28</span>),<span class="hljs-string">&quot;✵&quot;</span>,mineStyle);<br>                    &#125;<br>                &#125;<br>            &#125;<br><br>        <span class="hljs-keyword">if</span>(state&lt;<span class="hljs-number">0</span>)&#123;<br>            GUI.Box(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">810</span>,<span class="hljs-number">420</span>,<span class="hljs-number">300</span>,<span class="hljs-number">240</span>),<span class="hljs-string">&quot;&quot;</span>);<br>            <span class="hljs-keyword">if</span>(GUI.Button(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">910</span>,<span class="hljs-number">630</span>,<span class="hljs-number">100</span>,<span class="hljs-number">20</span>), <span class="hljs-string">&quot;Restart&quot;</span>))<br>                Init();<br>            <span class="hljs-keyword">if</span>(state == <span class="hljs-number">-1</span>)&#123;<br>                worl.normal.textColor =  Color.blue;<br>                GUI.Label(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">910</span>,<span class="hljs-number">440</span>,<span class="hljs-number">100</span>,<span class="hljs-number">50</span>), <span class="hljs-string">&quot;LOSE&quot;</span>, worl);<br>            &#125;<br>            <span class="hljs-keyword">else</span>&#123;<br>                worl.normal.textColor =  Color.red;<br>                GUI.Label(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">910</span>,<span class="hljs-number">440</span>,<span class="hljs-number">100</span>,<span class="hljs-number">50</span>), <span class="hljs-string">&quot;WIN&quot;</span>, worl);<br>            &#125;  <br>            <span class="hljs-built_in">int</span> endnum = <span class="hljs-number">60</span> - mine_num - wrong;<br>            GUI.Label(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">910</span>,<span class="hljs-number">510</span>,<span class="hljs-number">100</span>,<span class="hljs-number">50</span>), <span class="hljs-string">&quot;扫雷数：&quot;</span>+endnum.ToString(), txt);<br>            GUI.Label(<span class="hljs-keyword">new</span> Rect(<span class="hljs-number">910</span>,<span class="hljs-number">560</span>,<span class="hljs-number">100</span>,<span class="hljs-number">50</span>), <span class="hljs-string">&quot;总用时：&quot;</span>+time.ToString(), txt);<br><br>            tmptime = Mathf.Floor(Time.fixedTime);<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-comment">//计时</span><br>            <span class="hljs-keyword">if</span>(Mathf.Floor(Time.fixedTime)-tmptime==<span class="hljs-number">1</span>)&#123;<br>                tmptime = Mathf.Floor(Time.fixedTime);<br>                time++;<br>            &#125;<br>        &#125;<br><br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<p>由于IMGUI的控件部分只能在<code>OnGUI()</code>函数使用，因此这里会写的比较冗杂，嵌套也比较多。这里利用Time类来辅助我们计时。</p>
+<p><strong>其他相关代码：</strong></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">showAllMine</span>()</span>&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">16</span>;i++)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">20</span>;j++)&#123;<br>                <span class="hljs-keyword">if</span>(control_arr[i,j]==<span class="hljs-number">-1</span>)&#123;<br>                    show_arr[i,j]=<span class="hljs-number">1</span>;<br>                &#125;  <br>            &#125;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-comment">// 递归显示无雷区域</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">showEmpty</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> i,<span class="hljs-built_in">int</span> j</span>)</span>&#123;<br>        <span class="hljs-comment">// 遇到被标记的非雷 直接翻开</span><br>        <span class="hljs-keyword">if</span>(mark_arr[i,j]==<span class="hljs-number">1</span>)&#123;<br>            mark_arr[i,j]=<span class="hljs-number">0</span>;<br>            mine_num++;<br>        &#125;            <br>        show_arr[i,j]=<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">if</span>(control_arr[i,j]&gt;<span class="hljs-number">0</span>)<br>            <span class="hljs-keyword">return</span>;<br>   <br>        <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; show_arr[i<span class="hljs-number">-1</span>,j]==<span class="hljs-number">0</span>)<br>            showEmpty(i<span class="hljs-number">-1</span>,j);<br>        <span class="hljs-keyword">if</span>(i&lt;<span class="hljs-number">15</span> &amp;&amp; show_arr[i+<span class="hljs-number">1</span>,j]==<span class="hljs-number">0</span>)<br>            showEmpty(i+<span class="hljs-number">1</span>,j);<br>        <span class="hljs-keyword">if</span>(j&gt;<span class="hljs-number">0</span> &amp;&amp; show_arr[i,j<span class="hljs-number">-1</span>]==<span class="hljs-number">0</span>)<br>            showEmpty(i,j<span class="hljs-number">-1</span>);<br>        <span class="hljs-keyword">if</span>(j&lt;<span class="hljs-number">19</span> &amp;&amp; show_arr[i,j+<span class="hljs-number">1</span>]==<span class="hljs-number">0</span>)<br>            showEmpty(i,j+<span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; j&gt;<span class="hljs-number">0</span> &amp;&amp; show_arr[i<span class="hljs-number">-1</span>,j<span class="hljs-number">-1</span>]==<span class="hljs-number">0</span>)<br>            showEmpty(i<span class="hljs-number">-1</span>,j<span class="hljs-number">-1</span>);<br>        <span class="hljs-keyword">if</span>(i&lt;<span class="hljs-number">15</span> &amp;&amp; j&lt;<span class="hljs-number">19</span> &amp;&amp; show_arr[i+<span class="hljs-number">1</span>,j+<span class="hljs-number">1</span>]==<span class="hljs-number">0</span>)<br>            showEmpty(i+<span class="hljs-number">1</span>,j+<span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">if</span>(i&lt;<span class="hljs-number">15</span> &amp;&amp; j&gt;<span class="hljs-number">0</span> &amp;&amp; show_arr[i+<span class="hljs-number">1</span>,j<span class="hljs-number">-1</span>]==<span class="hljs-number">0</span>)<br>            showEmpty(i+<span class="hljs-number">1</span>,j<span class="hljs-number">-1</span>);<br>        <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; j&lt;<span class="hljs-number">19</span> &amp;&amp; show_arr[i<span class="hljs-number">-1</span>,j+<span class="hljs-number">1</span>]==<span class="hljs-number">0</span>)<br>            showEmpty(i<span class="hljs-number">-1</span>,j+<span class="hljs-number">1</span>);<br>        <br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<p><code>showAllMine()</code>函数是使用在踩雷情况，把剩下的雷也显示出来；<code>showEmpty()</code>函数是在扫雷过程中，如果遇到一个连续空白无雷区，会把没有数字(周围一圈没有雷)的区域及围绕它们的数字显示出来。</p>
+<p><strong>小结</strong></p>
+<ul>
+<li>在写控件Style的时候，感觉这也不太好设置，那也不太好设置，默认的Style风格又不太适用，整体看起来勉强过得去，有的按钮周围没有边框(比如“标”和“挖”)，就是皮肤设置的问题，做不出想要的风格，多少有点痛苦。可能还是乖乖导入Texture2D会更美观一些，但也要耗费时间去找合适的素材。</li>
+<li>制作计时器的时候，因为OnGUI()调用频率，以及Time可以获取从游戏启动的时间，就想到了这个先floor()，再比较有无变化的这个方法计时。其他的一些协程或是延时调用的方法看起来都比较复杂，不太好实现。</li>
+<li>关于利用Button按钮控件的“标”和“挖”来实现标雷和挖格子。似乎是在IMGUI中没能找到控件比较广泛的按键功能，只能监听到按钮被点击，无法监听是被左键或是右键点击又或是按键按下或松开这种，因此实现起来有点怪怪的并且有些麻烦。</li>
+<li>利用自定义状态值<code>state</code>来表示不同的游戏状态，能帮助更好地实现这个游戏功能。</li>
+</ul>
+<p>:sailboat:</p>
+<h3 id="三、思考题"><a href="#三、思考题" class="headerlink" title="三、思考题"></a>三、思考题</h3><ul>
+<li><p>微软XNA引擎的Game对象屏蔽了游戏循环的细节，并使用一组虚方法让继承者完成它们，我们称这种设计为“模板方法模式”。</p>
+<ul>
+<li><p>为什么是“模板方法”模式而不是“策略模式”呢？</p>
+<p>  <strong>模板方法模式：</strong>一个抽象类公开定义了执行它的方法的方式&#x2F;模板。它的子类可以按需要重写方法实现，但调用将以抽象类中定义的方式进行。</p>
+<p>  <strong>策略模式：</strong>是针对一组算法，将每一个算法封装到具有共同接口的独立的类中，从而使得它们可以相互替换。</p>
+<p>  – 微软XNA引擎的Game对象屏蔽了游戏循环的细节，用虚方法让继承者完成它们，更强调继承重写，明显更符合模板方法模式。</p>
+</li>
+</ul>
+</li>
+<li><p>将优先对象组成树形结构，每个节点都是游戏对象（或数）。</p>
+<ul>
+<li><p>尝试解释组合模式(Composite Pattern &#x2F;一种设计模式)。</p>
+<p>  <em>将对象组合成树形结构以表示”部分-整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。</em></p>
+</li>
+<li><p>使用 BroadcastMessage() 方法，向子对象发送消息。写出 BroadcastMessage() 的伪代码。</p>
+<p>  <img src="/img/2022/Homework2/10.jpg" srcset="/img/loading.gif" lazyload><br>  <img src="/img/2022/Homework2/11.jpg" srcset="/img/loading.gif" lazyload><br>  <img src="/img/2022/Homework2/12.jpg" srcset="/img/loading.gif" lazyload></p>
+  <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">BcM</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>  <span class="hljs-keyword">public</span> GameObject pobject;<br>  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> ()</span> &#123;<br>		pobject.BroadcastMessage(<span class="hljs-string">&quot;dbug&quot;</span>,<span class="hljs-string">&quot;inputstr&quot;</span>,SendMessageOptions.RequireReceiver);<br>	&#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">c1</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dbug</span>()</span>&#123;<br>        Debug.Log(<span class="hljs-string">&quot;c1&quot;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">c2</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dbug</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> str</span>)</span>&#123;<br>        Debug.Log(<span class="hljs-string">&quot;c2:&quot;</span>+str);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>  <img src="/img/2022/Homework2/13.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ul>
+</li>
+<li><p>一个游戏对象用于许多部件描述不同方面的特征。我们设计坦克游戏对象不是继承于 GameObject 对象，而是 GameObject 添加一组行为部件(Component)。</p>
+<ul>
+<li><p>这是什么设计模式？</p>
+<p>  装饰器模式?</p>
+</li>
+<li><p>为什么不用继承设计特殊的游戏对象？</p>
+<p>  由于继承为类引入静态特征，并且随着扩展功能的增多，子类会很膨胀。使用继承的话，扩展不够灵活。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>参考资料：<a target="_blank" rel="noopener" href="https://www.runoob.com/design-pattern/strategy-pattern.html">策略模式</a>，<a target="_blank" rel="noopener" href="https://www.runoob.com/design-pattern/template-pattern.html">模板模式</a>，<a target="_blank" rel="noopener" href="https://juejin.cn/post/7031727773613817893">组合模式</a>，<a target="_blank" rel="noopener" href="https://www.runoob.com/design-pattern/decorator-pattern.html">装饰器模式</a>，<a target="_blank" rel="noopener" href="https://www.runoob.com/design-pattern/bridge-pattern.html">桥接模式</a>，<a target="_blank" rel="noopener" href="https://blog.csdn.net/xiumang/article/details/88750110">u3d计时器</a>，<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/gui-Basics.html">IMGUI</a></p>
+<blockquote>
+<p>Cauchy    2022.10.04</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Game/" class="category-chain-item">Game</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/unity/" class="print-no-link">#unity</a>
+      
+        <a href="/tags/IMGUI/" class="print-no-link">#IMGUI</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>HW2: 离散仿真引擎基础</div>
+      <div>https://cauchyoooo.github.io/2022/10/04/2022/Homework2/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Cauchy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年10月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/10/23/2022/Homework3/" title="HW3: 空间与运动">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">HW3: 空间与运动</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/09/06/2022/Homework1/" title="HW1: 游戏的本质">
+                        <span class="hidden-mobile">HW1: 游戏的本质</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
