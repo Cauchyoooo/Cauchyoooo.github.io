@@ -8,20 +8,20 @@ archive:
   menu: '归档'
   title: 'Archive'
   subtitle: 'ARCHIVE'
-  post_total: '共计 %d 篇文章'
+  post_total: 'Total number of articles: %d'
 
 category:
   menu: '分类'
   title: 'Category'
   subtitle: 'CATEGORY'
-  post_total: '共计 %d 篇文章'
+  post_total: 'Total number of articles: %d'
   more: 'More...'
 
 tag:
   menu: '标签'
   title: 'Tag'
   subtitle: 'TAG'
-  post_total: '共计 %d 篇文章'
+  post_total: 'Total number of articles: %d'
 
 about:
   menu: '关于'
@@ -31,7 +31,7 @@ about:
 links:
   menu: '友链'
   title: 'Links'
-  subtitle: 'FRIEND LINKS'
+  subtitle: 'FRIENDS'
 
 page404:
   menu: '页面不存在'
@@ -57,6 +57,7 @@ post:
     SA: 'SA - 相同方式共享'
     NC: 'NC - 非商业性使用'
     ND: 'ND - 禁止演绎'
+    ZERO: 'CC0 - 无版权'
 
 footer:
   pv: '总访问量 {} 次'

@@ -227,6 +227,7 @@
 }
 .gt-container .gt-counts {
   margin: 0 0.625em 0 0;
+  color: #333; !important
 }
 .gt-container .gt-user {
   float: right;
@@ -242,6 +243,7 @@
 .gt-container .gt-user-inner {
   display: inline-block;
   cursor: pointer;
+  color: #333; !important
 }
 .gt-container .gt-user .gt-ico {
   margin: 0 0 0 0.3125em;
@@ -402,6 +404,7 @@
 }
 .gt-container .gt-comments {
   padding-top: 1.25em;
+  color: #333; !important
 }
 .gt-container .gt-comments-null {
   text-align: center;

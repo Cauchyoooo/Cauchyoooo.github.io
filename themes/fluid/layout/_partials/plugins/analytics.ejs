@@ -15,30 +15,31 @@
     </script>
   <% } %>
 
-  <% if (theme.web_analytics.google){ %>
-    <!-- Google Analytics -->
+  <% if (theme.web_analytics.google && theme.web_analytics.google.measurement_id){ %>
+    <!-- Google tag (gtag.js) -->
     <script async>
       if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
-          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
-          ga.l = +new Date;
-          ga('create', '<%= theme.web_analytics.google %>', 'auto');
-          ga('send', 'pageview');
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=<%= theme.web_analytics.google.measurement_id %>", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '<%= theme.web_analytics.google.measurement_id %>');
         });
       }
     </script>
   <% } %>
 
-  <% if (theme.web_analytics.gtag){ %>
-    <!-- Google gtag.js -->
+  <% if(theme.web_analytics.umami && theme.web_analytics.umami.src && theme.web_analytics.umami.website_id) { %>
     <script async>
       if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript('https://www.googletagmanager.com/gtag/js?id=<%= theme.web_analytics.gtag %>', function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '<%- theme.web_analytics.gtag %>');
-        });
+        let umami = document.createElement('script');
+        umami.async = true;
+        umami.src = "<%= theme.web_analytics.umami.src %>";
+        umami.setAttribute("data-website-id", "<%= theme.web_analytics.umami.website_id %>");
+        umami.setAttribute("data-domains", "<%= theme.web_analytics.umami.domains %>");
+        document.head.appendChild(umami);
       }
     </script>
   <% } %>
@@ -59,24 +60,6 @@
           var s = document.getElementsByTagName("script")[0];
           s.parentNode.insertBefore(mta, s);
         })();
-      }
-    </script>
-  <% } %>
-
-  <% if(theme.web_analytics.woyaola) { %>
-    <!-- 51.la Analytics -->
-    <script async>
-      if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript('//js.users.51.la/<%= theme.web_analytics.woyaola %>.js');
-      }
-    </script>
-  <% } %>
-
-  <% if(theme.web_analytics.cnzz) { %>
-    <!-- cnzz Analytics -->
-    <script async>
-      if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript('//s4.cnzz.com/z_stat.php?id=<%= theme.web_analytics.cnzz %>&show=pic');
       }
     </script>
   <% } %>

@@ -13,9 +13,9 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://cauchyoooo.github.io
-# url: http://localhost:4000/Blog
-permalink: :year/:month/:day/:title/
+url: https://cauchyoooo.github.io # github url 
+# url: http://localhost:5000/ # local url
+# permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -41,18 +41,17 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
+syntax_highlighter: highlight.js
 highlight:
-  enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
   preprocess: true
   line_number: true
   tab_replace: ''
