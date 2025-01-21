@@ -301,7 +301,7 @@
 </blockquote>
 <span id="more"></span>
 <p>💎</p>
-<h3 id="一-自定义组件"><a class="markdownIt-Anchor" href="#一-自定义组件"></a> 一、自定义组件</h3>
+<h3 id="一、自定义组件">一、自定义组件</h3>
 <ul>
 <li>用自定义组件定义几种飞碟，做成预制</li>
 </ul>
@@ -341,12 +341,12 @@
 </tbody>
 </table>
 <p>形状颜色与之匹配的分数规则如下图所示：</p>
-<p><img src="/img/2022/Homework5/01.png" srcset="/img/loading.gif" lazyload alt="01" /></p>
+<p><img src="/img/2022/Homework5/01.png" srcset="/img/loading.gif" lazyload alt="01"></p>
 <p>再利用Monobehavior脚本为各飞碟附上相应属性</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">public</span> DiskItem diskItem;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>这样，我们自定义的预制件就做好了。</p>
 <p>👾</p>
-<h3 id="二-编程实践"><a class="markdownIt-Anchor" href="#二-编程实践"></a> 二、编程实践</h3>
+<h3 id="二、编程实践">二、编程实践</h3>
 <p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw5/Assets">https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw5/Assets</a></p>
 <ul>
 <li>编写一个简单的鼠标打飞碟游戏
@@ -364,14 +364,14 @@
 </ul>
 </li>
 </ul>
-<h4 id="简单工厂"><a class="markdownIt-Anchor" href="#简单工厂"></a> 简单工厂</h4>
+<h4 id="简单工厂">简单工厂</h4>
 <p>简单工厂又称为工厂方法，即类一个方法能够得到一个对象实例，使用者不需要知道该实例如何构建、初始化等细节。</p>
 <ul>
 <li>游戏对象的创建与销毁高成本，必须减少销毁次数。</li>
 <li>屏蔽创建与销毁的业务逻辑，是程序易于扩展。</li>
 </ul>
 <p>在Unity中，<strong>工厂方法+单实例+对象池</strong> 通常都是同时一起用。这里给出一个设计例子：</p>
-<p><img src="/img/2022/Homework5/02.png" srcset="/img/loading.gif" lazyload alt="02" /></p>
+<p><img src="/img/2022/Homework5/02.png" srcset="/img/loading.gif" lazyload alt="02"></p>
 <p>其中：</p>
 <ul>
 <li>DiskFactory 类是一个单实例类，用钱买场景单实例创建</li>
@@ -379,14 +379,14 @@
 <li>DiskFactory 使用模板模式根据预制和规则制作飞碟</li>
 <li>对象模板包括飞碟对象与飞碟数据</li>
 </ul>
-<h4 id="实现效果"><a class="markdownIt-Anchor" href="#实现效果"></a> 实现效果</h4>
-<p><img src="/img/2022/Homework5/04.gif" srcset="/img/loading.gif" lazyload alt="04" /></p>
-<h4 id="代码框架"><a class="markdownIt-Anchor" href="#代码框架"></a> 代码框架</h4>
-<p><img src="/img/2022/Homework5/03.png" srcset="/img/loading.gif" lazyload alt="03" /></p>
+<h4 id="实现效果">实现效果</h4>
+<p><img src="/img/2022/Homework5/04.gif" srcset="/img/loading.gif" lazyload alt="04"></p>
+<h4 id="代码框架">代码框架</h4>
+<p><img src="/img/2022/Homework5/03.png" srcset="/img/loading.gif" lazyload alt="03"></p>
 <p>其中标注了<strong>固定模板</strong>的类是基本与前几次作业使用的代码一致，除了<code>Singleton</code>是本次作业新增的。</p>
 <p><code>Singleton</code>代码如下：</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Singleton</span>&lt;<span class="hljs-title">T</span>&gt; : <span class="hljs-title">MonoBehaviour</span> <span class="hljs-keyword">where</span> <span class="hljs-title">T</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">static</span> T instance;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> T Instance&#123;<br>        <span class="hljs-keyword">get</span>&#123;<br>            <span class="hljs-keyword">if</span>(instance == <span class="hljs-literal">null</span>)&#123;<br>                instance = (T)FindObjectOfType(<span class="hljs-keyword">typeof</span>(T));<br>                <span class="hljs-keyword">if</span>(instance == <span class="hljs-literal">null</span>)&#123;<br>                    Debug.LogError(<br>                        <span class="hljs-string">&quot;An instance of &quot;</span>+<br>                        <span class="hljs-keyword">typeof</span>(T)+<br>                        <span class="hljs-string">&quot; is needed in the scene, but there is none.&quot;</span><br>                    );<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">return</span> instance;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h4 id="主要代码"><a class="markdownIt-Anchor" href="#主要代码"></a> 主要代码</h4>
+<h4 id="主要代码">主要代码</h4>
 <p><strong>CCFlyAction</strong></p>
 <p>用于飞行动作。通过改变游戏对象position的z轴来实现其移动，也加入了游戏对象自己旋转。当z轴坐标不大于-20时，理解为飞出屏幕，销毁处理。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CCFlyAction</span> : <span class="hljs-title">SSAction</span><br>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> speed;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> CCFlyAction <span class="hljs-title">GetCCFlyAction</span>(<span class="hljs-params"><span class="hljs-built_in">float</span> s</span>)</span>&#123;<br>        CCFlyAction action = ScriptableObject.CreateInstance&lt;CCFlyAction&gt;();<br>        action.speed = s;<br>        <span class="hljs-keyword">return</span> action;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span>&#123;&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <span class="hljs-comment">//飞碟已经被&quot;销毁&quot;</span><br>        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.transform.gameObject.activeSelf == <span class="hljs-literal">false</span>) &#123; <br>            Debug.Log(<span class="hljs-string">&quot;Hit Destroy&quot;</span>);<br>            <span class="hljs-keyword">this</span>.destroy = <span class="hljs-literal">true</span>;<br>            <span class="hljs-keyword">this</span>.callback.SSActionEvent(<span class="hljs-keyword">this</span>);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.transform.position.z &lt;= <span class="hljs-number">-20</span>)&#123;<br>            Debug.Log(<span class="hljs-string">&quot;Out Destroy&quot;</span>);<br>            <span class="hljs-keyword">this</span>.destroy = <span class="hljs-literal">true</span>;<br>            <span class="hljs-keyword">this</span>.callback.SSActionEvent(<span class="hljs-keyword">this</span>);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br><br>        transform.position -= <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, speed * Time.deltaTime);<br>        transform.Rotate(<span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">10</span> * Time.deltaTime, <span class="hljs-number">30</span> * Time.deltaTime));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>

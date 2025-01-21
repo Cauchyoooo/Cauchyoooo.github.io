@@ -306,11 +306,11 @@
 </blockquote>
 <span id="more"></span>
 <p>🥘</p>
-<h3 id="一-基本操作演练"><a class="markdownIt-Anchor" href="#一-基本操作演练"></a> 一、基本操作演练</h3>
+<h3 id="一、基本操作演练">一、基本操作演练</h3>
 <ul>
 <li>下载Fantasy Skybox FREE，构建自己的游戏场景（含天空、光源、音效、地形）</li>
 </ul>
-<p><img src="/img/2022/Homework4/scene.jpg" srcset="/img/loading.gif" lazyload alt="scene" /></p>
+<p><img src="/img/2022/Homework4/scene.jpg" srcset="/img/loading.gif" lazyload alt="scene"></p>
 <ul>
 <li>写一个简单的总结，总结游戏对象的使用</li>
 </ul>
@@ -321,31 +321,31 @@
 </li>
 <li>
 <p>Terrain：地面，通过Terrain自带的编辑工具可以编辑地形，如更改地形大小，修改地形高度，给地形“上色”，还可以添加树木花草等。我们更多地会选择使用别人做好现成的素材。</p>
-<p><img src="/img/2022/Homework4/terrain1.jpg" srcset="/img/loading.gif" lazyload alt="terrain1" /></p>
-<p><img src="/img/2022/Homework4/terrain2.jpg" srcset="/img/loading.gif" lazyload alt="terrain2" /></p>
+<p><img src="/img/2022/Homework4/terrain1.jpg" srcset="/img/loading.gif" lazyload alt="terrain1"></p>
+<p><img src="/img/2022/Homework4/terrain2.jpg" srcset="/img/loading.gif" lazyload alt="terrain2"></p>
 </li>
 <li>
 <p>Light：灯光。光影的合理设置能更好地表达3D环境的颜色与情绪。有平行光、聚光灯、点光源、区域光等，不同光有不同属性面板。</p>
 <p>如点光源这个面板，我们能看到像颜色、阴影等设置。</p>
-<p><img src="/img/2022/Homework4/Light.jpg" srcset="/img/loading.gif" lazyload alt="Light" /></p>
+<p><img src="/img/2022/Homework4/Light.jpg" srcset="/img/loading.gif" lazyload alt="Light"></p>
 </li>
 <li>
 <p>Camera：摄影机。第一人称游戏可以作为玩家的眼睛，第三人称游戏可以跟随玩家运动。多摄像机是制造效果的重要手段。摄像机属性面板如下：</p>
-<p><img src="/img/2022/Homework4/Camera.jpg" srcset="/img/loading.gif" lazyload alt="Camera" /></p>
+<p><img src="/img/2022/Homework4/Camera.jpg" srcset="/img/loading.gif" lazyload alt="Camera"></p>
 <p>各属性说明可参考官方文档：<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2021.3/Manual/class-Camera.html">https://docs.unity.cn/cn/2021.3/Manual/class-Camera.html</a></p>
 </li>
 <li>
 <p>Skybox：天空盒（一种材料）。根据shader着色器的类型不同，需要配置不同的天空盒素材。如Skybox/Cubemap是一个圆形图片、Mobile/Skybox是6面图片、Skybox/Panoramic是一张全景图。制作好天空盒材质后，可以放到Camera的Skybox部件中。</p>
-<p><img src="/img/2022/Homework4/skybox.jpg" srcset="/img/loading.gif" lazyload alt="skybox" /></p>
-<p><img src="/img/2022/Homework4/skybox2.jpg" srcset="/img/loading.gif" lazyload alt="skybox2" /></p>
+<p><img src="/img/2022/Homework4/skybox.jpg" srcset="/img/loading.gif" lazyload alt="skybox"></p>
+<p><img src="/img/2022/Homework4/skybox2.jpg" srcset="/img/loading.gif" lazyload alt="skybox2"></p>
 </li>
 <li>
 <p>Audio：音源。可利用Audio Source在场景中播放声音，利用附着在角色对象上的Audio Listener监听场景中的声音。Audio Source可以设置为3D，听起来有立体的效果。通过混响等技巧可以产生更复杂的效果。</p>
-<p><img src="/img/2022/Homework4/audio.jpg" srcset="/img/loading.gif" lazyload alt="audio" /></p>
+<p><img src="/img/2022/Homework4/audio.jpg" srcset="/img/loading.gif" lazyload alt="audio"></p>
 </li>
 </ul>
 <p>🍜</p>
-<h3 id="二-编程实践"><a class="markdownIt-Anchor" href="#二-编程实践"></a> 二、编程实践</h3>
+<h3 id="二、编程实践">二、编程实践</h3>
 <p>牧师与魔鬼 动作分离版+设计一个裁判类（当游戏到达结束条件时，通知场景控制器游戏结束）</p>
 <p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw4/Assets/Scripts">https://github.com/Cauchyoooo/3DGameDesign/tree/main/hw4/Assets/Scripts</a></p>
 <p>对比上一个版本的一些区别：</p>
@@ -356,9 +356,9 @@
 <li>游戏结束会在船靠岸之后才提示弹出来</li>
 </ul>
 <p>实际效果如下图：</p>
-<p><img src="/img/2022/Homework4/anime.gif" srcset="/img/loading.gif" lazyload alt="anime" /></p>
-<h4 id="1-动作管理器的设计"><a class="markdownIt-Anchor" href="#1-动作管理器的设计"></a> 1 动作管理器的设计</h4>
-<p><img src="/img/2022/Homework4/uml.jpg" srcset="/img/loading.gif" lazyload alt="uml" /></p>
+<p><img src="/img/2022/Homework4/anime.gif" srcset="/img/loading.gif" lazyload alt="anime"></p>
+<h4 id="1-动作管理器的设计">1 动作管理器的设计</h4>
+<p><img src="/img/2022/Homework4/uml.jpg" srcset="/img/loading.gif" lazyload alt="uml"></p>
 <ul>
 <li>通过门面模式（控制器模式）输出组合好的几个动作，供原来程序调用。</li>
 <li>通过组合模式实现动作组合，按组合模式设计方法</li>
@@ -415,7 +415,7 @@
 <p><strong>6.动作组合管理(CCActionManager)</strong></p>
 <p>上一版本的moveable脚本拆分到这个类和FirstController的方法中，实现船和角色的移动管理。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-comment">// 将原来移动的方法 放在这里</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CCActionManager</span> : <span class="hljs-title">SSActionManager</span>, <span class="hljs-title">ISSActionCallback</span><br>&#123;<br>    <span class="hljs-comment">//是否正在运动</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">bool</span> isMoving = <span class="hljs-literal">false</span>;<br>    <span class="hljs-comment">//船移动动作类</span><br>    <span class="hljs-keyword">public</span> CCMoveToAction moveBoatAction;<br>    <span class="hljs-comment">//人移动动作类(需要组合)</span><br>    <span class="hljs-keyword">public</span> CCSequenceAction moveRoleAction;<br>    <span class="hljs-comment">//控制器</span><br>    <span class="hljs-keyword">public</span> FirstController controller;<br><br>    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        controller = (FirstController)Director.getInstance().currentSceneController;<br>        controller.actionManager = <span class="hljs-keyword">this</span>;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> <span class="hljs-title">IsMoving</span>()</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> isMoving;<br>    &#125;<br><br>    <span class="hljs-comment">//移动船</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MoveBoat</span>(<span class="hljs-params">GameObject boat, Vector3 target, <span class="hljs-built_in">float</span> speed</span>)</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (isMoving)<br>            <span class="hljs-keyword">return</span>;<br>        isMoving = <span class="hljs-literal">true</span>;<br>        moveBoatAction = CCMoveToAction.GetSSAction(target, speed);<br>        <span class="hljs-keyword">this</span>.RunAction(boat, moveBoatAction, <span class="hljs-keyword">this</span>);<br>    &#125;<br><br>    <span class="hljs-comment">//移动人</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MoveRole</span>(<span class="hljs-params">GameObject role, Vector3 mid_destination, Vector3 destination, <span class="hljs-built_in">int</span> speed</span>)</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (isMoving)<br>            <span class="hljs-keyword">return</span>;<br>        isMoving = <span class="hljs-literal">true</span>;<br>        moveRoleAction = CCSequenceAction.GetSSAction(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> List&lt;SSAction&gt; <br>            &#123;   CCMoveToAction.GetSSAction(mid_destination, speed), <br>                CCMoveToAction.GetSSAction(destination, speed) &#125;);<br>        <span class="hljs-keyword">this</span>.RunAction(role, moveRoleAction, <span class="hljs-keyword">this</span>);<br>    &#125;<br><br>    <span class="hljs-comment">//回调函数</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSActionEvent</span>(<span class="hljs-params">SSAction source,</span></span><br><span class="hljs-params"><span class="hljs-function">    SSActionEventType events = SSActionEventType.Completed,</span></span><br><span class="hljs-params"><span class="hljs-function">    <span class="hljs-built_in">int</span> intParam = <span class="hljs-number">0</span>,</span></span><br><span class="hljs-params"><span class="hljs-function">    <span class="hljs-built_in">string</span> strParam = <span class="hljs-literal">null</span>,</span></span><br><span class="hljs-params"><span class="hljs-function">    Object objectParam = <span class="hljs-literal">null</span></span>)</span><br>    &#123;<br>        isMoving = <span class="hljs-literal">false</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h4 id="2-部分控制类的设计"><a class="markdownIt-Anchor" href="#2-部分控制类的设计"></a> 2 部分控制类的设计</h4>
+<h4 id="2-部分控制类的设计">2 部分控制类的设计</h4>
 <p><strong>1.最高层控制器(FirstController)</strong></p>
 <ul>
 <li>这里仅展示有增改的函数方法，增添了一个裁判反馈信息<code>JudgeCallback</code>，实现裁判类的回调函数。</li>
