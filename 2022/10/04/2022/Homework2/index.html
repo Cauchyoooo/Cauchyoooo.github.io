@@ -76,6 +76,12 @@
 
 <link  rel="stylesheet" href="/css/main.css" />
 
+<!-- katex -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/.css">
+<link rel="stylesheet" href="/katex.min.css">
+
+
 
   <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
@@ -305,33 +311,33 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>作业简介：<br>
-1.简答题（涉及GameObject, Transform, Assets, Prefabs, Component, MonoBehaviour等）<br>
-2.编程实践（仅允许使用IMGUI构建UI，训练数据-控制分离的编程思维）<br>
+<p>作业简介：<br />
+1.简答题（涉及GameObject, Transform, Assets, Prefabs, Component, MonoBehaviour等）<br />
+2.编程实践（仅允许使用IMGUI构建UI，训练数据-控制分离的编程思维）<br />
 3.思考题（涉及游戏设计模式）</p>
 </blockquote>
 <span id="more"></span>
 <p>🌈</p>
-<h3 id="一、简答题">一、简答题</h3>
+<h3 id="一-简答题"><a class="markdownIt-Anchor" href="#一-简答题"></a> 一、简答题</h3>
 <ol>
 <li>
 <p>解释游戏对象(<strong>GameObjects</strong>)和资源(<strong>Assets</strong>)的区别与联系</p>
 <p><strong>GameObjects</strong>：是 Unity 中的基础对象，表示角色、道具和景物。它们本身并没有取得多大作为，但它们充当组件(Component)的容器，而组件可实现功能。</p>
-<p><img src="/img/2022/Homework2/02.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/2022/Homework2/02.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p>我们可以看到GameObject列表下有各种属性的对象，包括空属性对象、3D对象、效果、灯光等</p>
 <p><strong>Assets</strong>：表示 Unity 项目中用来创建游戏或应用的任何项；也可以代表项目中的视觉或音频元素，例如 3D 模型、纹理、精灵、音效或音乐；还可以表示更抽象的项目，例如任何用途的颜色渐变、动画遮罩或任意文本或数字数据。</p>
-<p><img src="/img/2022/Homework2/03.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/2022/Homework2/03.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p>我们可以看到Assets创建下有很多类型的资源，如C#脚本，着色器，预制件等。</p>
 <p>简单地理解，游戏对象是真正加入到游戏场景里的实体，类似一个空盒子，需要向里面添加各种组件来实功能。资源是创建或外导入的各种数据，可以应用到不同游戏对象身上，可以只是存储在项目里，不一定会使用到当前的游戏场景中。</p>
-<p><img src="/img/2022/Homework2/01.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/2022/Homework2/01.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
 </li>
 <li>
 <p>下载几个游戏案列，分别总结资源、对象组织和结构（指资源的目录组织结构与游戏对象树的层次结构）</p>
 <p>这里用作展示的是官方的游戏教程里的资源与对象的组织和结构。</p>
-<p><img src="/img/2022/Homework2/04.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/2022/Homework2/04.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p>我们可以看到<strong>资源</strong>一般是按<strong>用途</strong>来分的，不同的文件夹存放不同类别的资源，包括音频、角色、环境、脚本、预制件、场景等，这里还可以看到模型资源里的环境精灵是按颜色来分类的，脚本里面按使用场景分类。</p>
-<p><img src="/img/2022/Homework2/05.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/img/2022/Homework2/06.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/2022/Homework2/05.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/img/2022/Homework2/06.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p><strong>游戏对象</strong>主要是根据<strong>功能</strong>不同分类的，可以看到第一个游戏对象树有UI画布、摄像机、角色、格子、敌人等分支，第二个游戏对象树则是利用空对象来写分割线区分结构。</p>
 <p>养成合理分类资源与游戏对象的好习惯，能让我们更高效地制作游戏。</p>
 </li>
@@ -341,7 +347,7 @@
 <li>基本行为包括 <code>Awake()</code> <code>Start()</code> <code>Update()</code> <code>FixedUpdate()</code> <code>LateUpdate()</code></li>
 <li>常用事件包括 <code>OnGUI()</code> <code>OnDisable()</code> <code>OnEnable()</code></li>
 </ul>
-<p><em>“MonoBehaviour 类是一个基类，所有 Unity 脚本都默认派生自该类。MonoBehaviour 类允许您启动、停止和管理协程。MonoBehaviour 类提供对大量事件消息的访问，允许您根据项目中当前发生的情况执行代码。”</em></p>
+<p><em>&quot;MonoBehaviour 类是一个基类，所有 Unity 脚本都默认派生自该类。MonoBehaviour 类允许您启动、停止和管理协程。MonoBehaviour 类提供对大量事件消息的访问，允许您根据项目中当前发生的情况执行代码。&quot;</em></p>
 <p><strong>MonoBehaviour 方法简介</strong></p>
 <ul>
 <li><code>Awake</code>：在加载脚本实例时调用，无论该脚本是否启用，初始化脚本时都会调用。其在 Start 前调用</li>
@@ -355,7 +361,7 @@
 </ul>
 <p>代码验证：</p>
  <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Awake</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Awake&quot;</span>);&#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Start&quot;</span>);&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Update&quot;</span>);&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">FixedUpdate</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Fixed&quot;</span>);&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnGUI</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;OnGUI&quot;</span>);&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnEnable</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Enabled&quot;</span>);&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnDisable</span>()</span> &#123;Debug.Log(<span class="hljs-string">&quot;Disabled&quot;</span>);&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p><img src="/img/2022/Homework2/07.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/2022/Homework2/07.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
 </li>
 <li>
 <p>查找脚本手册，了解 GameObjects, Transform, Component 对象</p>
@@ -377,12 +383,12 @@
 </li>
 </ul>
 <p><strong>图</strong></p>
-<p><img src="/img/2022/Homework2/08.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>Table的GameObject属性包含Tag(标签)、Layer(层)、Static(是否静态)、勾选框(是否活动)、属性名；<br>
-Table的Transform属性包含Position(坐标)、Rotation(旋转角)、Scale(大小)；<br>
+<p><img src="/img/2022/Homework2/08.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>Table的GameObject属性包含Tag(标签)、Layer(层)、Static(是否静态)、勾选框(是否活动)、属性名；<br />
+Table的Transform属性包含Position(坐标)、Rotation(旋转角)、Scale(大小)；<br />
 Table的Component属性包括Cube(Mesh Filter)、Mesh Renderer、Box Collider、RIgidbody、Hello(Script)、Red(Material)。</p>
 <p><strong>UML图</strong></p>
-<p><img src="/img/2022/Homework2/09.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/2022/Homework2/09.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
 </li>
 <li>
 <p>资源预设(<strong>Prefabs</strong>)与对象克隆(<strong>clone</strong>)</p>
@@ -403,11 +409,11 @@ Table的Component属性包括Cube(Mesh Filter)、Mesh Renderer、Box Collider、
 </li>
 </ol>
 <p>🍰</p>
-<h3 id="二、编程实践">二、编程实践</h3>
+<h3 id="二-编程实践"><a class="markdownIt-Anchor" href="#二-编程实践"></a> 二、编程实践</h3>
 <p>源码地址：<a target="_blank" rel="noopener" href="https://github.com/Cauchyoooo/3DGameDesign/blob/main/hw2/MineGame.cs">https://github.com/Cauchyoooo/3DGameDesign/blob/main/hw2/MineGame.cs</a></p>
 <p>这里是利用IMGUI做了一个扫雷小游戏。运行窗口大小为Full HD(1920x1080)</p>
 <p>实现的效果如下图</p>
-<p><img src="/img/2022/Homework2/win.gif" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/2022/Homework2/win.gif" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p><strong>数据定义部分代码：</strong></p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-comment">// Data</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span>[,] control_arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">16</span>,<span class="hljs-number">20</span>]; <span class="hljs-comment">//用于记录雷和数字 -1是雷 0是空 其他是周围的雷数</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span>[,] show_arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">16</span>,<span class="hljs-number">20</span>]; <span class="hljs-comment">//用于记录格子可见性 0是可见 1是不可见</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span>[,] mark_arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">16</span>,<span class="hljs-number">20</span>]; <span class="hljs-comment">//用于玩家标记雷 标记雷为1 此时按钮不可点击</span><br>   <br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> mine_num = <span class="hljs-number">60</span>; <span class="hljs-comment">//用于记录剩余雷数</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> wrong = <span class="hljs-number">0</span>; <span class="hljs-comment">//用于记录标错的雷数</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> time = <span class="hljs-number">0</span>; <span class="hljs-comment">//用于记录用时</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">float</span> tmptime = <span class="hljs-number">0</span>; <span class="hljs-comment">//用于记录上一帧时间(不会重复初始化)</span><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> state = <span class="hljs-number">0</span>; <span class="hljs-comment">//0为挖矿模式，1为标记模式 输了为-1，赢了为-2</span><br><br>   <span class="hljs-comment">// Controls Style</span><br>   GUIStyle smileStyle = <span class="hljs-keyword">new</span> GUIStyle();<br>   GUIStyle mineStyle = <span class="hljs-keyword">new</span> GUIStyle();<br>   GUIStyle[] numStyle = <span class="hljs-keyword">new</span> GUIStyle[<span class="hljs-number">8</span>]; <span class="hljs-comment">//记录数字1-8的格式</span><br>   GUIStyle state0 = <span class="hljs-keyword">new</span> GUIStyle();<br>   GUIStyle state1 = <span class="hljs-keyword">new</span> GUIStyle();<br>   GUIStyle worl = <span class="hljs-keyword">new</span> GUIStyle();<br>   GUIStyle txt = <span class="hljs-keyword">new</span> GUIStyle();<br></code></pre></td></tr></table></figure>
 <p>由于不是很想利用Texture2D导入图片素材，这里用的是IMGUI里简陋的<code>GUIStyle()</code>，配合可显示的Unicode符号食用。</p>
@@ -434,7 +440,7 @@ Table的Component属性包括Cube(Mesh Filter)、Mesh Renderer、Box Collider、
 <li>利用自定义状态值<code>state</code>来表示不同的游戏状态，能帮助更好地实现这个游戏功能。</li>
 </ul>
 <p>⛵</p>
-<h3 id="三、思考题">三、思考题</h3>
+<h3 id="三-思考题"><a class="markdownIt-Anchor" href="#三-思考题"></a> 三、思考题</h3>
 <ul>
 <li>
 <p>微软XNA引擎的Game对象屏蔽了游戏循环的细节，并使用一组虚方法让继承者完成它们，我们称这种设计为“模板方法模式”。</p>
@@ -443,7 +449,7 @@ Table的Component属性包括Cube(Mesh Filter)、Mesh Renderer、Box Collider、
 <p>为什么是“模板方法”模式而不是“策略模式”呢？</p>
 <p>**模板方法模式：**一个抽象类公开定义了执行它的方法的方式/模板。它的子类可以按需要重写方法实现，但调用将以抽象类中定义的方式进行。</p>
 <p>**策略模式：**是针对一组算法，将每一个算法封装到具有共同接口的独立的类中，从而使得它们可以相互替换。</p>
-<p>– 微软XNA引擎的Game对象屏蔽了游戏循环的细节，用虚方法让继承者完成它们，更强调继承重写，明显更符合模板方法模式。</p>
+<p>-- 微软XNA引擎的Game对象屏蔽了游戏循环的细节，用虚方法让继承者完成它们，更强调继承重写，明显更符合模板方法模式。</p>
 </li>
 </ul>
 </li>
@@ -456,11 +462,11 @@ Table的Component属性包括Cube(Mesh Filter)、Mesh Renderer、Box Collider、
 </li>
 <li>
 <p>使用 BroadcastMessage() 方法，向子对象发送消息。写出 BroadcastMessage() 的伪代码。</p>
-<p><img src="/img/2022/Homework2/10.jpg" srcset="/img/loading.gif" lazyload alt=""><br>
-<img src="/img/2022/Homework2/11.jpg" srcset="/img/loading.gif" lazyload alt=""><br>
-<img src="/img/2022/Homework2/12.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/2022/Homework2/10.jpg" srcset="/img/loading.gif" lazyload alt="" /><br />
+<img src="/img/2022/Homework2/11.jpg" srcset="/img/loading.gif" lazyload alt="" /><br />
+<img src="/img/2022/Homework2/12.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
   <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">BcM</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>  <span class="hljs-keyword">public</span> GameObject pobject;<br>  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> ()</span> &#123;<br>		pobject.BroadcastMessage(<span class="hljs-string">&quot;dbug&quot;</span>,<span class="hljs-string">&quot;inputstr&quot;</span>,SendMessageOptions.RequireReceiver);<br>	&#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">c1</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dbug</span>()</span>&#123;<br>        Debug.Log(<span class="hljs-string">&quot;c1&quot;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">c2</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dbug</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> str</span>)</span>&#123;<br>        Debug.Log(<span class="hljs-string">&quot;c2:&quot;</span>+str);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p><img src="/img/2022/Homework2/13.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/2022/Homework2/13.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
 </li>
 </ul>
 </li>
