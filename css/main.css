@@ -1473,8 +1473,9 @@ figure.highlight td.code > pre {
 .markdown-body figure > a > img {
   max-width: 90%;
   margin: 1.5rem auto;
+  padding: 1px 3px;
   display: block;
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+  border: solid 1px rgba(0,0,0,0.051);
   border-radius: 4px;
   background-color: transparent;
 }
