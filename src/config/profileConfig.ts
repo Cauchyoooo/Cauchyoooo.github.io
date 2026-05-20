@@ -28,17 +28,24 @@ export const profileConfig: ProfileConfig = {
 		// 	showName: false,
 		// },
 		{
+			name: "Email",
+			icon: "fa7-solid:envelope",
+			url: "mailto:903729210@qq.com",
+			showName: false,
+		},
+		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
 			url: "https://github.com/Cauchyoooo",
 			showName: false,
 		},
-		// {
-		// 	name: "Email",
-		// 	icon: "fa7-solid:envelope",
-		// 	url: "mailto:xiaye@msn.com",
-		// 	showName: false,
-		// },
+		{
+			name: "Steam",
+			icon: "fa7-brands:steam-square",
+			url: "https://steamcommunity.com/profiles/76561199073240218/",
+			showName: false,
+		}
+		
 		// {
 		// 	name: "RSS",
 		// 	icon: "fa7-solid:rss",
