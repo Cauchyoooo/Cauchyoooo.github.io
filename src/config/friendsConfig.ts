@@ -32,6 +32,16 @@ export const friendsConfig: FriendLink[] = [
 		weight: 10, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
+	{
+		title: "YuFish",
+		imgurl:
+			"/assets/images/friends/sxybk.png",
+		desc: "拾雪掩碧空",
+		siteurl: "https://yufish131416.github.io/yufish.github.io/",
+		tags: ["Blog"],
+		weight: 9, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
 	// {
 	// 	title: "Firefly Docs",
 	// 	imgurl: "https://docs-firefly.cuteleaf.cn/logo.png",
