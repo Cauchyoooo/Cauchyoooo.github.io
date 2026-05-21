@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cauchy&apos;s Blog</title><description>No description</description><link>https://cauchyoooo.github.io/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.10.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年5月21日 21:27:54</lastBuildDate><item><title>港硕回顾</title><link>https://cauchyoooo.github.io/posts/2025/nikki/0817_review-hk/</link><guid isPermaLink="true">https://cauchyoooo.github.io/posts/2025/nikki/0817_review-hk/</guid><description>一年的港硕生活，就这么过去了。</description><pubDate>Sun, 17 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;&lt;p&gt;随着港硕学业的告终，也是时候做一篇回顾谈谈感想了。&lt;/p&gt;&lt;/blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cauchy&apos;s Blog</title><description>No description</description><link>https://cauchyoooo.github.io/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.10.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年5月21日 23:16:52</lastBuildDate><item><title>校园二手交易平台项目——分析篇</title><link>https://cauchyoooo.github.io/posts/2026/nikki/0521-review/</link><guid isPermaLink="true">https://cauchyoooo.github.io/posts/2026/nikki/0521-review/</guid><description>一个看似可行的校园项目为何走向终止？</description><pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;&lt;p&gt;这是23年项目的一些反思与分析，或许我能从中获得些许收获，提醒自己不要重复踩坑。由ai辅助本人乱写。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;section&gt;&lt;h1&gt;校园二手交易平台项目——分析篇&lt;a href=&quot;#校园二手交易平台项目分析篇&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;section&gt;&lt;h2&gt;一、项目概况简述&lt;a href=&quot;#一项目概况简述&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;项目定位&lt;/strong&gt;：校园二手交易微信小程序，方便校内闲置物品流通&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;团队构成&lt;/strong&gt;：学生+上班族兼职，技术部约8人，市场部约7人&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开发周期&lt;/strong&gt;：2023年5月–9月集中开发，2024年2月上线&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最终结果&lt;/strong&gt;：用户量极低，服务器约2024年下半年关停，公司2025年注销&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;二、失败原因分析&lt;a href=&quot;#二失败原因分析&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. 需求把控失衡：从“解决问题”变成“堆砌功能”&lt;a href=&quot;#1-需求把控失衡从解决问题变成堆砌功能&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;核心需求不聚焦&lt;/strong&gt;：校园二手交易的核心问题是“&lt;strong&gt;信息分散、缺乏可信的校内渠道&lt;/strong&gt;”。项目初期完成的基础功能（商品浏览、私信、用户页）已经可以解决这一问题。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;盲目增加社交模块&lt;/strong&gt;：发起人Sunny哥希望加入类似校园集市的发帖评论功能，试图“把&amp;lt;校园集市&amp;gt;的人挖过来”。这导致：
+&lt;ul&gt;
+&lt;li&gt;功能臃肿，小程序定位模糊（交易+社交）&lt;/li&gt;
+&lt;li&gt;开发资源被分散，延后了核心功能的打磨&lt;/li&gt;
+&lt;li&gt;与现有成熟产品（校园集市、闲鱼）直接竞争，差异化优势丧失&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺乏真实用户验证&lt;/strong&gt;：新增功能前没有做小范围调研或MVP测试，更多是凭发起人的直觉判断。&lt;/li&gt;
+&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;启示&lt;/strong&gt;：校园项目的资源有限，应坚持“做少而精”，先验证核心场景再考虑扩展。&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. 团队结构与协作问题：兼职模式下的天然缺陷&lt;a href=&quot;#2-团队结构与协作问题兼职模式下的天然缺陷&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;成员投入度不均&lt;/strong&gt;：团队中有上班族、学生，时间精力差异大。部分成员“进来后基本没干活”（跑路哥A/B、摸鱼哥），导致实际核心人力只有约一半。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;远程协作效率低&lt;/strong&gt;：没有严格的代码规范，分工虽明确但交叉改代码的情况缺乏沟通机制。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PM管理方式有待优化&lt;/strong&gt;：B哥作为PM，在出现bug时直接指派非责任人修改，绕过分工链路，反而降低了排查效率。同时组织“docker培训”等基础内容，对于具备自学能力的成员来说可能有些多余——更高效的方式是提供文档链接或答疑时间。&lt;/li&gt;
+&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;启示&lt;/strong&gt;：兼职/志愿型项目需要更轻量的协作流程，避免过度管理；PM应尊重已有分工，发挥协调而非越位指挥的作用。&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. 市场与推广策略失效：没有找到冷启动的支点&lt;a href=&quot;#3-市场与推广策略失效没有找到冷启动的支点&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;地推受阻&lt;/strong&gt;：计划走班宣传、朋友圈转发抽奖，但恰逢校园诈骗事件，学生对扫码转发高度警惕，方案被迫取消。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺乏官方背书&lt;/strong&gt;：学校不允许官方宣传，导致只能靠学生自发传播，信任度不足。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;激励效果有限&lt;/strong&gt;：集赞领红包虽然有人参与（如本人领了5元），但无法形成持续活跃。用户反馈“不如宿舍群出物快”——说明产品没有提供比现有渠道更明显的价值。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;市场部作用不明显&lt;/strong&gt;：从描述看，市场部未能找到有效的获客渠道或运营策略，更像“配合执行”。&lt;/li&gt;
+&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;启示&lt;/strong&gt;：校园项目的冷启动必须依托已有社群（如班级群、社团、二手群）或官方背书（学生会、后勤处），单纯的地推和红包很难起量。&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;4. 产品与运营节奏错位：上线时机与用户需求不匹配&lt;a href=&quot;#4-产品与运营节奏错位上线时机与用户需求不匹配&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;上线时间尴尬&lt;/strong&gt;：2024年2月上线后不久就临近寒假，学生二手交易需求大幅下降（离校、备考）。缺乏提前预热和蓄水。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;没有运营抓手&lt;/strong&gt;：小程序上线后没有持续的运营活动（如话题、优惠、种子用户激励），仅靠初期一波推广，后续声音逐渐消失。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;广告决策的争议&lt;/strong&gt;：PM想加开屏广告回本，但开屏广告会进一步伤害本就不多的用户体验。最终虽未加，但讨论本身反映出项目已陷入“如何回本”而非“如何增长”的困境。&lt;/li&gt;
+&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;启示&lt;/strong&gt;：上线时间应选择交易旺季（如毕业季、开学季），并提前1-2周做预热。产品初期应优先追求用户量和活跃度，而非短期变现。&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;5. 商业设想脱离现实：从“赚几个亿”到“几百块卖源码”&lt;a href=&quot;#5-商业设想脱离现实从赚几个亿到几百块卖源码&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;目标过于宏大&lt;/strong&gt;：PM曾设想“推广到全国高校，赚几个亿”。但团队连本校一个校区的冷启动都没完成，这种目标差距导致资源错配和心态失衡。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;盈利模式不清晰&lt;/strong&gt;：前期没有明确的盈利点，后期想靠广告回本，但用户量不足时广告无意义。有人提出几百块买断源码包运维——这显然无法覆盖任何一方的投入。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;股权设计意义有限&lt;/strong&gt;：虽然设计了复杂的按劳分配股权方案，但项目没有实际价值时，股权只是一张纸。PM曾幻想1股卖5万，但最终公司注销，股份归零。&lt;/li&gt;
+&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;启示&lt;/strong&gt;：校园项目的商业设计应务实——先验证单校模型，再谈复制。早期可承诺“如有收益按劳分配”，但不必过度包装股权价值。&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;6. 技术决策中的风险意识不足：学生认证的隐私隐患&lt;a href=&quot;#6-技术决策中的风险意识不足学生认证的隐私隐患&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;学信网认证方案存在获取用户身份证等敏感信息的风险，且官方并无开放接口。虽然最终搁置，但提出这样的方案说明团队对数据合规、用户隐私的敏感度不够。&lt;/li&gt;
+&lt;li&gt;若强行上线，可能引发法律风险或用户信任危机。&lt;/li&gt;
+&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;启示&lt;/strong&gt;：涉及用户敏感信息的功能，必须优先查阅官方文档和法律法规，不能轻信第三方“接口服务”。&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;三、小结&lt;a href=&quot;#三小结&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;维度&lt;/th&gt;&lt;th&gt;主要问题&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;需求&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;功能蔓延，核心不够扎实，盲目增加社交模块&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;团队&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;兼职模式投入不均，PM管理风格与团队协作习惯不匹配&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;市场&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;冷启动策略受外部事件冲击，缺乏官方背书，没有找到比现有渠道更优的价值点&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;节奏&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;上线时机不佳，运营缺失，过早纠结变现&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;商业&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;目标脱离现实，盈利模式模糊，股权激励形同虚设&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;合规&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;对用户隐私风险认识不足&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;strong&gt;根本原因&lt;/strong&gt;：项目缺乏一个“既懂校园二手场景、又能管理预期和节奏”的项目管理人。发起人（Sunny哥）重想法轻验证，PM（B哥）重执行但视角偏技术且过于乐观，市场部能力不足，导致产品做出来了却推不动。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;可借鉴的经验&lt;/strong&gt;：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;校园项目优先做轻量级MVP（如先用问卷或微信群模拟交易流程）&lt;/li&gt;
+&lt;li&gt;冷启动必须绑定已有强信任渠道（班长群、宿舍楼群、学生会）&lt;/li&gt;
+&lt;li&gt;上线时间卡准毕业季/开学季，提前两周预热&lt;/li&gt;
+&lt;li&gt;股权/分红在没有实际收入前不宜复杂化，简单按劳结算更务实&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;四、讨论&lt;a href=&quot;#四讨论&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. 方向本身就是错的吗？&lt;a href=&quot;#1-方向本身就是错的吗&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;方向并不完全错误，但属于&lt;strong&gt;低利润、高运营成本&lt;/strong&gt;的赛道。&lt;/p&gt;&lt;/blockquote&gt;&lt;section&gt;&lt;h4&gt;需求角度：方向基本正确，但低估了场景落实的难度&lt;a href=&quot;#需求角度方向基本正确但低估了场景落实的难度&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;校园二手交易确实是一个真实存在的需求。每年毕业季、开学季，教材、电器、生活用品都有大量流转。闲鱼、转转等平台存在跨校交易不方便（物流成本高、信任低）的问题，校内专属平台理论上是有价值的。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;但是&lt;/strong&gt;，这个需求的满足方式已经存在——&lt;strong&gt;微信群/QQ群&lt;/strong&gt;。群交易的特点是：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;极低的技术门槛（发个文字或图片即可）&lt;/li&gt;
+&lt;li&gt;即时性高（发出去群里的人立刻看到）&lt;/li&gt;
+&lt;li&gt;信任感强（群成员大概率是同学或邻居）&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;小程序要替代微信群，必须提供微信群做不到的价值：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;搜索、筛选、分类&lt;/li&gt;
+&lt;li&gt;长期保存信息（群消息很快被刷掉）&lt;/li&gt;
+&lt;li&gt;交易记录和信用体系&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;原文中的小程序确实做到了前两点，但第三点“信用体系”没有真正落地（学生认证被搁置、信誉分仅靠卖家自行展示）。&lt;strong&gt;也就是说，小程序相比微信群的优势不够碾压&lt;/strong&gt;。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h4&gt;商业模式角度：方向本身很难赚钱&lt;a href=&quot;#商业模式角度方向本身很难赚钱&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;校园二手交易的天然问题是：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;低频（一个学生平均一学期卖几次、买几次）&lt;/li&gt;
+&lt;li&gt;低客单价（几十到几百块）&lt;/li&gt;
+&lt;li&gt;用户生命周期短（4年就毕业）&lt;/li&gt;
+&lt;li&gt;无法抽佣（小程序平台无法支持或保障交易，学生需要跳到第三方平台）&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;所以纯粹的校园二手信息平台，靠广告或抽佣都很难盈利。除非做延伸服务（如回收、维修、租赁、教材循环等）。&lt;strong&gt;项目从一开始就没有想清楚盈利模式&lt;/strong&gt;，B哥后来想加广告，属于“临时找补”。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;更务实的方向&lt;/strong&gt;：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;只做单一学校或大学城，深度运营，靠校园合伙人分成养活小团队&lt;/li&gt;
+&lt;li&gt;不做独立小程序，而是做微信群机器人+小工具的轻量方案&lt;/li&gt;
+&lt;li&gt;与学校后勤合作，嵌入官方公众号或企业微信，获得流量入口&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. 团队到底有没有心做成这件事？&lt;a href=&quot;#2-团队到底有没有心做成这件事&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;本人反思了一下，其实自己并没有心做成这件事，但技术方面我承担了我应该负责的部分。所以推广的，想要依赖市场部去做。而我也私下问过部分成员，他们也觉得我们的Leader过于乐观了，大家时常想要做完什么就跑路。&lt;/p&gt;&lt;/blockquote&gt;&lt;section&gt;&lt;h4&gt;团队成员分类&lt;a href=&quot;#团队成员分类&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; &lt;strong&gt;画饼型选手&lt;/strong&gt;：Sunny哥、B哥&lt;/p&gt;&lt;p&gt;有热情和野心，但不够脚踏实地。Sunny哥出国后心思变少；B哥能垫付服务器、搞培训、做很多杂事，但管理风格和个人认知存在局限，导致团队协作效率不高。&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;主观上有心，但能力和认知与目标不匹配。&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt; &lt;strong&gt;牛马型选手&lt;/strong&gt;：我、学妹、同事哥、MA哥、MB哥、美工哥&lt;/p&gt;&lt;p&gt;完成自己的开发任务，也会主动帮助他人发现问题，但对商业成功没有过高期待。我们真的是来打工和积累经验的，能否给我们分点money。&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;有心做好自己分内的事，但对项目整体成败的推动力有限&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt; &lt;strong&gt;划水/跑路型&lt;/strong&gt;：摸鱼哥、跑路哥A/B&lt;/p&gt;&lt;p&gt;进来后不干活或很快消失。你们到底是来干嘛的？&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;这也算团队的一部分吗？&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;strong&gt;(d) 市场部&lt;/strong&gt;：？&lt;/p&gt;&lt;p&gt;不熟，看起来没有一个主要负责人，看不到分工安排，工作记录。从结果看几乎没有有效产出。可能能力不足，也可能积极性不高。处处是阻碍，似乎没大家想象得那么简单。&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;不了解，不分析&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;section&gt;&lt;h4&gt;细节分析&lt;a href=&quot;#细节分析&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;1. 是否有明确的目标和里程碑&lt;/strong&gt;？
+有工作记录文档，有分工，有开发计划 —— 这是有心做事的体现。但缺乏产品上线后的增长目标和运营计划。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;2. 是否愿意投入资源&lt;/strong&gt;？
+B哥自己垫付服务器（每月近千元），Sunny哥注册公司、设计股权 —— 说明核心发起人确实投入了真金白银和精力。但投入的“姿势”有问题（重开发轻推广、重理想轻现实）。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;3. 面对挫折的反应&lt;/strong&gt;？&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;推广受阻 → 等开学/毕业季（被动）&lt;/li&gt;
+&lt;li&gt;有人买源码 → 拒绝（价格太低不值得，被动）&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;这些反应表明：&lt;strong&gt;团队缺乏持续解决问题的韧性和策略&lt;/strong&gt;，更多是“做到哪算哪”。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;4. 股权设计的意义&lt;/strong&gt;？
+把股权设计得很复杂，说明早期发起人想用利益绑定大家。但当项目看不到希望时，股权没有任何激励作用。本人说“赌一把”，也只是试试看的心态，或许也有相当一部分的小伙伴也和我心态相似。&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;根本问题在于：没有一个人真正为项目的成败负全责&lt;/strong&gt;。Sunny哥是发起人但后期心思转移，B哥更像个技术乐观主义者，市场部形同虚设。&lt;strong&gt;责任分散&lt;/strong&gt;导致项目自然消亡。&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. 停滞过程中还能做什么努力？&lt;a href=&quot;#3-停滞过程中还能做什么努力&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;section&gt;&lt;h4&gt;(a) 场景：上线后走班宣传受阻&lt;a href=&quot;#a-场景上线后走班宣传受阻&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;我们采取了企业微信的组群方式，让人扫码进群，但感兴趣的人不多。&lt;/p&gt;&lt;p&gt;放弃大规模地推，改为逐个渗透宿舍楼群、班级群、社团群。让最早一批用户在群里直接分享链接，甚至给群主/活跃分子发小额红包请他们帮忙转发。但实际上，这份工作落实需要资金投入，需要一个主要负责人，给大伙分工，谁谁谁负责哪个校区的宣传，是否做到位了之类的。没有人去推进，是一个问题。我作为技术人员，事实上并不想承担推广的任务，我认为如果资金有的话，可以低价请同学做这件事。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h4&gt;(b) 场景：用户反馈“不如宿舍群出物快”&lt;a href=&quot;#b-场景用户反馈不如宿舍群出物快&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;对比宿舍群出物，小程序的优势是信息结构化、可搜索。我们组建的社区没有活跃起来，也没有人去活跃。用户太少，活跃度低增加了出物收物的时间成本，导致更全面复杂的功能也用不上。说明还是要去获取更多的用户，提升用户活跃度。如前期的资金激励，或者在这个平台交易成功可以获得奖励等。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h4&gt;(c) 场景：市场部计划等开学/毕业季，但到了时间仍无起色&lt;a href=&quot;#c-场景市场部计划等开学毕业季但到了时间仍无起色&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;市场部需要提前1个月准备：联系毕业生收集闲置物品清单，帮助他们上架；在宿舍楼下张贴二维码；与后勤/宿管合作，在回收旧物的同时引导使用小程序。但这时市场部学生可能正忙于期末考，无暇做计划。&lt;/p&gt;&lt;p&gt;毕业季的学生有大量出物需求，事实上应该在毕业这个学期就要开始逐渐预热，让毕业生有足够时间整理自己出的东西并上架。需求可能不是单件物品出，而是一堆的东西出，这时在功能上，我们也许要“粗化”范围，比如一张卡片，就包含哪个校区哪个宿舍楼哪个宿舍，出的一堆东西图片及价格。&lt;/p&gt;&lt;p&gt;开学季的学生有大量收物需求，在开学前，应该打入各大新生群，收集他们的需求，并做成一个功能，使用户可以发布收物的需求，学校的用户看到可以及时联系。平台当前只有出物，没有收物的功能。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h4&gt;(d) 场景：服务器月成本近千元，B哥想加开屏广告回本&lt;a href=&quot;#d-场景服务器月成本近千元b哥想加开屏广告回本&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;盈利的方式，确实只有广告这条路。但在收益不明朗，资金成本无人投资的情况下，难以维持长期的运营。当大家无心去做这件事的时候，就应该直接停掉服务器及时止损，重新商讨可行策略。但没有人出来掌舵。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h4&gt;(e) 场景：有人出几百块买源码包运维，团队拒绝&lt;a href=&quot;#e-场景有人出几百块买源码包运维团队拒绝&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;如果是几百块源码包运维，实际上分到收益应该是技术部的人和发起人，市场部没有对其有任何贡献。而我们做的量和运维成本，几百块真的太低了。如果我们技术部整理好源码和框架，去做定制化产品线上销售的话，真正去运营的话，或许也能有不错的收益。这种市场上做，加上我们原创的美工设计，估计也要几千上万的。&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;我自己觉得，主要还是市场部和人心不齐的问题吧。可能我们技术部对推广也没花多少心思，但属于市场部本身的工作，她们没有足够能力和经验，想办法推进。如果缺乏计划，且吝啬于资金的投入，我相信推广也难以成效。&lt;strong&gt;没有人&lt;/strong&gt;愿意承担资金投入亏损的风险。&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;/section&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>校园二手交易平台项目——故事篇</title><link>https://cauchyoooo.github.io/posts/2026/nikki/0513-story/</link><guid isPermaLink="true">https://cauchyoooo.github.io/posts/2026/nikki/0513-story/</guid><description>在23年的时候，莫名加入了一个项目，突然心血来潮，想要分享这个故事。</description><pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;&lt;p&gt;在23年的时候，莫名加入了一个项目，这个项目最后当然是以失败告终。今天想起来写这件事，或许是为了学到更多的东西吧。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;section&gt;&lt;h1&gt;校园二手交易平台项目——故事篇&lt;a href=&quot;#校园二手交易平台项目故事篇&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;section&gt;&lt;h2&gt;一、缘起：偶然加入项目&lt;a href=&quot;#一缘起偶然加入项目&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;时间回到2023年5月。那时我刚打算以后做前端开发，经常蹲学院群的消息。有一天看到一条招募——缺前端开发。我起初并不知道这个项目具体做什么，想着无论结果如何，能参与实际项目总是有好处的。于是就这样加入了。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;二、团队阵容：各路伙伴齐聚&lt;a href=&quot;#二团队阵容各路伙伴齐聚&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;为了方便描述，我给主要成员取了代号：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sunny哥&lt;/strong&gt;（商科同学）：项目发起人&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A哥&lt;/strong&gt;（上班族）：前端原负责人&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;B哥&lt;/strong&gt;（上班族）：后端负责人兼PM&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;美工哥&lt;/strong&gt;（外校同学）：负责UI设计&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;前端成员&lt;/strong&gt;：我、学妹、同事哥（B哥同事）、摸鱼哥（科班学生）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后端成员&lt;/strong&gt;：MA哥（硕士）、MB哥（硕士）、跑路哥A（上班族）、跑路哥B（B哥同事）&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;后来A哥因工作调动离开，摸鱼哥长期潜水后也退出了，跑路哥A和B基本没怎么干活就走了。最后坚持下来的核心成员是：Sunny哥、B哥、美工哥、我、学妹、同事哥、MA哥、MB哥。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;三、分工与股权：按劳分配，赌一把&lt;a href=&quot;#三分工与股权按劳分配赌一把&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;加入时没怎么面试——项目缺人，有意愿就能进。目标是做一个校园二手交易微信小程序，方便校内闲置物品流通。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Sunny哥&lt;/strong&gt;为此注册了一家公司。分红方案分两部分：启动部分（50%）和推广运维部分（50%）。启动部分中，市场部占30%、技术部占70%；推广运维部分按劳分配，市场部占70%、技术部占30%。两部分加权后就是每个人的股份权重。也可以选择不要股份，开发完成后一次性按权重结算，由Sunny哥出钱。抱着“赌一把”的心态，我没有选择一次性结清。后来公司注销前，我大概占了7%的股权。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;部门股权分配&lt;/th&gt;&lt;th&gt;启动部分：50%&lt;/th&gt;&lt;th&gt;推广运维部分：50%&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;市场部&lt;/td&gt;&lt;td&gt;15%&lt;/td&gt;&lt;td&gt;35%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;技术部&lt;/td&gt;&lt;td&gt;35%&lt;/td&gt;&lt;td&gt;15%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;四、开发过程：暑假里的协作&lt;a href=&quot;#四开发过程暑假里的协作&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;2023年5月到9月（主要是暑假）是我们集中开发的时间。B哥有工作经验，很主动也很自信，自然而然地承担了PM的职责。我们用一个工作记录文档来跟踪任务，有点像Scrum但没有分sprint，只有一条条story——每项记录工作内容、状态、负责人、优先级，挺清晰的。这个文档也是计算工作量的依据。&lt;/p&gt;&lt;p&gt;A哥离开后，前端由我给大家分工。每个人负责一组相关联的页面，方便复用自己写的组件，偶尔需要交叉调用。这样出了问题，能快速定位到负责人。我和学妹、同事哥相处得很愉快。有时我时间充裕，看到别人代码里的小问题（比如逻辑或样式瑕疵），会主动加注释提醒，一般不会直接动别人的代码。除非是像颜色这类纯CSS调整、不影响整体框架的，偶尔会顺手改一下。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;五、需求膨胀：从交易到社交&lt;a href=&quot;#五需求膨胀从交易到社交&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Sunny哥和B哥是技术部里两个很有意思的角色。Sunny哥想法很多，今天说做这个，明天说要加那个需求。不知道是不是老板都这样。&lt;/p&gt;&lt;p&gt;最初我们规划的功能有：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;首页&lt;/strong&gt;（商品页）：查看、搜索二手物品，可按分类、关键词、学校、校区筛选；还能获取用户地理位置（需授权），按距离排序。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;物品页&lt;/strong&gt;：展示物品图片、信息、原价/现价、发布时间、卖方信息、地理位置、交易方式等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;消息页&lt;/strong&gt;：类似某鱼，买家点“我想要”后自动发送物品卡片并建立私信，可发文字和图片，无表情/语音等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用户页&lt;/strong&gt;：用户名、学校、信誉、已发布/已卖出物品列表，以及授权、条款、通知设置等。&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;做完这些，我觉得专注校园二手交易的核心功能已经够了——主要提供信息平台，让用户快速找到东西、联系卖家，再通过其他平台完成交易。&lt;/p&gt;&lt;p&gt;但Sunny哥想加一个&lt;strong&gt;社交功能&lt;/strong&gt;，像校园集市那样发帖、评论回复，说可以把那边的用户挖过来。我当时觉得两个系统揉进一个小程序会太臃肿，而且同质化严重，没必要。但作为执行者，还是照做了。我也试着做过一些简单的可行性分析，只是商业上的事我也不太清楚。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;六、管理风格的碰撞：关于培训与分工&lt;a href=&quot;#六管理风格的碰撞关于培训与分工&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;B哥和Sunny哥志同道合，而且有着天然的自信，觉得项目推广到全国高校能赚几个亿。我每次都说，先把我们本校和周边学校做好就不错了。B哥认为我们有年龄和资历差距，我们的想法不太行——互相之间多少有些看不顺眼吧。他还喜欢分享企业家讲话，憧憬着将来像他们一样成功。他和Sunny哥差不多，都喜欢画饼。&lt;/p&gt;&lt;p&gt;有一次，B哥给后端同学线上培训docker怎么用，让我们前端也去听，还把“培训”写进工作内容。我认为计算机专业的学生，自主学习能力是很重要的——文档、教程、搜索引擎，大部分问题10分钟内就能找到答案。如果缺乏搜索和自学的能力，在计算机行业确实会比较吃力。当然，每个专业都有混日子的同学，AI时代最先受到冲击的可能也是这批人。不过这只是我个人的想法。&lt;/p&gt;&lt;p&gt;我觉得B哥不太适合做PM。有一次前端某个模块出了bug，不是我负责的部分，他却直接@我去修。我的原则是：分工明确的情况下，让模块负责人自己去debug最有效率——他们一看问题就能知道大概范围，自己改起来也顺手；而且如果别人的代码被我改了，结构变了，原负责人再读起来也费劲。我自己的代码也不喜欢别人不经同意就改。我们本来有分工，按分工来管理才是高效的做法。B哥选择的方式让我有些困惑，不知道是不是他上班的地方管理就比较混乱。另外，我们也没有代码规范，可读性一般。我认为无论做技术还是管理，高效协作都很重要——B哥在这方面的意识和我有些不同。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;七、争议：学生认证的隐私问题&lt;a href=&quot;#七争议学生认证的隐私问题&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;关于学生认证，B哥提出用学信网来验证，我强烈反对。他说网上有学信网验证服务卖，但我查了学信网官方并没有开放验证接口。那种服务很可能是获取用户学信网的一串码，再去学信网抓取信息——这样一来，除了学校信息，还会经手身份证等敏感数据。即使服务方承诺不保存，中间传输过程本身就存在风险。&lt;/p&gt;&lt;p&gt;我认为前期用户少的时候不必强行规范，可以先用学生卡认证（像校园集市那样），虽然也会泄露一些个人信息，但在可接受范围内。经过争论，我们决定暂时搁置学生认证功能。其实非学生（比如教职工）也可以用，不是吗？&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;八、上线与推广：出师不利&lt;a href=&quot;#八上线与推广出师不利&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;2024年2月，小程序正式上线，市场部开始干活。计划先在我们学校的不同校区推广，打算走班宣传、让大家扫码，同时在朋友圈传播。原本想用“转发得抽奖机会”的方式，但恰好之前发生过一起类似的诈骗事件，同学们对这类活动都很警惕，我们只好放弃。真是“一粒老鼠屎坏了整锅粥”啊。&lt;/p&gt;&lt;p&gt;后来改用朋友圈集赞、找小客服领红包的奖励方式。我还领了5块钱——对于大学生来说，白捡的奖励不要白不要。&lt;/p&gt;&lt;p&gt;但推广持续了一段时间，效果很一般。临近寒假，大家交易需求不高。我问了身边同学，反馈是：用户量太少，浏览量低，还不如在宿舍群里出物快。学校似乎也不允许官方宣传，最后不了了之。市场部的成果不太理想。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;九、落幕：广告、卖源码&lt;a href=&quot;#九落幕广告卖源码&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;服务器每月成本近千元（由B哥垫付），他觉得需要接入广告来回本。从用户交互角度考虑，开屏广告体验差、用户会更不想用，而插入在浏览列表中间的广告相对好一些。我表达了反对，最后大家同意先不加开屏广告。但后面也没见什么起色，市场部说等开学或毕业季，等到时候了依然没动静——宣发基本停滞了。&lt;/p&gt;&lt;p&gt;后来有人联系想花几百块钱买下源码和美工，还要求包运维。这显然不合理——几百块十几个人分，每人几十块还要做运维？我果断反对。B哥当时还说一股能卖5万……如果真能这样，我第一个就卖了。最后大家决定不卖，留作纪念。源码我还存着，不过想想环境迭代了好几轮，现在AI写代码也方便，源码本身可能不值钱了。但美工哥设计的UI真的很好看，当作品集也不错，卖掉就太可惜了。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;十、感想&lt;a href=&quot;#十感想&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;大概2024年下半年服务器就停了。公司直到2025年才注销。虽然项目失败了，但我也算当了一回小股东，经历了一次完整的从开发到推广再到落幕的过程。现在想起来，还是学到了不少东西。&lt;/p&gt;&lt;p&gt;想法不是最重要的，这个想法肯定别人也想过，为什么没人做成，是我们需要反思的。我们的方向本就是错的？还是团队无心做成这件事？我们中间停滞的过程本来还能做什么努力？&lt;/p&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>港硕回顾</title><link>https://cauchyoooo.github.io/posts/2025/nikki/0817_review-hk/</link><guid isPermaLink="true">https://cauchyoooo.github.io/posts/2025/nikki/0817_review-hk/</guid><description>一年的港硕生活，就这么过去了。</description><pubDate>Sun, 17 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;&lt;p&gt;随着港硕学业的告终，也是时候做一篇回顾谈谈感想了。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;section&gt;&lt;h1&gt;Review-HK: study and life&lt;a href=&quot;#review-hk-study-and-life&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;section&gt;&lt;h2&gt;🔮 为什么读&lt;a href=&quot;#-为什么读&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;故事要拉回大学时光。从大一我就在思考自己想做什么或者不想做什么，我也从来没有想过留学。因为读的计算机嘛，通常大家会有几条路可以选，本科就业、读研深造（国内考研/保研）、考公等。一开始参与了一个大创小组，只是为了学点东西。我们的大创是一个小型的科研，做的对抗攻击相关的，老师对我们挺严格，印象是要我们把吴恩达的机器学习和深度学习、李飞飞的CS231N的网课刷一遍，并跟着实验去敲代码。我其实也很不容易地把视频看完并做了一些笔记，现在找不到笔记了hhh，但我没做实验。那会刷网课就挺难顶的了，是因为内容比较多，我兴致也不是很高的样子。反正就是整个项目感受到了科研的冰山一角，读论文也让我很痛苦，也不喜欢写论文，做实验反而还好。那个时候我就知道自己不太适合走科研这条路，或者是这种推着我必须去做什么必须有什么成果的节奏吧。身边很多朋友都进了实验室，我就在想本科就业这条路，所以之后的学习我都没有刻意去卷绩点，而是尽量去学习，学到多少是多少，尤其是自己想学的，就要认真学；不喜欢的也不用勉强自己去拿高分。课设接触过很多前端相关的部分，也有学unity游戏方面的，但我们的课更多是AI方向的多，不得不学的东西。&lt;/p&gt;&lt;p&gt;大三那会就在纠结，是去学游戏开发还是去做前端，两个都是我比较感兴趣的，但自己做的相关项目和游戏开发靠不上边。大三下6月份左右吧，觉得很迷茫啊，于是发现了留学这条路，就自己去收集信息了解各种东西。留学读硕士的话，分授课硕（Taught Postgraduate, Master）和科研硕（哲学硕士，Mphil, Master of Philosophy），还有phd这种。授课硕的特点是面向就业，学制短，学费高昂，上课或者完成项目修满学分就能毕业。科研硕比phd还难申请一些，学费比较便宜、甚至会有工资，反正就是真正搞科研，进组干活，要写论文的。一般我们计算机，美英新港吧，考虑到经济条件和我想体验的东西，我直接就把地点框在了香港。从很久以前就对香港有一种莫名的情愫，广东人嘛，广东话也很有亲切感，以前也是看tvb大的，觉得自己无论如何都想去香港体验一番。学费贵是贵，家里愿意支持我去读，我很感激。&lt;/p&gt;&lt;p&gt;当时还和一位欣赏且喜欢的老师聊天，问我要不要gap一年，我不知道我想做什么，又担心赶不及申请。她就说如果不是身体因素，没有必要gap，可以边读边去思考。她在我眼里是一位很优秀的独立女性！我就听了她的话，在期末结束以后，好好做准备去了。总结起来是，一想去香港，二想体验留学生活，三想留时间去思考和发现自己想做什么，四顺便拿个硕士学位（给就业留后路）。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;🥛申请过程&lt;a href=&quot;#申请过程&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;要申留学，要考语言成绩、自己准备资料申请院校（ps, cv, 推荐信）、可能要准备笔试面试。很多人是提前一年就在准备了，我那会决定要留学已经差不多7月了，9月很多院校就开放申请了。虽然没有特意卷绩点，还好我们老师给分都不错，转换过去我gpa大概是3.7/4的样子，并不是我多厉害，我排名还不够院前50%，但也够我申请不错的学校和专业了。语言考的雅思，我挑的院校和专业对语言要求不高，最高要求的是6.5(5.5)，自学了一个月左右，不花钱刷的机考题，有朋友陪我临急抱佛脚练口语，最后的成绩就是6.5(5.5)，本人口语5.5是非常合理的事情哈哈哈。分不在高，够用就行。ps、cv都是自己找资料自己写的，推荐信磨蹭了我好久，一是不好意思麻烦我的老师，二是我自己写不出来，最后去找了个代写。最后所有资料准备完成的时候是十月初国庆后了。参考往年的申请经验帖子，这个时候不早也不晚，很是适合。很可惜这一年cuhk10月就收满了9月的申请的生源，我算申请晚了。hku（太贵且要笔面）和hkust（太卷、适合科研）我都不太指望。就到11和12月申请city和poly，poly的话应该也申晚了，city破天荒的12月才开申请，专收我们这种落榜生是吧。最后也是被city收留了，今天回头看，学校不在于名声有多好，更在于合适，尤其对我这种有特别目的的人，我很喜欢这所学校。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;📗学习过程&lt;a href=&quot;#学习过程&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;整体给我的课程难度是类似我的本科吧。很不习惯这种快节奏、全英授课、以及小组作业和pre。Sem A为了留后面的时间去实习规划，就猛猛选了18学分6门课，一周上3天，每天两门课的样子，期末难顶到差点崩溃。Sem B选了6学分2门课+3学分的project（和ST3学分，加起来6学分的project）。project不需要到学校去，ST 结束在8月，毕业时间在10月。我其实住在深圳 (吃住更舒适成本更低)，港深通勤上课，多数是有课才去学校，按我的规划，sem B结束了就没有去学校的课程了。&lt;/p&gt;&lt;p&gt;这里也罗列一些上过的课。&lt;/p&gt;
 
 
