@@ -5,7 +5,7 @@ export const announcementConfig: AnnouncementConfig = {
 	title: "近期状态",
 
 	// 公告内容
-	content: "5.20: 人果然还是要好好照顾自己的身体。刚刚更换完blog主题， 文章搬迁ing...",
+	content: "5.21: 刚刚更换完blog主题， 文章搬迁完毕！需要压缩一些图片的大小，节约资源空间。处于神游的状态...",
 
 	// 是否允许用户关闭公告
 	closable: false,
