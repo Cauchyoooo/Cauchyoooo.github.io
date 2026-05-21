@@ -3,8 +3,8 @@ title: "HW1: 游戏的本质"
 published: 2022-09-06
 pinned: false
 description: 我正在学习一门课程《3D游戏编程与设计》，接下来的时间，我都会在这个博客上记录我这门课的学习，请大家多多指教~ 
-tags: [3D游戏编程与设计, 课程]
-category: 游戏
+tags: [3D游戏编程与设计]
+category: 课程
 draft: false
 ---
 

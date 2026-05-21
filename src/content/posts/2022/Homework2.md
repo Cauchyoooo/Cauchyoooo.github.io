@@ -3,8 +3,8 @@ title: "HW2: 离散仿真引擎基础"
 published: 2022-10-04
 pinned: false
 description: 此课程涉及IMGUI，数据-控制分离，设计模式
-tags: [3D游戏编程与设计, 课程]
-category: 游戏
+tags: [3D游戏编程与设计]
+category: 课程
 draft: false
 ---
 
@@ -610,5 +610,4 @@ void showAllMine(){
 [lin5]:https://www.runoob.com/design-pattern/bridge-pattern.html
 [lin6]:https://blog.csdn.net/xiumang/article/details/88750110
 [lin7]:https://docs.unity.cn/cn/2021.3/Manual/gui-Basics.html
-
 

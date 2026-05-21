@@ -3,8 +3,8 @@ title: "HW4: 游戏对象与图形基础"
 published: 2022-11-05
 pinned: false
 description: 该课程主要是搭建游戏场景，了解基础场景构成
-tags: [3D游戏编程与设计, 课程]
-category: 游戏
+tags: [3D游戏编程与设计]
+category: 课程
 draft: false
 ---
 
@@ -601,5 +601,4 @@ public class JudgeController : MonoBehaviour {
     }
 }
 ```
-
 

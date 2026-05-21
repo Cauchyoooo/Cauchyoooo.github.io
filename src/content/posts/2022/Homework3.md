@@ -3,8 +3,8 @@ title: "HW3: 空间与运动"
 published: 2022-10-23
 pinned: false
 description: 该课程涉及游戏对象运动，做的是牧师与恶魔游戏逻辑
-tags: [3D游戏编程与设计, 课程]
-category: 游戏
+tags: [3D游戏编程与设计]
+category: 课程
 draft: false
 ---
 
@@ -837,5 +837,4 @@ public class myUserGUI : MonoBehaviour
 * 河水和船等动画也没有制作
 * 没有加1min的倒计时
 * 游戏失败没有等船到岸之后弹出来
-
 

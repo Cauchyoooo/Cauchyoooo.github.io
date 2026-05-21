@@ -3,8 +3,8 @@ title: "HW6: 物理系统与碰撞"
 published: 2022-12-04
 pinned: false
 description: 刚体物理学、碰撞的实践
-tags: [3D游戏编程与设计, 课程]
-category: 游戏
+tags: [3D游戏编程与设计]
+category: 课程
 draft: false
 ---
 
@@ -467,5 +467,4 @@ public class ScoreController : MonoBehaviour
 * 要区分各种碰撞检测模式，Discrete、Continus、Continus Dynamic等，有性能上的差异。
 * 碰撞异常要思考：物体是否启用碰撞器、碰撞检测模式是否正确、物体运动是否过于高速、物体碰撞器体积是否过小等。
 * 熟悉Rigidbody的一些属性与使用，方便实现物理运动效果。
-
 

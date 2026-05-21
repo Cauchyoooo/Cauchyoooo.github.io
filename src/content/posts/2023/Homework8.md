@@ -3,8 +3,8 @@ title: "Final: 粒子系统与流动效果"
 published: 2023-01-05
 pinned: false
 description: 这是大作业内容，粒子系统的应用
-tags: [3D游戏编程与设计, 课程]
-category: 游戏
+tags: [3D游戏编程与设计]
+category: 课程
 draft: false
 ---
 

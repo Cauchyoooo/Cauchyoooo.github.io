@@ -3,8 +3,8 @@ title: "HW5: 与游戏世界交互"
 published: 2022-11-13
 pinned: false
 description: 工厂模式的实践 
-tags: [3D游戏编程与设计, 课程]
-category: 游戏
+tags: [3D游戏编程与设计]
+category: 课程
 draft: false
 ---
 
@@ -558,5 +558,4 @@ public class myUserGUI : MonoBehaviour
     
 }
 ```
-
 

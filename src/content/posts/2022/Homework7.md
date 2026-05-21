@@ -4,8 +4,8 @@ published: 2022-12-18
 updated: 2022-12-19
 pinned: false
 description: 动画、订阅/发布模式的实践 
-tags: [3D游戏编程与设计, 课程]
-category: 游戏
+tags: [3D游戏编程与设计]
+category: 课程
 draft: false
 ---
 
