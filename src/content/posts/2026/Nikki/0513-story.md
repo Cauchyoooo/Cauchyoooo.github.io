@@ -2,7 +2,7 @@
 title: "校园二手交易平台项目——故事篇"
 published: 2026-05-13
 pinned: false
-description:在23年的时候，莫名加入了一个项目，突然心血来潮，想要分享这个故事。
+description: "在23年的时候，莫名加入了一个项目，突然心血来潮，想要分享这个故事。"
 tags: [项目]
 category: 日志
 draft: false

@@ -2,7 +2,7 @@
 title: "校园二手交易平台项目——分析篇"
 published: 2026-05-21
 pinned: false
-description:一个看似可行的校园项目为何走向终止。
+description: "一个看似可行的校园项目为何走向终止？"
 tags: [项目]
 category: 日志
 draft: false
